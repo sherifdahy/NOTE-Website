@@ -3,6 +3,7 @@
     --body-color:rgb(214, 214, 214);
     --footer-color:black;
     --header-color:white;
+    --box-color:white;
 }
 
 *{
@@ -27,4 +28,10 @@ body{
 
 .border{
     border:5px solid red ;
+}
+
+.box-content{
+    background-color: var(--box-color);
+    border-radius: 5px;
+    box-shadow: 6px 8px 5px #979595;
 }
