@@ -1,14 +1,30 @@
 :root{
     --main-color : red;
     --body-color:rgb(214, 214, 214);
+    --footer-color:black;
+    --header-color:white;
 }
 
 *{
     box-sizing:border-box;
     margin: 0;
     padding: 0;
+    list-style-type: none;
+    text-decoration: none;
 }
 
 body{
     background-color: var(--body-color);
+    
+    
+}
+
+.container{
+    width: 90%;
+    margin-inline: auto;
+}
+
+
+.border{
+    border:5px solid red ;
 }
