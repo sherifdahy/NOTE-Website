@@ -10,10 +10,9 @@ header{
             display: flex;
             justify-content: center;
             align-items: center;
-            
+            gap: 1.2rem;
             & img{
                 width: 2rem;
-                margin-inline: 1.2rem;
             }
         }
 
