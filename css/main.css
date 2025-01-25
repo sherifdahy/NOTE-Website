@@ -16,7 +16,8 @@
 
 body{
     background-color: var(--body-color);
-    
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
     
 }
 
@@ -35,3 +36,5 @@ body{
     border-radius: 5px;
     box-shadow: 6px 8px 5px #979595;
 }
+
+
