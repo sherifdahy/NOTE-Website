@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 namespace Entities.Models
 {
     
+
     public class Product
     {
         [Key]
