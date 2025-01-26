@@ -3,6 +3,7 @@ main{
     & .main-content
     {
         
+        
         & section{
             display: flex;
             align-items: center;
