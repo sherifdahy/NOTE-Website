@@ -5,7 +5,6 @@ D:\WebApplication\NOTE-Website\MVC\Entities\Entities\obj\Debug\net8.0\Entities.G
 D:\WebApplication\NOTE-Website\MVC\Entities\Entities\obj\Debug\net8.0\Entities.AssemblyInfoInputs.cache
 D:\WebApplication\NOTE-Website\MVC\Entities\Entities\obj\Debug\net8.0\Entities.AssemblyInfo.cs
 D:\WebApplication\NOTE-Website\MVC\Entities\Entities\obj\Debug\net8.0\Entities.csproj.CoreCompileInputs.cache
-D:\WebApplication\NOTE-Website\MVC\Entities\Entities\obj\Debug\net8.0\Entities.sourcelink.json
 D:\WebApplication\NOTE-Website\MVC\Entities\Entities\obj\Debug\net8.0\Entities.dll
 D:\WebApplication\NOTE-Website\MVC\Entities\Entities\obj\Debug\net8.0\refint\Entities.dll
 D:\WebApplication\NOTE-Website\MVC\Entities\Entities\obj\Debug\net8.0\Entities.pdb
