@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace Interface.Controllers
 {
@@ -41,7 +42,12 @@ namespace Interface.Controllers
                 if (result.Succeeded)
                 {
                     // create cookie
-                    await signInManager.SignInAsync(applicationUser, false);
+                    //await signInManager.SignInAsync(applicationUser, false);
+
+                    await signInManager.SignInWithClaimsAsync(applicationUser, false, new List<Claim>() { 
+                        new Claim("Address","41 street elnegma"),
+                        new Claim("Type","male")
+                    });
                     return RedirectToAction(nameof(Index), "Home");
                 }
                 else {

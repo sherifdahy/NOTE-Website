@@ -5,16 +5,48 @@
       "PackagePath": "staticwebassets\\Interface.bundle.scp.css"
     },
     {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\footer.css",
+      "PackagePath": "staticwebassets\\css\\footer.css"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\header.css",
+      "PackagePath": "staticwebassets\\css\\header.css"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\main.css",
       "PackagePath": "staticwebassets\\css\\main.css"
     },
     {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\signup.css",
+      "PackagePath": "staticwebassets\\css\\signup.css"
     },
     {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\imgs\\2869279.jpg",
+      "PackagePath": "staticwebassets\\imgs\\2869279.jpg"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\imgs\\3094352.jpg",
+      "PackagePath": "staticwebassets\\imgs\\3094352.jpg"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\imgs\\4957136.jpg",
+      "PackagePath": "staticwebassets\\imgs\\4957136.jpg"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\imgs\\login-page.png",
+      "PackagePath": "staticwebassets\\imgs\\login-page.png"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\imgs\\logo.png",
+      "PackagePath": "staticwebassets\\imgs\\logo.png"
     },
     {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\site.js",

@@ -3,40 +3,28 @@
   "WorkspaceRootPath": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\viewmodels\\loginvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\viewmodels\\loginvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\viewmodels\\registervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\viewmodels\\registervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,59 +46,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BaseController.cs",
-              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Controllers\\BaseController.cs",
-              "RelativeDocumentMoniker": "Interface\\Controllers\\BaseController.cs",
-              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Controllers\\BaseController.cs",
-              "RelativeToolTip": "Interface\\Controllers\\BaseController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T18:37:14.874Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Interface\\Views\\Account\\Login.cshtml",
-              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "Interface\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-27T18:05:37.116Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\Product\\Create.cshtml",
-              "RelativeDocumentMoniker": "Interface\\Views\\Product\\Create.cshtml",
-              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\Product\\Create.cshtml",
-              "RelativeToolTip": "Interface\\Views\\Product\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-27T18:02:59.917Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "LoginVM.cs",
-              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\ViewModels\\LoginVM.cs",
-              "RelativeDocumentMoniker": "Interface\\ViewModels\\LoginVM.cs",
-              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\ViewModels\\LoginVM.cs",
-              "RelativeToolTip": "Interface\\ViewModels\\LoginVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T17:56:38.038Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Interface\\Controllers\\HomeController.cs",
@@ -118,59 +54,69 @@
               "RelativeToolTip": "Interface\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T17:49:52.6Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-27T21:13:12.439Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "Interface\\Controllers\\ProductController.cs",
-              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "Interface\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAowEcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T17:24:10.242Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "Interface\\Views\\Account\\Register.cshtml",
-              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "Interface\\Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Interface\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Interface\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAE0AAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-27T16:24:45.125Z",
+              "WhenOpened": "2025-01-27T21:12:27.218Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RegisterVM.cs",
-              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\ViewModels\\RegisterVM.cs",
-              "RelativeDocumentMoniker": "Interface\\ViewModels\\RegisterVM.cs",
-              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\ViewModels\\RegisterVM.cs",
-              "RelativeToolTip": "Interface\\ViewModels\\RegisterVM.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAYwBcAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T16:12:32.003Z",
-              "EditorCaption": ""
+              "DocumentIndex": 5,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "Interface\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "Interface\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-27T21:12:09.164Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "AccountController.cs",
               "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Interface\\Controllers\\AccountController.cs",
               "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Controllers\\AccountController.cs",
               "RelativeToolTip": "Interface\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwGEAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAwwCIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T16:04:36.614Z",
+              "WhenOpened": "2025-01-27T21:07:08.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Interface\\Views\\Account\\Register.cshtml",
+              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "Interface\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-27T21:07:58.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Interface\\Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Interface\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-27T21:04:39.847Z",
               "EditorCaption": ""
             }
           ]

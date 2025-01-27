@@ -1,13 +1,33 @@
 ﻿@using Interface.ViewModels
 @model LoginVM
 
-<div class="handle_form">
+<link rel="stylesheet" href="~/css/login.css">
 
-    <form method="post" asp-action="Login">
-        <input asp-for="Username" placeholder="Username" />
-        <input type="password" asp-for="Password" placeholder="Password" />
-        <input type="submit" value="Login" />
 
-    </form>
-
+<div class="main-content container box-content">
+    <section class="">
+        <div class="img-box ">
+            <img src="~/imgs/4957136.jpg" alt="">
+        </div>
+        <div class="input-field ">
+            <h3>Welcome Back.</h3>
+            <form action="" method="post">
+                <input asp-for="Username" placeholder="Username" />
+                <span asp-validation-for="Username" style="color:red"></span>
+                <input type="password" asp-for="Password" placeholder="Password" />
+                <span asp-validation-for="Password" style="color:red"></span>
+                <label>
+                    <input type="checkbox" asp-for="RememberMe"> Remember me
+                </label>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </section>
 </div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

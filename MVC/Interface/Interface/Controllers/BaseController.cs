@@ -2,6 +2,7 @@
 using Entities.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace Interface.Controllers
 {
@@ -20,6 +21,7 @@ namespace Interface.Controllers
             this.roleManager = roleManager;
             this.signInManager = signInManager;
             _context = applicationDbContext;
+           
         }
     }
 }

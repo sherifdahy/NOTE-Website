@@ -1,16 +1,32 @@
 ﻿@using Interface.ViewModels
 @model RegisterVM
-<link rel="stylesheet" href="~/css/main.css" />
-<div class="handle_form">
-    <form method="post" asp-controller="Account" asp-action="Register">
-        <input type="text" asp-for="@Model.Username" placeholder="Username" />
-        <input type="email" asp-for="@Model.Email" placeholder="Email Address" />
-        <input type="password" asp-for="@Model.Password" placeholder="Password" />
-        <input type="password" asp-for="@Model.ConfirmPassword" placeholder="Password" />
-        <input type="submit" value="Sign up" />
+<link rel="stylesheet" href="~/css/signup.css">
 
-    </form>
+<div class="main-content container box-content">
+    <section class="">
+        <div class="img-box ">
+            <img src="~/imgs/2869279.jpg" alt="">
+        </div>
+        <div class="input-field ">
+            <h3>Sign up for NOTE Solution.</h3>
+            <form method="post" asp-controller="Account" asp-action="Register">
+                <input type="text" asp-for="@Model.Username" placeholder="Username" />
+                <span asp-validation-for="Username" style="color:red"></span>
+                <input type="email" asp-for="@Model.Email" placeholder="Email Address" />
+                <span asp-validation-for="Email" style="color:red"></span>
+                <input type="password" asp-for="@Model.Password" placeholder="Password" />
+                <span asp-validation-for="Password" style="color:red"></span>
+                <input type="password" asp-for="@Model.ConfirmPassword" placeholder="Confirm Password" />
+                <span asp-validation-for="ConfirmPassword" style="color:red"></span>
+                <label for="">
+                    <input type="checkbox"> I Accept the Terms and Privacy Policy
+                </label>
+                <button type="submit">Signup</button>
+            </form>
+        </div>
+    </section>
 </div>
+
 
 
 @section Scripts {

@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Interface.Controllers
 {
-    [Authorize]
     public class HomeController : Controller
     {
         // GET: HomeController
