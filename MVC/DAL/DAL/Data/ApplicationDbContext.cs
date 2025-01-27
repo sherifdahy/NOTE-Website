@@ -1,5 +1,7 @@
 ﻿using Entities.ConfigurationSettings;
 using Entities.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,11 +12,12 @@ using System.Threading.Tasks;
 
 namespace DAL.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext
+        <ApplicationUser,IdentityRole<int>,int>
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public ApplicationDbContext(DbContextOptions options) : base(options)
         {
-            optionsBuilder.UseSqlServer(ConfigSettings.ConnectionString);
+
         }
         public override int SaveChanges()
         {

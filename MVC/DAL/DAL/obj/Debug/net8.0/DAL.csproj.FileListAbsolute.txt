@@ -13,3 +13,4 @@ D:\WebApplication\NOTE-Website\MVC\DAL\DAL\obj\Debug\net8.0\DAL.dll
 D:\WebApplication\NOTE-Website\MVC\DAL\DAL\obj\Debug\net8.0\refint\DAL.dll
 D:\WebApplication\NOTE-Website\MVC\DAL\DAL\obj\Debug\net8.0\DAL.pdb
 D:\WebApplication\NOTE-Website\MVC\DAL\DAL\obj\Debug\net8.0\ref\DAL.dll
+D:\WebApplication\NOTE-Website\MVC\DAL\DAL\obj\Debug\net8.0\DAL.sourcelink.json

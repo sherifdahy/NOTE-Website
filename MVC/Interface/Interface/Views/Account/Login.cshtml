@@ -1,0 +1,13 @@
+﻿@using Interface.ViewModels
+@model LoginVM
+
+<div class="handle_form">
+
+    <form method="post" asp-action="Login">
+        <input asp-for="Username" placeholder="Username" />
+        <input type="password" asp-for="Password" placeholder="Password" />
+        <input type="submit" value="Login" />
+
+    </form>
+
+</div>

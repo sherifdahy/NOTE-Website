@@ -31,5 +31,10 @@ namespace Entities.Models
         [Required]
         [StringLength(3)]
         public string CodeType { get; set; }
+
+        [Required]
+        public int ApplicationUserId { get; set; }
+
+        public virtual ApplicationUser ApplicationUser { get; set; }
     }
 }

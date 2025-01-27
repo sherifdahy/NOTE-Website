@@ -9,3 +9,5 @@ D:\WebApplication\NOTE-Website\MVC\Entities\Entities\obj\Debug\net8.0\Entities.d
 D:\WebApplication\NOTE-Website\MVC\Entities\Entities\obj\Debug\net8.0\refint\Entities.dll
 D:\WebApplication\NOTE-Website\MVC\Entities\Entities\obj\Debug\net8.0\Entities.pdb
 D:\WebApplication\NOTE-Website\MVC\Entities\Entities\obj\Debug\net8.0\ref\Entities.dll
+D:\WebApplication\NOTE-Website\MVC\Entities\Entities\obj\Debug\net8.0\Entities.sourcelink.json
+D:\WebApplication\NOTE-Website\MVC\Entities\Entities\obj\Debug\net8.0\Entities.csproj.AssemblyReference.cache

@@ -1,3 +1,8 @@
+using DAL.Data;
+using Entities.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+
 namespace Interface
 {
     public class Program
@@ -8,6 +13,21 @@ namespace Interface
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+
+            // register built in service
+            builder.Services.AddDbContext<ApplicationDbContext>
+                (x=>x.UseSqlServer(builder.Configuration.GetConnectionString("local")));
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole<int>>(option =>
+                option.Password.RequireDigit = true
+                )
+                .AddEntityFrameworkStores<ApplicationDbContext>();
+
+
+            
+
+
+
 
             var app = builder.Build();
 
@@ -23,7 +43,7 @@ namespace Interface
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(

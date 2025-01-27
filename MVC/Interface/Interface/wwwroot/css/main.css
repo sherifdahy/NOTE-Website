@@ -1,0 +1,9 @@
+﻿.handle_form {
+    & form
+{   align-content:center;
+    display: flex;
+    flex-direction: column;
+    gap:1.2rem;
+    width : 50%
+}
+}
