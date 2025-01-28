@@ -16,11 +16,14 @@ namespace Interface.ViewModels
         public string Email { get; set; }
         [Required]
         [MaxLength (100)]
-        [PasswordPropertyText]
+        [DataType(DataType.Password)]
+
         public string Password { get; set; }
         [Required]
         [MaxLength(100)]
         [Compare(nameof(Password))]
+        [DataType(DataType.Password)]
+
         public string ConfirmPassword { get; set; }
 
         public  ApplicationUser Casting()

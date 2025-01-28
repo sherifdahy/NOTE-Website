@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 using System.Security.Claims;
 
 namespace Interface.Controllers
@@ -21,6 +22,9 @@ namespace Interface.Controllers
         {
 
         }
+
+        
+
 
         #region Register
         [HttpGet]
@@ -41,14 +45,29 @@ namespace Interface.Controllers
                 IdentityResult result = await userManager.CreateAsync(applicationUser, registerVM.Password);
                 if (result.Succeeded)
                 {
-                    // create cookie
-                    //await signInManager.SignInAsync(applicationUser, false);
 
-                    await signInManager.SignInWithClaimsAsync(applicationUser, false, new List<Claim>() { 
+                    //Assign Role
+
+                    #region Assign Role to User
+                    IdentityResult nested_result = await userManager.AddToRoleAsync(applicationUser, "User");
+                    if (nested_result.Succeeded)
+                    {
+                        // create cookie
+
+                        await signInManager.SignInWithClaimsAsync(applicationUser, false, new List<Claim>() {
                         new Claim("Address","41 street elnegma"),
                         new Claim("Type","male")
-                    });
-                    return RedirectToAction(nameof(Index), "Home");
+                        });
+                        return RedirectToAction(nameof(Index), "Home");
+                    }
+                    else
+                    {
+                        foreach (var item in result.Errors)
+                        {
+                            ModelState.AddModelError("", item.Description);
+                        }
+                    }
+                    #endregion
                 }
                 else {
                     foreach (var item in result.Errors)
@@ -76,7 +95,8 @@ namespace Interface.Controllers
             if (ModelState.IsValid == true) 
             {
                 ApplicationUser applicationUser = await userManager.FindByNameAsync(loginVM.Username);
-                if (applicationUser != null) {
+                if (applicationUser != null) 
+                {
                     bool found = await userManager.CheckPasswordAsync(applicationUser,loginVM.Password);
                     if (found) {
                         await signInManager.SignInAsync(applicationUser, loginVM.RememberMe);

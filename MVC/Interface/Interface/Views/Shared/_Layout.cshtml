@@ -31,6 +31,13 @@
                     <li><a href="#">Our Product</a></li>
                     <li><a href="#">Team</a></li>
                     <li><a href="#">About Us</a></li>
+
+
+                    @if(User.IsInRole("Admin"))
+                    {
+                        <li><a asp-action="NewRole" asp-controller="Service">New Role</a></li>
+
+                    }
                 </ul>
 
             </section>

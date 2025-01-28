@@ -1,5 +1,6 @@
 using DAL.Data;
 using Entities.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,7 +18,7 @@ namespace Interface
 
             // register built in service
             builder.Services.AddDbContext<ApplicationDbContext>
-                (x=>x.UseSqlServer(builder.Configuration.GetConnectionString("local")));
+                (x=>x.UseSqlServer(builder.Configuration.GetConnectionString("online")));
             builder.Services.AddIdentity<ApplicationUser, IdentityRole<int>>(option =>
                 option.Password.RequireDigit = true
                 )
@@ -26,10 +27,12 @@ namespace Interface
 
             
 
-
-
+          
 
             var app = builder.Build();
+            
+            
+
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())

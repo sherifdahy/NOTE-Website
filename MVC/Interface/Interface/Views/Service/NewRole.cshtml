@@ -1,0 +1,18 @@
+﻿@using Interface.ViewModels
+@model RoleVM
+
+
+<div >
+    <form method="post">
+        <input name="Name" placeholder="Role Name" />
+        <span asp-validation-for="Name"></span>
+        <button type="submit">Add</button>
+    </form>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
