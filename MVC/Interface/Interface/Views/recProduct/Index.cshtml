@@ -1,0 +1,162 @@
+﻿@using Interface.ViewModels
+@model ProductVM
+
+<link rel="stylesheet" href="~/css/afterUserLogin/slider.css">
+<link rel="stylesheet" href="~/css/afterUserLogin/products.css">
+
+
+<div class="container">
+    
+    <section class="slider box-content">
+        <ul>
+            <a asp-action="index" asp-controller="recdash">
+            <li >
+                <i class="fa-solid fa-gauge"></i>
+                Dashboard
+            </li>
+            </a>
+            <a asp-action="index" asp-controller="recproduct">
+            <li class="active">
+                <i class="fa-solid fa-truck-ramp-box"></i>
+                Products
+            </li></a>
+        </ul>
+    </section>
+    <section class="main-content ">
+        <div class="box-content btn-operation">
+            <form asp-controller="recProduct">
+                <button>Insert From EXCEL</button>
+                <button type="submit" asp-action="DeleteAll">Delete All</button>
+            </form>
+        </div>
+        <div class="box-content">
+            <div class="inside-box">
+                <form asp-action="add" asp-controller="recProduct">
+                    <div class=" input-fields">
+                        <div class="group-content">
+                            <label for="">Internal Id</label>
+                            <input asp-for="InternalId" >
+                            <span asp-validation-for="InternalId" style="color:red;margin-bottom:0.2rem"></span>
+                        </div>
+                        <div class="group-content">
+                            <label for="">Name</label>
+                            <input asp-for="Name">
+                            <span asp-validation-for="Name" style="color:red;margin-bottom:0.2rem"></span>
+                        </div>
+
+                        <div class="group-content">
+                            <label for="">Unit Price</label>
+                            <input type="number" asp-for="UnitPrice">
+                            <span asp-validation-for="UnitPrice" style="color:red;margin-bottom:0.2rem"></span>
+                        </div>
+                        <div class="group-content">
+                            <label for="">Unit Type</label>
+                            <select name="unittype" id="">
+                                <option value="EA">EA</option>
+                            </select>
+                        </div>
+                        <div class="group-content">
+                            <label for="">Code</label>
+                            <input asp-for="Code">
+                            <span asp-validation-for="Code" style="color:red;margin-bottom:0.2rem"></span>
+                        </div>
+                        <div class="group-content">
+                            <label for="">Code Type</label>
+                            <select name="codetype" id="">
+                                <option value="EGS">EGS</option>
+                                <OPTION value="GS1">GS1</OPTION>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="group-content">
+                        <label for="">Description</label>
+                        <textarea asp-for="Description"></textarea>
+                        <span asp-validation-for="Description" style="color:red;margin-bottom:0.2rem"></span>
+                    </div>
+                    <div class="operation">
+                        <button type="submit">Add Product</button>
+                    </div>
+                </form>
+                
+            </div>
+
+        </div>
+        <table class="box-content">
+
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Internal Id</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Unit Price</th>
+                    <th>Unit Type</th>
+                    <th>Code</th>
+                    <th>Code Type</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (((bool)ViewData.ContainsKey("Products") == true) && ViewBag.Products != null)
+                {
+                    @foreach (var item in ViewBag.Products)
+                    {
+                        <tr>
+                           <td>@item.Id</td>
+                           <td>@item.InternalId</td>
+                           <td>@item.Name</td>
+                           <td>@item.Description</td>
+                           <td>@item.UnitPrice</td>
+                           <td>@item.UnitType</td>
+                           <td>@item.Code</td>
+                           <td>@item.CodeType</td>
+                            <td>
+                                <form  asp-controller="recProduct" method="get"  >
+                                    <button type="submit" asp-action="Edit" asp-route-id="@item.Id">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                        Edit
+                                    </button>
+
+                                    <button type="submit" asp-action="delete" asp-route-id="@item.Id">
+                                        <i class="fa-solid fa-trash"></i>
+                                        Delete
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+           
+
+            @if (ViewBag.PageCount > 1)
+            {
+                <div>
+                    @if (ViewBag.skip > 0)
+                    {
+                        <a asp-action="Index" asp-route-skip="@(ViewBag.skip - 10)" class="btn btn-primary">السابق</a>
+                    }
+
+
+
+                    @if (ViewBag.skip < (ViewBag.PageCount - 1) * 10)
+                    {
+                        <a asp-action="Index" asp-route-skip="@(ViewBag.skip + 10)" class="btn btn-primary">التالي</a>
+                    }
+                </div>
+            }
+        </table>
+
+        
+
+    </section>
+</div>
+        
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

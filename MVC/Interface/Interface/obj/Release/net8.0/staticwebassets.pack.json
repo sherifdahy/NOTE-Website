@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\Interface.bundle.scp.css"
     },
     {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\afterUserLogin\\dashboard.css",
+      "PackagePath": "staticwebassets\\css\\afterUserLogin\\dashboard.css"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\afterUserLogin\\products.css",
+      "PackagePath": "staticwebassets\\css\\afterUserLogin\\products.css"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\afterUserLogin\\slider.css",
+      "PackagePath": "staticwebassets\\css\\afterUserLogin\\slider.css"
+    },
+    {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\footer.css",
       "PackagePath": "staticwebassets\\css\\footer.css"
     },
@@ -43,6 +55,10 @@
     {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\imgs\\4957136.jpg",
       "PackagePath": "staticwebassets\\imgs\\4957136.jpg"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\imgs\\923f1c7f-c35b-4cbf-b181-fe235aa28aba_AQP2Uixrv2FisRfZm2ufaL_59G-q6gUAqrAi6PqQvfT_7qLUxzTDzKGohTFtRn_MlsMrWNoBz63hOQSg.mp4",
+      "PackagePath": "staticwebassets\\imgs\\923f1c7f-c35b-4cbf-b181-fe235aa28aba_AQP2Uixrv2FisRfZm2ufaL_59G-q6gUAqrAi6PqQvfT_7qLUxzTDzKGohTFtRn_MlsMrWNoBz63hOQSg.mp4"
     },
     {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\imgs\\login-page.png",

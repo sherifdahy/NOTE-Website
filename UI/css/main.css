@@ -41,14 +41,19 @@ body{
 }
 
 
-input{
+input,textarea,select{
     line-height: 1.5rem;
     padding: 0.3rem;
-    border: 2px solid var(--main-color);
+    border: 1px solid var(--main-color);
     border-radius: 3px;
+    font-size: 15px;
 }
 
-
+.group-content{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
 button {
     padding: 0.5rem;
     background-color: var(--main-color);

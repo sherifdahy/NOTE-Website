@@ -1,0 +1,12 @@
+main {
+    
+    & .container{
+        
+
+        & .main-content{
+            width: 100%;
+    
+        }
+    }
+
+}

@@ -16,6 +16,9 @@ namespace Entities.Models
         public int Id { get; set; }
         [Required]
         [StringLength(100)]
+        public string InternalId { get; set; }
+        [Required]
+        [StringLength(100)]
         public string Name { get; set; }
         [Required]
         [StringLength(500)]

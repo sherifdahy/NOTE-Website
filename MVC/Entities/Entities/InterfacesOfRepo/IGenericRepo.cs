@@ -13,8 +13,14 @@ namespace Entities.InterfacesOfRepo
         public void Delete(T entity);
         T UpdateById(T entity);
         void Insert(T entity);
-        public IEnumerable<T> FindAll(Expression<Func<T, bool>> criteria, string[] includes);
+        public IEnumerable<T> FindAll(Expression<Func<T, bool>> criteria, string[] includes, int skip = 0, int take = 10);
+        public int Count();
 
         public T GetById(int id);
+
+        public void DeleteAll(Expression<Func<T, bool>> expression);
+
+
+
     }
 }

@@ -292,3 +292,10 @@ D:\WebApplication\NOTE-Website\MVC\Interface\Interface\obj\Release\net8.0\refint
 D:\WebApplication\NOTE-Website\MVC\Interface\Interface\obj\Release\net8.0\Interface.pdb
 D:\WebApplication\NOTE-Website\MVC\Interface\Interface\obj\Release\net8.0\Interface.genruntimeconfig.cache
 D:\WebApplication\NOTE-Website\MVC\Interface\Interface\obj\Release\net8.0\ref\Interface.dll
+D:\WebApplication\NOTE-Website\MVC\Interface\Interface\bin\Release\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+D:\WebApplication\NOTE-Website\MVC\Interface\Interface\bin\Release\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\WebApplication\NOTE-Website\MVC\Interface\Interface\bin\Release\net8.0\Microsoft.Extensions.ObjectPool.dll
+D:\WebApplication\NOTE-Website\MVC\Interface\Interface\bin\Release\net8.0\Microsoft.Extensions.WebEncoders.dll
+D:\WebApplication\NOTE-Website\MVC\Interface\Interface\bin\Release\net8.0\System.Security.Cryptography.Pkcs.dll
+D:\WebApplication\NOTE-Website\MVC\Interface\Interface\bin\Release\net8.0\System.Security.Cryptography.Xml.dll
+D:\WebApplication\NOTE-Website\MVC\Interface\Interface\bin\Release\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

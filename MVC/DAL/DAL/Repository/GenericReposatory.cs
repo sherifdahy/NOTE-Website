@@ -27,19 +27,21 @@ namespace DAL.Repository
         {
             return context.Set<T>().ToList();
         }
-        public IEnumerable<T> FindAll(Expression<Func<T, bool>> criteria, string[] includes)
-        {
-            IQueryable<T> Query = context.Set<T>();
+        
 
-            if (includes != null)
+
+        public IEnumerable<T> FindAll(Expression<Func<T, bool>> criteria,string[] includes, int skip = 0, int take = 10)
+        {
+            IQueryable<T> query = context.Set<T>();
+
+            if(includes != null)
             {
-                foreach (string include in includes)
+                foreach(string include in includes)
                 {
-                    Query.Include(include);
+                    query.Include(include);
                 }
             }
-
-            return Query.Where(criteria);
+            return query.Where(criteria).Skip(skip).Take(take).ToList();
         }
         public T GetById(int id)
         {
@@ -56,5 +58,21 @@ namespace DAL.Repository
             context.Set<T>().Update(entity);
             return entity;
         }
+
+        public void DeleteAll(Expression<Func<T,bool>> expression)
+        {
+            IQueryable<T> query = context.Set<T>().Where(expression);
+            context.Set<T>().RemoveRange(query.ToList());
+            
+        }
+
+        public int Count()
+        {
+            return context.Set<T>().Count();
+        }
+
+
+
+
     }
 }

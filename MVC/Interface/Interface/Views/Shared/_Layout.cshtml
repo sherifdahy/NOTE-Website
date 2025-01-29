@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using System.Security.Claims
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,17 +28,17 @@
             </section>
             <section class="nav-links-page">
                 <ul>
-                    <li><a asp-action="index" asp-controller="Home">Home</a></li>
-                    <li><a href="#">Our Product</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">About Us</a></li>
-
-
-                    @if(User.IsInRole("Admin"))
+                    
+                    @if (!User.Identity.IsAuthenticated)
                     {
-                        <li><a asp-action="NewRole" asp-controller="Service">New Role</a></li>
-
+                        <li><a asp-action="index" asp-controller="Home">Home</a></li>
+                        <li><a href="#">Our Product</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">About Us</a></li>
+                        
                     }
+
+                    
                 </ul>
 
             </section>
@@ -58,6 +59,7 @@
                 }
                 else
                 {
+                    <p>Welcome <span style="font-weight:600">@User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Name).Value</span></p>
                     <ul>
                         <li>
                             <a asp-action="signout" asp-controller="Account">Sign out</a>

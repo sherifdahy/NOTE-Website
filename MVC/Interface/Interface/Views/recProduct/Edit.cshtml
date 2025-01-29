@@ -1,0 +1,90 @@
+﻿@using Entities.Models
+@model Product
+
+<link rel="stylesheet" href="~/css/afterUserLogin/slider.css">
+<link rel="stylesheet" href="~/css/afterUserLogin/products.css">
+
+
+<div class="container">
+
+    <section class="slider box-content">
+        <ul>
+            <a asp-action="index" asp-controller="recdash">
+            <li>
+                <i class="fa-solid fa-gauge"></i>
+                Dashboard
+            </li>
+            </a>
+            <a asp-action="index" asp-controller="recproduct">
+            <li class="active">
+                <i class="fa-solid fa-truck-ramp-box"></i>
+                Products
+            </li></a>
+        </ul>
+    </section>
+    <section class="main-content ">
+        
+        <div class="box-content">
+            <div class="inside-box">
+                <form asp-action="Edit" asp-controller="recProduct" method="post">
+                    <div class=" input-fields">
+                        <div class="group-content">
+                            <label for="">Internal Id</label>
+                            <input asp-for="InternalId">
+                            <span asp-validation-for="InternalId" style="color:red;margin-bottom:0.2rem"></span>
+                        </div>
+                        <div class="group-content">
+                            <label for="">Name</label>
+                            <input asp-for="Name">
+                            <span asp-validation-for="Name" style="color:red;margin-bottom:0.2rem"></span>
+                        </div>
+
+                        <div class="group-content">
+                            <label for="">Unit Price</label>
+                            <input type="number" asp-for="UnitPrice">
+                            <span asp-validation-for="UnitPrice" style="color:red;margin-bottom:0.2rem"></span>
+                        </div>
+                        <div class="group-content">
+                            <label for="">Unit Type</label>
+                            <select name="unittype" id="">
+                                <option value="EA">EA</option>
+                            </select>
+                        </div>
+                        <div class="group-content">
+                            <label for="">Code</label>
+                            <input asp-for="Code">
+                            <span asp-validation-for="Code" style="color:red;margin-bottom:0.2rem"></span>
+                        </div>
+                        <div class="group-content">
+                            <label for="">Code Type</label>
+                            <select name="codetype" id="">
+                                <option value="EGS">EGS</option>
+                                <OPTION value="GS1">GS1</OPTION>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="group-content">
+                        <label for="">Description</label>
+                        <textarea asp-for="Description"></textarea>
+                        <span asp-validation-for="Description" style="color:red;margin-bottom:0.2rem"></span>
+                    </div>
+                    <div class="operation">
+                        <button type="submit">Update Product</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+        
+    </section>
+</div>
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

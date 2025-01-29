@@ -52,8 +52,7 @@ namespace Interface.Controllers
                         // create cookie
 
                         await IUnitOfWork.SignInManager.SignInWithClaimsAsync(applicationUser, false, new List<Claim>() {
-                        new Claim("Address","41 street elnegma"),
-                        new Claim("Type","male")
+                        
                         });
                         return RedirectToAction(nameof(Index), "Home");
                     }
@@ -96,7 +95,9 @@ namespace Interface.Controllers
                 {
                     bool found = await IUnitOfWork.UserManager.CheckPasswordAsync(applicationUser,loginVM.Password);
                     if (found) {
-                        await IUnitOfWork.SignInManager.SignInAsync(applicationUser, loginVM.RememberMe);
+                        await IUnitOfWork.SignInManager.SignInWithClaimsAsync(applicationUser, loginVM.RememberMe, new List<Claim>() {
+                        
+                        });
                         return RedirectToAction("index", "Home");
                     }
                 }
