@@ -1,4 +1,5 @@
 ﻿using DAL.Data;
+using Entities.InterfacesOfRepo;
 using Entities.Models;
 using Interface.ViewModels;
 using Microsoft.AspNetCore.Authorization;
@@ -14,16 +15,12 @@ namespace Interface.Controllers
     public class AccountController : BaseController
     {
 
-        public AccountController(ApplicationDbContext context,
-            UserManager<ApplicationUser> userManager,
-            RoleManager<IdentityRole<int>> roleManager,
-            SignInManager<ApplicationUser> signInManager) :
-            base(context, userManager, roleManager, signInManager)
+        public AccountController(IUnitOfWork unitOfWork):base(unitOfWork) 
         {
-
+            
         }
 
-        
+
 
 
         #region Register
@@ -42,19 +39,19 @@ namespace Interface.Controllers
                 //casting
                 ApplicationUser applicationUser = registerVM.Casting();
                 // creating
-                IdentityResult result = await userManager.CreateAsync(applicationUser, registerVM.Password);
+                IdentityResult result = await IUnitOfWork.UserManager.CreateAsync(applicationUser, registerVM.Password);
                 if (result.Succeeded)
                 {
 
                     //Assign Role
 
                     #region Assign Role to User
-                    IdentityResult nested_result = await userManager.AddToRoleAsync(applicationUser, "User");
+                    IdentityResult nested_result = await IUnitOfWork.UserManager.AddToRoleAsync(applicationUser, "User");
                     if (nested_result.Succeeded)
                     {
                         // create cookie
 
-                        await signInManager.SignInWithClaimsAsync(applicationUser, false, new List<Claim>() {
+                        await IUnitOfWork.SignInManager.SignInWithClaimsAsync(applicationUser, false, new List<Claim>() {
                         new Claim("Address","41 street elnegma"),
                         new Claim("Type","male")
                         });
@@ -94,12 +91,12 @@ namespace Interface.Controllers
         {
             if (ModelState.IsValid == true) 
             {
-                ApplicationUser applicationUser = await userManager.FindByNameAsync(loginVM.Username);
+                ApplicationUser applicationUser = await IUnitOfWork.UserManager.FindByNameAsync(loginVM.Username);
                 if (applicationUser != null) 
                 {
-                    bool found = await userManager.CheckPasswordAsync(applicationUser,loginVM.Password);
+                    bool found = await IUnitOfWork.UserManager.CheckPasswordAsync(applicationUser,loginVM.Password);
                     if (found) {
-                        await signInManager.SignInAsync(applicationUser, loginVM.RememberMe);
+                        await IUnitOfWork.SignInManager.SignInAsync(applicationUser, loginVM.RememberMe);
                         return RedirectToAction("index", "Home");
                     }
                 }
@@ -116,7 +113,7 @@ namespace Interface.Controllers
         [HttpGet]
         public async Task<IActionResult> Signout()
         {
-            await signInManager.SignOutAsync();
+            await IUnitOfWork.SignInManager.SignOutAsync();
             return RedirectToAction(nameof(Index),"Home");
         }
         #endregion

@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\imgs\\00f545aa-43de-4630-b7ed-bc2a8d7c9a47_Filtters (1).pdf",
+      "PackagePath": "staticwebassets\\imgs\\00f545aa-43de-4630-b7ed-bc2a8d7c9a47_Filtters (1).pdf"
+    },
+    {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\imgs\\2869279.jpg",
       "PackagePath": "staticwebassets\\imgs\\2869279.jpg"
     },
@@ -37,20 +41,8 @@
       "PackagePath": "staticwebassets\\imgs\\3094352.jpg"
     },
     {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\imgs\\39b7e4b6-95d6-41ef-b715-39e5fc691307_Image",
-      "PackagePath": "staticwebassets\\imgs"
-    },
-    {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\imgs\\4957136.jpg",
       "PackagePath": "staticwebassets\\imgs\\4957136.jpg"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\imgs\\63ff0e50-99e4-4ecc-aa1b-342db9efc789_Image",
-      "PackagePath": "staticwebassets\\imgs"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\imgs\\d4a77025-3f37-41c8-bd5b-ea61efb78180_442501915_506436088843568_3727653303563397655_n.jpg",
-      "PackagePath": "staticwebassets\\imgs\\d4a77025-3f37-41c8-bd5b-ea61efb78180_442501915_506436088843568_3727653303563397655_n.jpg"
     },
     {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\imgs\\login-page.png",

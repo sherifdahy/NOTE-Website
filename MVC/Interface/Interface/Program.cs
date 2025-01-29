@@ -1,4 +1,6 @@
 using DAL.Data;
+using DAL.Repository;
+using Entities.InterfacesOfRepo;
 using Entities.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
@@ -25,7 +27,9 @@ namespace Interface
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
 
-            
+            builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
+            builder.Services.AddScoped<IGenericRepo<Product>,GenericRepository<Product>>();
+
 
           
 

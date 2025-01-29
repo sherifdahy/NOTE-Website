@@ -1,4 +1,5 @@
 ﻿using DAL.Data;
+using Entities.InterfacesOfRepo;
 using Entities.Models;
 using Interface.ViewModels;
 using Microsoft.AspNetCore.Authorization;
@@ -11,11 +12,9 @@ namespace Interface.Controllers
     public class ServiceController : BaseController
     {
 
-        public ServiceController(ApplicationDbContext context,
-            UserManager<ApplicationUser> userManager,
-            RoleManager<IdentityRole<int>> roleManager,
-            SignInManager<ApplicationUser> signInManager) : base(context, userManager, roleManager, signInManager)
+        public ServiceController(IUnitOfWork unitOfWork):base(unitOfWork)
         {
+            
         }
         #region Create Role
 
@@ -23,9 +22,6 @@ namespace Interface.Controllers
 
         [Authorize(Roles ="Admin")]
         [HttpGet]
-
-
-
 
         public IActionResult NewRole()
         { 
@@ -44,7 +40,7 @@ namespace Interface.Controllers
                     Name = vM.Name,
                 };
 
-                IdentityResult result = await roleManager.CreateAsync(role);
+                IdentityResult result = await IUnitOfWork.RoleManager.CreateAsync(role);
                 if (result.Succeeded)
                 {
                     return View(new RoleVM());
