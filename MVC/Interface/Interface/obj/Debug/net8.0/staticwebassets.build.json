@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SzhwSPD97gTZydrN6FVu7BA04qzkHp75jJg+LqdNsRc=",
+  "Hash": "hv83yXZgoa7mjm1fFQ+dx1AFue+n6EIGYjw5ABacyqs=",
   "Source": "Interface",
   "BasePath": "_content/Interface",
   "Mode": "Default",
@@ -359,12 +359,12 @@
       "OriginalItemSpec": "wwwroot\\imgs\\logo.png"
     },
     {
-      "Identity": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\site.js",
+      "Identity": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\productSearchAjax.js",
       "SourceId": "Interface",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\",
       "BasePath": "_content/Interface",
-      "RelativePath": "js/site.js",
+      "RelativePath": "js/productSearchAjax.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -375,7 +375,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\site.js"
+      "OriginalItemSpec": "wwwroot\\js\\productSearchAjax.js"
     },
     {
       "Identity": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

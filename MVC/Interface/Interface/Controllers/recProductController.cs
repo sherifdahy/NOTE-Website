@@ -14,17 +14,42 @@ namespace Interface.Controllers
         {
             
         }
+        
         [HttpGet]
         public IActionResult Index(int skip = 0)
         {
             int id = int.Parse(User.Claims.FirstOrDefault(i => i.Type == ClaimTypes.NameIdentifier).Value);
-            ViewBag.Products = IUnitOfWork.Products.FindAll(x => x.ApplicationUserId == id, new string[] { },skip,10);
+            ViewBag.Products = IUnitOfWork.Products.FindAll(x => x.ApplicationUserId == id, new string[] { },skip,10).OrderByDescending(x=>x.Id);
             ViewBag.count = IUnitOfWork.Products.Count();
             ViewBag.PageCount = (int)Math.Ceiling((double)ViewBag.Count / 10);
             ViewBag.skip = skip;
             return View();
         }
 
+        [HttpGet]
+        public IActionResult SearchProduct(string text)
+        {
+            int id = int.Parse(User.Claims.FirstOrDefault(i => i.Type == ClaimTypes.NameIdentifier).Value);
+
+
+
+            if(text != null)
+            {
+                ViewBag.Products = IUnitOfWork.Products.FindAll(x => x.ApplicationUserId == id && x.Name.Contains(text), new string[] { }, 0, 10).OrderByDescending(x => x.Id);
+            }
+            else
+            {
+                ViewBag.Products = IUnitOfWork.Products.FindAll(x => x.ApplicationUserId == id, new string[] { }, 0, 10).OrderByDescending(x => x.Id);
+            }
+
+
+
+            ViewBag.count = IUnitOfWork.Products.Count();
+            ViewBag.PageCount = (int)Math.Ceiling((double)ViewBag.Count / 10);
+            ViewBag.skip = 0;
+                
+            return PartialView("_tablePartial");
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Add(ProductVM vM) 

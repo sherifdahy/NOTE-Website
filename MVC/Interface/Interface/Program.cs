@@ -18,15 +18,16 @@ namespace Interface
             builder.Services.AddControllersWithViews();
 
 
-            // register built in service
+            //  built in service need to regiser 
             builder.Services.AddDbContext<ApplicationDbContext>
-                (x=>x.UseSqlServer(builder.Configuration.GetConnectionString("online")));
+                (option=>option.UseSqlServer(builder.Configuration.GetConnectionString("online")));
+
+
+            // custom service need to register
             builder.Services.AddIdentity<ApplicationUser, IdentityRole<int>>(option =>
                 option.Password.RequireDigit = true
                 )
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-
-
             builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
             builder.Services.AddScoped<IGenericRepo<Product>,GenericRepository<Product>>();
 

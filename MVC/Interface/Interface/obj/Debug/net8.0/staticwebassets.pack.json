@@ -69,8 +69,8 @@
       "PackagePath": "staticwebassets\\imgs\\logo.png"
     },
     {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\productSearchAjax.js",
+      "PackagePath": "staticwebassets\\js\\productSearchAjax.js"
     },
     {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\bootstrap\\LICENSE",

@@ -3,49 +3,20 @@
   "WorkspaceRootPath": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\wwwroot\\favicon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}",
-      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\wwwroot\\favicon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\interface.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\interface.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\controllers\\recdash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\controllers\\recdash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\views\\recproduct\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\views\\recproduct\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\controllers\\recproductcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\controllers\\recproductcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45FCD9BE-5F0D-4913-99D7-611E050F3F91}|..\\DAL\\DAL\\DAL.csproj|d:\\webapplication\\note-website\\mvc\\dal\\dal\\repository\\genericreposatory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\wwwroot\\css\\afteruserlogin\\products.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\wwwroot\\css\\afteruserlogin\\products.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60987A85-03BD-4BCE-8852-BC816DD7E84F}|..\\Entities\\Entities\\Entities.csproj|d:\\webapplication\\note-website\\mvc\\entities\\entities\\interfacesofrepo\\igenericrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60987A85-03BD-4BCE-8852-BC816DD7E84F}|..\\Entities\\Entities\\Entities.csproj|d:\\webapplication\\note-website\\mvc\\entities\\entities\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\views\\recproduct\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\views\\recproduct\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\views\\recproduct\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\views\\recproduct\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -55,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -67,156 +38,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Program.cs",
               "RelativeDocumentMoniker": "Interface\\Program.cs",
               "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Program.cs",
               "RelativeToolTip": "Interface\\Program.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAQwCwAAACPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T19:56:02.82Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "favicon.ico - Icon [32x32, 32 bit, BMP]",
-              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\favicon.ico",
-              "RelativeDocumentMoniker": "Interface\\wwwroot\\favicon.ico",
-              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\favicon.ico - Icon [32x32, 32 bit, BMP]",
-              "RelativeToolTip": "Interface\\wwwroot\\favicon.ico - Icon [32x32, 32 bit, BMP]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001525|",
-              "WhenOpened": "2025-01-29T19:55:49.725Z",
-              "EditorCaption": " - Icon [32x32, 32 bit, BMP]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Interface",
-              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Interface.csproj",
-              "RelativeDocumentMoniker": "Interface\\Interface.csproj",
-              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Interface.csproj",
-              "RelativeToolTip": "Interface\\Interface.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-29T19:55:05.603Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Interface\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Interface\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-29T19:54:53.08Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "recDash.cs",
-              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Controllers\\recDash.cs",
-              "RelativeDocumentMoniker": "Interface\\Controllers\\recDash.cs",
-              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Controllers\\recDash.cs",
-              "RelativeToolTip": "Interface\\Controllers\\recDash.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T19:43:00.624Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\recProduct\\Index.cshtml",
-              "RelativeDocumentMoniker": "Interface\\Views\\recProduct\\Index.cshtml",
-              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\recProduct\\Index.cshtml",
-              "RelativeToolTip": "Interface\\Views\\recProduct\\Index.cshtml",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAgwJEAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-29T18:46:18.84Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IGenericRepo.cs",
-              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Entities\\Entities\\InterfacesOfRepo\\IGenericRepo.cs",
-              "RelativeDocumentMoniker": "..\\Entities\\Entities\\InterfacesOfRepo\\IGenericRepo.cs",
-              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Entities\\Entities\\InterfacesOfRepo\\IGenericRepo.cs",
-              "RelativeToolTip": "..\\Entities\\Entities\\InterfacesOfRepo\\IGenericRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAYwA8AAAB6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T18:30:49.956Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GenericReposatory.cs",
-              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\DAL\\DAL\\Repository\\GenericReposatory.cs",
-              "RelativeDocumentMoniker": "..\\DAL\\DAL\\Repository\\GenericReposatory.cs",
-              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\DAL\\DAL\\Repository\\GenericReposatory.cs",
-              "RelativeToolTip": "..\\DAL\\DAL\\Repository\\GenericReposatory.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAQwC8AAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T18:28:17.148Z",
+              "WhenOpened": "2025-01-30T17:17:54.011Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\appsettings.json",
-              "RelativeDocumentMoniker": "Interface\\appsettings.json",
-              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\appsettings.json",
-              "RelativeToolTip": "Interface\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-29T18:22:47.762Z",
+              "Title": "products.css",
+              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\afterUserLogin\\products.css",
+              "RelativeDocumentMoniker": "Interface\\wwwroot\\css\\afterUserLogin\\products.css",
+              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\afterUserLogin\\products.css",
+              "RelativeToolTip": "Interface\\wwwroot\\css\\afterUserLogin\\products.css",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-01-30T17:04:40.453Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\recProduct\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Interface\\Views\\recProduct\\Edit.cshtml",
-              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\recProduct\\Edit.cshtml",
-              "RelativeToolTip": "Interface\\Views\\recProduct\\Edit.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABwAAABQAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\recProduct\\Index.cshtml",
+              "RelativeDocumentMoniker": "Interface\\Views\\recProduct\\Index.cshtml",
+              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\recProduct\\Index.cshtml",
+              "RelativeToolTip": "Interface\\Views\\recProduct\\Index.cshtml",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-29T17:25:46.36Z",
+              "WhenOpened": "2025-01-30T17:03:53.579Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Product.cs",
-              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Entities\\Entities\\Models\\Product.cs",
-              "RelativeDocumentMoniker": "..\\Entities\\Entities\\Models\\Product.cs",
-              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Entities\\Entities\\Models\\Product.cs",
-              "RelativeToolTip": "..\\Entities\\Entities\\Models\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T16:03:58.898Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "recProductController.cs",
               "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Controllers\\recProductController.cs",
               "RelativeDocumentMoniker": "Interface\\Controllers\\recProductController.cs",
               "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Controllers\\recProductController.cs",
               "RelativeToolTip": "Interface\\Controllers\\recProductController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwBIAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T15:15:40.047Z",
+              "WhenOpened": "2025-01-30T17:03:50.178Z",
               "EditorCaption": ""
             }
           ]

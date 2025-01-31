@@ -82,73 +82,15 @@
             </div>
 
         </div>
-        <table class="box-content">
 
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Internal Id</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Unit Price</th>
-                    <th>Unit Type</th>
-                    <th>Code</th>
-                    <th>Code Type</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @if (((bool)ViewData.ContainsKey("Products") == true) && ViewBag.Products != null)
-                {
-                    @foreach (var item in ViewBag.Products)
-                    {
-                        <tr>
-                           <td>@item.Id</td>
-                           <td>@item.InternalId</td>
-                           <td>@item.Name</td>
-                           <td>@item.Description</td>
-                           <td>@item.UnitPrice</td>
-                           <td>@item.UnitType</td>
-                           <td>@item.Code</td>
-                           <td>@item.CodeType</td>
-                            <td>
-                                <form  asp-controller="recProduct" method="get"  >
-                                    <button type="submit" asp-action="Edit" asp-route-id="@item.Id">
-                                        <i class="fa-regular fa-pen-to-square"></i>
-                                        Edit
-                                    </button>
+        <div class="box-content">
+            <div class="search-box">
+                <input type="search" id="txt-search" onchange="getProduct(event)" placeholder="Type to Search for Product..." />
+                <i class="fa-solid fa-magnifying-glass"></i>
 
-                                    <button type="submit" asp-action="delete" asp-route-id="@item.Id">
-                                        <i class="fa-solid fa-trash"></i>
-                                        Delete
-                                    </button>
-                                </form>
-                            </td>
-                        </tr>
-                    }
-                }
-            </tbody>
-           
-
-            @if (ViewBag.PageCount > 1)
-            {
-                <div>
-                    @if (ViewBag.skip > 0)
-                    {
-                        <a asp-action="Index" asp-route-skip="@(ViewBag.skip - 10)" class="btn btn-primary">السابق</a>
-                    }
-
-
-
-                    @if (ViewBag.skip < (ViewBag.PageCount - 1) * 10)
-                    {
-                        <a asp-action="Index" asp-route-skip="@(ViewBag.skip + 10)" class="btn btn-primary">التالي</a>
-                    }
-                </div>
-            }
-        </table>
-
-        
+            </div>
+            <partial name="_tablePartial"></partial>
+        </div>
 
     </section>
 </div>
@@ -156,6 +98,11 @@
 
 
 @section Scripts {
+
+    <script src="~/js/productSearchAjax.js">
+        
+    </script>
+
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
