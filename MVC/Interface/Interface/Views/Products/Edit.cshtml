@@ -1,41 +1,22 @@
-﻿@using Interface.ViewModels
-@model ProductVM
+﻿@using Entities.Models
+@model Product
 
 <link rel="stylesheet" href="~/css/afterUserLogin/slider.css">
 <link rel="stylesheet" href="~/css/afterUserLogin/products.css">
 
 
 <div class="container">
-    
-    <section class="slider box-content">
-        <ul>
-            <a asp-action="index" asp-controller="recdash">
-            <li >
-                <i class="fa-solid fa-gauge"></i>
-                Dashboard
-            </li>
-            </a>
-            <a asp-action="index" asp-controller="recproduct">
-            <li class="active">
-                <i class="fa-solid fa-truck-ramp-box"></i>
-                Products
-            </li></a>
-        </ul>
-    </section>
+
+    <partial name="_sliderPartial"></partial>
     <section class="main-content ">
-        <div class="box-content btn-operation">
-            <form asp-controller="recProduct">
-                <button>Insert From EXCEL</button>
-                <button type="submit" asp-action="DeleteAll">Delete All</button>
-            </form>
-        </div>
+        
         <div class="box-content">
             <div class="inside-box">
-                <form asp-action="add" asp-controller="recProduct">
+                <form asp-action="Edit" asp-controller="recProduct" method="post">
                     <div class=" input-fields">
                         <div class="group-content">
                             <label for="">Internal Id</label>
-                            <input asp-for="InternalId" >
+                            <input asp-for="InternalId">
                             <span asp-validation-for="InternalId" style="color:red;margin-bottom:0.2rem"></span>
                         </div>
                         <div class="group-content">
@@ -75,38 +56,20 @@
                         <span asp-validation-for="Description" style="color:red;margin-bottom:0.2rem"></span>
                     </div>
                     <div class="operation">
-                        <button type="submit">Add Product</button>
+                        <button type="submit">Update Product</button>
                     </div>
                 </form>
-                
-            </div>
-
-        </div>
-
-        <div class="box-content">
-            <div class="search-box">
-                <input type="search" id="txt-search" onchange="getProduct(event)" placeholder="Type to Search for Product..." />
-                <i class="fa-solid fa-magnifying-glass"></i>
 
             </div>
 
-            <partial name="_tablePartial"></partial>
-
-
-
         </div>
-
+        
     </section>
 </div>
-        
+
 
 
 @section Scripts {
-
-    <script src="~/js/productSearchAjax.js">
-        
-    </script>
-
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }

@@ -141,6 +141,333 @@ namespace DAL.Migrations
                     b.ToTable("Products");
                 });
 
+            modelBuilder.Entity("Entities.Models.Receipt.BranchAddress", b =>
+                {
+                    b.Property<int>("BranchAddressId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BranchAddressId"));
+
+                    b.Property<string>("BuildingNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Country")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Governate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RegionCity")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Street")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("BranchAddressId");
+
+                    b.ToTable("BranchAddress");
+                });
+
+            modelBuilder.Entity("Entities.Models.Receipt.CommercialDiscountData", b =>
+                {
+                    b.Property<int>("CommercialDiscountDataId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CommercialDiscountDataId"));
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ItemId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Rate")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("CommercialDiscountDataId");
+
+                    b.HasIndex("ItemId");
+
+                    b.ToTable("CommercialDiscountData");
+                });
+
+            modelBuilder.Entity("Entities.Models.Receipt.DocumentType", b =>
+                {
+                    b.Property<int>("DocumentTypeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DocumentTypeId"));
+
+                    b.Property<string>("ReceiptType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TypeVersion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("DocumentTypeId");
+
+                    b.ToTable("DocumentType");
+                });
+
+            modelBuilder.Entity("Entities.Models.Receipt.Header", b =>
+                {
+                    b.Property<int>("HeaderId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("HeaderId"));
+
+                    b.Property<string>("Currency")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DateTimeIssued")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ExchangeRate")
+                        .HasColumnType("int");
+
+                    b.Property<string>("OrderdeliveryMode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PreviousUUID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ReceiptNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ReferenceOldUUID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SOrderNameCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Uuid")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("HeaderId");
+
+                    b.ToTable("Header");
+                });
+
+            modelBuilder.Entity("Entities.Models.Receipt.Item", b =>
+                {
+                    b.Property<int>("ItemId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ItemId"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("InternalCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ItemCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ItemType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("NetSale")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("Quantity")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int?>("ReceiptId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Total")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("TotalSale")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("UnitPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("UnitType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ItemId");
+
+                    b.HasIndex("ReceiptId");
+
+                    b.ToTable("Item");
+                });
+
+            modelBuilder.Entity("Entities.Models.Receipt.Receipt", b =>
+                {
+                    b.Property<int>("ReceiptId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReceiptId"));
+
+                    b.Property<int>("ApplicationUserId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DocumentTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("HeaderId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("NetAmount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("PaymentMethod")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SellerId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("TotalAmount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("TotalCommercialDiscount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("TotalSales")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("ReceiptId");
+
+                    b.HasIndex("ApplicationUserId");
+
+                    b.HasIndex("DocumentTypeId");
+
+                    b.HasIndex("HeaderId");
+
+                    b.HasIndex("SellerId");
+
+                    b.ToTable("Receipts");
+                });
+
+            modelBuilder.Entity("Entities.Models.Receipt.Seller", b =>
+                {
+                    b.Property<int>("SellerId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SellerId"));
+
+                    b.Property<string>("ActivityCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("BranchAddressId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("BranchCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CompanyTradeName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DeviceSerialNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Rin")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("SellerId");
+
+                    b.HasIndex("BranchAddressId");
+
+                    b.ToTable("Seller");
+                });
+
+            modelBuilder.Entity("Entities.Models.Receipt.TaxTotal", b =>
+                {
+                    b.Property<int>("TaxTotalId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TaxTotalId"));
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int?>("ReceiptId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TaxType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("TaxTotalId");
+
+                    b.HasIndex("ReceiptId");
+
+                    b.ToTable("TaxTotal");
+                });
+
+            modelBuilder.Entity("Entities.Models.Receipt.TaxableItems", b =>
+                {
+                    b.Property<int>("TaxableItemsId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TaxableItemsId"));
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int?>("ItemId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Rate")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("SubType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TaxType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("TaxableItemsId");
+
+                    b.HasIndex("ItemId");
+
+                    b.ToTable("TaxableItems");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<int>", b =>
                 {
                     b.Property<int>("Id")
@@ -285,6 +612,80 @@ namespace DAL.Migrations
                     b.Navigation("ApplicationUser");
                 });
 
+            modelBuilder.Entity("Entities.Models.Receipt.CommercialDiscountData", b =>
+                {
+                    b.HasOne("Entities.Models.Receipt.Item", null)
+                        .WithMany("CommercialDiscountData")
+                        .HasForeignKey("ItemId");
+                });
+
+            modelBuilder.Entity("Entities.Models.Receipt.Item", b =>
+                {
+                    b.HasOne("Entities.Models.Receipt.Receipt", null)
+                        .WithMany("itemData")
+                        .HasForeignKey("ReceiptId");
+                });
+
+            modelBuilder.Entity("Entities.Models.Receipt.Receipt", b =>
+                {
+                    b.HasOne("Entities.Models.ApplicationUser", "ApplicationUser")
+                        .WithMany("Receipts")
+                        .HasForeignKey("ApplicationUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Entities.Models.Receipt.DocumentType", "DocumentType")
+                        .WithMany()
+                        .HasForeignKey("DocumentTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Entities.Models.Receipt.Header", "Header")
+                        .WithMany()
+                        .HasForeignKey("HeaderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Entities.Models.Receipt.Seller", "Seller")
+                        .WithMany()
+                        .HasForeignKey("SellerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApplicationUser");
+
+                    b.Navigation("DocumentType");
+
+                    b.Navigation("Header");
+
+                    b.Navigation("Seller");
+                });
+
+            modelBuilder.Entity("Entities.Models.Receipt.Seller", b =>
+                {
+                    b.HasOne("Entities.Models.Receipt.BranchAddress", "BranchAddress")
+                        .WithMany()
+                        .HasForeignKey("BranchAddressId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("BranchAddress");
+                });
+
+            modelBuilder.Entity("Entities.Models.Receipt.TaxTotal", b =>
+                {
+                    b.HasOne("Entities.Models.Receipt.Receipt", null)
+                        .WithMany("TaxTotals")
+                        .HasForeignKey("ReceiptId");
+                });
+
+            modelBuilder.Entity("Entities.Models.Receipt.TaxableItems", b =>
+                {
+                    b.HasOne("Entities.Models.Receipt.Item", null)
+                        .WithMany("TaxableItems")
+                        .HasForeignKey("ItemId");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole<int>", null)
@@ -339,6 +740,22 @@ namespace DAL.Migrations
             modelBuilder.Entity("Entities.Models.ApplicationUser", b =>
                 {
                     b.Navigation("Products");
+
+                    b.Navigation("Receipts");
+                });
+
+            modelBuilder.Entity("Entities.Models.Receipt.Item", b =>
+                {
+                    b.Navigation("CommercialDiscountData");
+
+                    b.Navigation("TaxableItems");
+                });
+
+            modelBuilder.Entity("Entities.Models.Receipt.Receipt", b =>
+                {
+                    b.Navigation("TaxTotals");
+
+                    b.Navigation("itemData");
                 });
 #pragma warning restore 612, 618
         }

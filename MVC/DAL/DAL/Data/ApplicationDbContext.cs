@@ -1,5 +1,6 @@
 ﻿using Entities.ConfigurationSettings;
 using Entities.Models;
+using Entities.Models.Receipt;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -36,5 +37,6 @@ namespace DAL.Data
         }
 
         public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Receipt> Receipts { get; set; }    
     }
 }

@@ -1,7 +1,7 @@
 ﻿<link rel="stylesheet" href="~/css/Home.css">
 
 <div class="main-content container">
-    <a asp-action="index" asp-controller="recdash" class="box-content">
+    <a asp-action="index" asp-controller="Dashboard" class="box-content">
         <i class="fa-solid fa-receipt"></i>
         <p >Receipt</p>
     </a>
@@ -50,6 +50,7 @@
                     return item.text; // كيفية عرض العنصر في القائمة
                 },
                 templateSelection: function (item) {
+                    
                     return item.text; // كيفية عرض العنصر المحدد
                 }
             });

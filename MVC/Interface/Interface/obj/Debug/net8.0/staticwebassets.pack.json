@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\afterUserLogin\\dashboard.css"
     },
     {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\afterUserLogin\\newreceipt.css",
+      "PackagePath": "staticwebassets\\css\\afterUserLogin\\newreceipt.css"
+    },
+    {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\afterUserLogin\\products.css",
       "PackagePath": "staticwebassets\\css\\afterUserLogin\\products.css"
     },

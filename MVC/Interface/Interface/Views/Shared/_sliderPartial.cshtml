@@ -1,0 +1,27 @@
+﻿<section class="slider box-content">
+    <ul>
+        <a asp-action="index" asp-controller="dashboard">
+        <li>
+            <i class="fa-solid fa-gauge"></i>
+            Dashboard
+        </li>
+        </a>
+        <a asp-action="index" asp-controller="Receipts">
+        <li>
+            <i class="fa-solid fa-receipt"></i>
+            Receipts
+        </li>
+        </a>
+        <div id="id-Receipt-menu" hidden>
+            <ul>
+                <a asp-action="index" asp-controller="receipts"><li>Index</li></a>
+                <a asp-action="new" asp-controller="receipts"><li>Create</li></a>
+            </ul>
+        </div>
+        <a asp-action="index" asp-controller="Products">
+        <li >
+            <i class="fa-solid fa-truck-ramp-box"></i>
+            Products
+        </li></a>
+    </ul>
+</section>

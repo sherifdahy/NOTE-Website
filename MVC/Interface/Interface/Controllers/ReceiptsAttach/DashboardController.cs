@@ -2,14 +2,14 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Interface.Controllers
+namespace Interface.Controllers.Receipt
 {
     [Authorize]
-    public class recDash : BaseController
+    public class DashboardController : BaseController
     {
-        public recDash(IUnitOfWork unitOfWork):base(unitOfWork)
+        public DashboardController(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
-            
+
         }
         public IActionResult Index()
         {

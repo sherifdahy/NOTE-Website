@@ -42,6 +42,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NccmVjRGFzaFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/WebApplication/NOTE-Website/MVC/Interface/Interface/Views/Receipt/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWlwdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication/NOTE-Website/MVC/Interface/Interface/Views/Receipt/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWlwdFxOZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/WebApplication/NOTE-Website/MVC/Interface/Interface/Views/recProduct/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NccmVjUHJvZHVjdFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

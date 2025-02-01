@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Entities.Models.Receipt;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -11,7 +12,7 @@ namespace Entities.Models
 {
     public class ApplicationUser:IdentityUser<int>
     {
-        
+        public virtual ICollection<Receipt.Receipt> Receipts { get; set; } = new HashSet<Receipt.Receipt>();
         public virtual ICollection<Product> Products { get; set; } = new HashSet<Product>();
     }
 }

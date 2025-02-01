@@ -1,0 +1,64 @@
+main{
+    & .content{
+
+
+        & .receipt-header{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            padding: 1.2rem;
+            
+        }
+
+        & .receipt-items{
+            display: flex;
+            flex-grow: 1;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+
+
+            & .left-box{
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                min-width: 70%;
+                & .input-fields{
+                    padding: 1.2rem;
+                    display: flex;
+                    
+                    flex-direction: column;
+
+                    & >div{
+                        display: flex;
+                        gap: 20px;
+                        flex-wrap: wrap;
+                    }
+                }
+
+                & .summary-item{
+                    padding: 1.2rem;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                }
+            }
+
+            & .right-box{
+                gap: 20px;
+                
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                padding: 1.2rem;
+                & >div{
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    flex-grow: 1;
+                    gap: 20px;
+                    
+                }
+            }
+        }
+    }
+}

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vfWwcNlIGT9Pww/X5lFaOSdNv+oKVZVRNjac4VOT3MQ=",
+  "Hash": "MIGGXUB05P4I9BGCAmfJBDRhsu8w24YtTBS5VKpqqs8=",
   "Source": "Interface",
   "BasePath": "_content/Interface",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\afterUserLogin\\dashboard.css"
+    },
+    {
+      "Identity": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\afterUserLogin\\newreceipt.css",
+      "SourceId": "Interface",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\",
+      "BasePath": "_content/Interface",
+      "RelativePath": "css/afterUserLogin/newreceipt.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\afterUserLogin\\newreceipt.css"
     },
     {
       "Identity": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\afterUserLogin\\products.css",

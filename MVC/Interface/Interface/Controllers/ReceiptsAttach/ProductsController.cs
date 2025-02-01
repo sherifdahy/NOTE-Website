@@ -5,21 +5,21 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
-namespace Interface.Controllers
+namespace Interface.Controllers.Receipt
 {
     [Authorize]
-    public class recProductController : BaseController
+    public class ProductsController : BaseController
     {
-        public recProductController(IUnitOfWork unitOfWork):base(unitOfWork)
+        public ProductsController(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
-            
+
         }
-        
+
         [HttpGet]
         public IActionResult Index(int skip = 0)
         {
             int id = int.Parse(User.Claims.FirstOrDefault(i => i.Type == ClaimTypes.NameIdentifier).Value);
-            ViewBag.Products = IUnitOfWork.Products.FindAll(x => x.ApplicationUserId == id, new string[] { },skip,10).OrderByDescending(x=>x.Id);
+            ViewBag.Products = IUnitOfWork.Products.FindAll(x => x.ApplicationUserId == id, new string[] { }, skip, 10).OrderByDescending(x => x.Id);
             ViewBag.count = IUnitOfWork.Products.Count();
             ViewBag.PageCount = (int)Math.Ceiling((double)ViewBag.Count / 10);
             ViewBag.skip = skip;
@@ -32,7 +32,7 @@ namespace Interface.Controllers
             int id = int.Parse(User.Claims.FirstOrDefault(i => i.Type == ClaimTypes.NameIdentifier).Value);
 
             var products = IUnitOfWork.Products.FindAll(x => x.ApplicationUserId == id && x.Name.Contains(q), new string[] { })
-                .Select(p => new { id = p.Id, text = p.Name }) 
+                .Select(p => new { id = p.Id, text = p.Name, test = p.Code })
                 .ToList();
 
             return Json(new { results = products });
@@ -54,7 +54,7 @@ namespace Interface.Controllers
             }
             ViewBag.count = IUnitOfWork.Products.Count();
             ViewBag.PageCount = (int)Math.Ceiling((double)ViewBag.Count / 10);
-            ViewBag.skip = 0; 
+            ViewBag.skip = 0;
             #endregion
 
             return PartialView("_tablePartial");
@@ -64,22 +64,24 @@ namespace Interface.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Add(ProductVM vM) 
+        public IActionResult Add(ProductVM vM)
         {
-            if (ModelState.IsValid == true) {
+            if (ModelState.IsValid == true)
+            {
                 int id = int.Parse(User.Claims.FirstOrDefault(i => i.Type == ClaimTypes.NameIdentifier).Value);
                 Product product = vM.Casting(id);
                 IUnitOfWork.Products.Insert(product);
                 IUnitOfWork.Save();
                 return RedirectToAction(nameof(Index));
             }
-            return RedirectToAction(nameof(Index),vM);
+            return RedirectToAction(nameof(Index), vM);
         }
 
         [ValidateAntiForgeryToken]
         public IActionResult Delete(int id)
         {
-            if (id !=0) {
+            if (id != 0)
+            {
                 IUnitOfWork.Products.Delete(IUnitOfWork.Products.GetById(id));
                 IUnitOfWork.Save();
             }
@@ -87,10 +89,10 @@ namespace Interface.Controllers
         }
 
         [ValidateAntiForgeryToken]
-        public IActionResult DeleteAll ()
+        public IActionResult DeleteAll()
         {
             int id = int.Parse(User.Claims.FirstOrDefault(i => i.Type == ClaimTypes.NameIdentifier).Value);
-            IUnitOfWork.Products.DeleteAll(x=>x.ApplicationUserId == id);
+            IUnitOfWork.Products.DeleteAll(x => x.ApplicationUserId == id);
             IUnitOfWork.Save();
             return RedirectToAction(nameof(Index));
         }
@@ -101,14 +103,14 @@ namespace Interface.Controllers
         // recProduct/edit/1
         public IActionResult Edit(int id)
         {
-            
+
             return View(IUnitOfWork.Products.GetById(id));
 
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id,ProductVM vM)
+        public IActionResult Edit(int id, ProductVM vM)
         {
             if (ModelState.IsValid == true)
             {
