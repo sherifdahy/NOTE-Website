@@ -19,12 +19,7 @@ namespace Interface.Controllers
         {
             return View();
         }
-        [HttpPost]
-        public ActionResult Index(IFormFile Image)
-        {
-            uploadFile.uploadImage(hostEnvironment, Image);
-            return View();
-        }
+        
 
     }
 }

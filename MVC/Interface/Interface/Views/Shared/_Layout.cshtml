@@ -16,16 +16,17 @@
     <!-- cdn fontawsme -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!-- end cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 
 
 <body>
     <header class="">
         <div class="header-content container">
-            <section class="logo">
+            <a asp-action="index" asp-controller="home" class="logo">
                 <img src="~/imgs/logo.png" alt="">
                 NOTE Solution
-            </section>
+            </a>
             <section class="nav-links-page">
                 <ul>
                     
@@ -83,7 +84,9 @@
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

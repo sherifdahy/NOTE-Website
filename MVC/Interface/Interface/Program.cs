@@ -3,6 +3,7 @@ using DAL.Repository;
 using Entities.InterfacesOfRepo;
 using Entities.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,7 +21,7 @@ namespace Interface
 
             //  built in service need to regiser 
             builder.Services.AddDbContext<ApplicationDbContext>
-                (option=>option.UseSqlServer(builder.Configuration.GetConnectionString("online")));
+                (option => option.UseSqlServer(builder.Configuration.GetConnectionString("online")));
 
 
             // custom service need to register
@@ -28,15 +29,15 @@ namespace Interface
                 option.Password.RequireDigit = true
                 )
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
-            builder.Services.AddScoped<IGenericRepo<Product>,GenericRepository<Product>>();
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+            builder.Services.AddScoped<IGenericRepo<Product>, GenericRepository<Product>>();
 
 
-          
+
 
             var app = builder.Build();
-            
-            
+
+
 
 
             // Configure the HTTP request pipeline.
@@ -55,8 +56,21 @@ namespace Interface
             app.UseAuthorization();
 
             app.MapControllerRoute(
+                name: "Product",
+                pattern: "recProduct/{id}/",
+                defaults: new
+                {
+                    controller = "recproduct",
+                    action = "Edit",
+                }
+                );
+
+            app.UseEndpoints(endpoint => endpoint.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                pattern: "{controller=Home}/{action=Index}/{id?}"));
+
+
 
             app.Run();
         }

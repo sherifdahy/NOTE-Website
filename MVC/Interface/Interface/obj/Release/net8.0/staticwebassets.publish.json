@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "j5aj58kd3/SrGMat1XsWVIm4EPiKy2XRzfg/tH1+wzM=",
+  "Hash": "bK7Jhafg5jKovUF56U/xolqw3jvC9/v3T5AuN91KXBI=",
   "Source": "Interface",
   "BasePath": "_content/Interface",
   "Mode": "Default",
@@ -148,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\header.css"
+    },
+    {
+      "Identity": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\Home.css",
+      "SourceId": "Interface",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\",
+      "BasePath": "_content/Interface",
+      "RelativePath": "css/Home.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Home.css"
     },
     {
       "Identity": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\login.css",

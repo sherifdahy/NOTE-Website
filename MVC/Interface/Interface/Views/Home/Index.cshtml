@@ -1,4 +1,58 @@
-﻿
+﻿<link rel="stylesheet" href="~/css/Home.css">
+
+<div class="main-content container">
+    <a asp-action="index" asp-controller="recdash" class="box-content">
+        <i class="fa-solid fa-receipt"></i>
+        <p >Receipt</p>
+    </a>
+    <a href="#" class="box-content">
+        <i class="fa-solid fa-file-invoice"></i>
+        <p>Invoice</p>
+    </a>
+</div>
 
 
-<a asp-action="index" asp-controller="recdash">Receipt</a>
+
+
+<select id="mySelect2" style="width: 300px;"></select>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $('#mySelect2').select2({
+                ajax: {
+                    url: '/recproduct/fuck', // رابط الـ Action
+                    dataType: 'json',
+                    delay: 250,
+                    data: function (params) {
+                        return {
+                            q: params.term, // الكلمة التي يكتبها المستخدم
+                            
+                        };
+                    },
+                    processResults: function (data, params) {
+                        params.page = params.page || 1;
+                        return {
+                            results: data.results, // البيانات التي سيتم عرضها
+                            pagination: {
+                                more: false // هل هناك المزيد من النتائج؟
+                            }
+                        };
+                    },
+                    cache: true
+                },
+                minimumInputLength: 1, // الحد الأدنى لعدد الأحرف قبل إرسال الطلب
+                placeholder: 'ابحث عن منتج...', // نص افتراضي في حقل البحث
+                templateResult: function (item) {
+                    if (item.loading) {
+                        return "جاري التحميل...";
+                    }
+                    return item.text; // كيفية عرض العنصر في القائمة
+                },
+                templateSelection: function (item) {
+                    return item.text; // كيفية عرض العنصر المحدد
+                }
+            });
+        });
+</script>
+}

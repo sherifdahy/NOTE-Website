@@ -26,14 +26,25 @@ namespace Interface.Controllers
             return View();
         }
 
-        [HttpGet]
-        public IActionResult SearchProduct(string text)
+
+        public IActionResult fuck(string q)
         {
             int id = int.Parse(User.Claims.FirstOrDefault(i => i.Type == ClaimTypes.NameIdentifier).Value);
 
+            var products = IUnitOfWork.Products.FindAll(x => x.ApplicationUserId == id && x.Name.Contains(q), new string[] { })
+                .Select(p => new { id = p.Id, text = p.Name }) 
+                .ToList();
+
+            return Json(new { results = products });
+        }
 
 
-            if(text != null)
+        [HttpGet("[Controller]/[action]/{text}")]
+        public IActionResult SearchProduct(string text)
+        {
+            #region code
+            int id = int.Parse(User.Claims.FirstOrDefault(i => i.Type == ClaimTypes.NameIdentifier).Value);
+            if (text != null)
             {
                 ViewBag.Products = IUnitOfWork.Products.FindAll(x => x.ApplicationUserId == id && x.Name.Contains(text), new string[] { }, 0, 10).OrderByDescending(x => x.Id);
             }
@@ -41,15 +52,16 @@ namespace Interface.Controllers
             {
                 ViewBag.Products = IUnitOfWork.Products.FindAll(x => x.ApplicationUserId == id, new string[] { }, 0, 10).OrderByDescending(x => x.Id);
             }
-
-
-
             ViewBag.count = IUnitOfWork.Products.Count();
             ViewBag.PageCount = (int)Math.Ceiling((double)ViewBag.Count / 10);
-            ViewBag.skip = 0;
-                
+            ViewBag.skip = 0; 
+            #endregion
+
             return PartialView("_tablePartial");
         }
+
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Add(ProductVM vM) 
@@ -82,7 +94,11 @@ namespace Interface.Controllers
             IUnitOfWork.Save();
             return RedirectToAction(nameof(Index));
         }
-        [HttpGet]
+
+
+        [Route("[Controller]/[action]/{id}")]
+        [HttpGet("[controller]/[action]/{id}")]
+        // recProduct/edit/1
         public IActionResult Edit(int id)
         {
             

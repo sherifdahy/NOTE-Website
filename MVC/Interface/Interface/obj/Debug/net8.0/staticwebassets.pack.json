@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Interface.bundle.scp.css"
     },
     {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\Home.css",
+      "PackagePath": "staticwebassets\\css\\Home.css"
+    },
+    {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\afterUserLogin\\dashboard.css",
       "PackagePath": "staticwebassets\\css\\afterUserLogin\\dashboard.css"
     },

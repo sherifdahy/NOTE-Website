@@ -44,36 +44,7 @@ main {
                 }
                 
             }
-            & table{
-                border-spacing: 0;
-                border: 2px solid var(--main-color);
-                text-align: center;
-                width: 100%;
-                line-height: 3rem;
-                margin-bottom: 1.2rem;
-                & thead{
-                    background-color: var(--main-color);
-                    color: white;
-
-                }
-                & tbody{
-                    & tr:hover{
-                        background-color: var(--body-color);
-                    }
-
-                    & tr{
-                        & td{
-                            max-width: 100px;
-                            overflow:hidden;
-                            white-space: nowrap;
-                            text-overflow: ellipsis;
-                            
-                        }
-                        
-                    }
-                }
-                
-            }
+            
         }
     }
 
