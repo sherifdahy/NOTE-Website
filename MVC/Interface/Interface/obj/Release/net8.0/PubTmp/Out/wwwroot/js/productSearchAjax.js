@@ -3,7 +3,7 @@
 document.getElementById("txt-search").value;
 
 function getProduct(event) {
-    var url_ = "/recproduct/searchproduct/";
+    var url_ = "/products/searchproduct";
     $.ajax(
         {
             url: url_,

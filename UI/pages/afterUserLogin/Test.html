@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    sadsad
+    <select id="mySelect2" style="width: 300px;"></select>
+    
+    
+
+
+
+
+
+
+
+    <style>
+        /* تعديلات CSS */
+        .select2-container {
+            width: 50% !important;
+        }
+
+        .select2-container .select2-selection--single {
+            height: 40px !important;
+            line-height: 40px !important;
+            background-color: #f8f9fa !important;
+            border: 1px solid #ced4da !important;
+            border-radius: 4px !important;
+            font-size: 16px !important;
+            color: #333 !important;
+        }
+
+        .select2-container .select2-selection--single .select2-selection__rendered {
+            color: #007bff !important;
+        }
+
+        .select2-container .select2-dropdown {
+            border: 1px solid #ced4da !important;
+            border-radius: 4px !important;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+            max-height: 200px !important;
+            overflow-y: auto !important;
+        }
+
+        .select2-container .select2-results__option {
+            padding: 8px 12px !important;
+            font-size: 14px !important;
+        }
+
+        .select2-container .select2-results__option--highlighted {
+            background-color: #007bff !important;
+            color: #fff !important;
+        }
+    </style>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Select2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        
+        $(document).ready(function() {
+        $('#mySelect2').select2({
+        ajax: {
+            url: 'https://api.example.com/data', // رابط API الذي سيتم إرسال الطلب إليه
+            dataType: 'json', // نوع البيانات المتوقعة من الخادم
+            delay: 250, // تأخير بين كتابة المستخدم وإرسال الطلب (بالمللي ثانية)
+            data: function(params) {
+                return {
+                    q: params.term, // الكلمة التي يكتبها المستخدم في حقل البحث
+                    page: params.page || 1 // رقم الصفحة (للتقسيم pagination)
+                };
+            },
+            processResults: function(data, params) {
+                params.page = params.page || 1;
+
+                // تحويل البيانات الواردة من الخادم إلى التنسيق الذي تفهمه Select2
+                return {
+                    results: data.items, // البيانات التي سيتم عرضها في القائمة
+                    pagination: {
+                        more: data.more // هل هناك المزيد من النتائج لتحميلها؟
+                    }
+                };
+            },
+            cache: true // تخزين النتائج مؤقتًا لتحسين الأداء
+        },
+        minimumInputLength: 1, // الحد الأدنى لعدد الأحرف قبل إرسال الطلب
+        placeholder: 'ابحث عن عنصر...', // نص افتراضي في حقل البحث
+        templateResult: function(item) {
+            if (item.loading) {
+                return "جاري التحميل...";
+            }
+            return item.text; // كيفية عرض العنصر في القائمة
+        },
+        templateSelection: function(item) {
+            return item.text; // كيفية عرض العنصر المحدد
+        }
+    });
+});
+    </script>
+</body>
+</html>

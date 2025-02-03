@@ -1,6 +1,6 @@
 main{
     & .content{
-
+        flex-grow: 1;
 
         & .receipt-header{
             display: flex;

@@ -7,6 +7,7 @@
     <!-- links css -->
     <link rel="stylesheet" href="/UI/css/main.css">
     <link rel="stylesheet" href="/UI/css/header.css">
+    <link rel="stylesheet" href="/UI/css/afterUserLogin/slider.css">
     <link rel="stylesheet" href="/UI/css/footer.css">
     <link rel="stylesheet" href="/UI/css/afterUserLogin/newreceipt.css">
     <!-- end of links css -->
@@ -16,6 +17,9 @@
     <!-- cdn fontawsme -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!-- end cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    
+
 </head>
 
 
@@ -49,148 +53,167 @@
             </section>
         </div>
     </header>
-    <main class="">
-        <div class="content container">
-            <div class="receipt-header box-content">
-                <div class="group">
-                    <label for="">Receipt Number</label>
-                    <input type="text" >
-                    <span>error</span>
+
+    <main >
+        <div class="container">
+            <section class="slider box-content">
+                <ul>
+                    <a href="#" ><li class="active">
+                        <i class="fa-solid fa-gauge"></i>
+                        Dashboard</li>
+                    </a>
+                    <a href="#"><li>
+                        <i class="fa-solid fa-truck-ramp-box"></i>
+                        Products</li></a>
+                </ul>
+            </section>
+            
+
+            <div class="content ">
+                <div class="receipt-header box-content">
+                    <div class="group">
+                        <label for="">Receipt Number</label>
+                        <input type="text" >
+                        <span>error</span>
+                    </div>
+                    <div class="group">
+                        <label for="">Date Time</label>
+                        <input type="datetime-local" >
+                        <span>error</span>
+                    </div>
+                    <div class="group">
+                        <label for="">Issued Number</label>
+                        <input type="text">
+                        <span>error</span>
+                    </div>
+                    <div class="group">
+                        <label for="">Issued Name</label>
+                        <input type="text" >
+                        <span>error</span>
+                    </div>
                 </div>
-                <div class="group">
-                    <label for="">Date Time</label>
-                    <input type="datetime-local" >
-                    <span>error</span>
-                </div>
-                <div class="group">
-                    <label for="">Issued Number</label>
-                    <input type="text">
-                    <span>error</span>
-                </div>
-                <div class="group">
-                    <label for="">Issued Name</label>
-                    <input type="text" >
-                    <span>error</span>
-                </div>
-            </div>
-            <div class="receipt-items ">
-                <div class="left-box">
-                    <div class="input-fields box-content">
+                <div class="receipt-items ">
+                    <div class="left-box">
+                        <div class="input-fields box-content">
+                            <div>
+                                <div class="group " style="min-width: 40%;">
+                                    <label for="">Product Name</label>
+                                    <select id="mySelect2"></select>
+                                    <span>error</span>
+                                </div>
+                                
+                                <div class="group">
+                                    <label for="">Quentity</label>
+                                    <input type="number" >
+                                    <span>error</span>
+                                </div>
+                                <div class="group">
+                                    <label for="">Unit Price</label>
+                                    <input type="number" >
+                                    <span>error</span>
+                                </div>
+                                
+                                <div class="group">
+                                    <label for="">Discount</label>
+                                    <input type="number" >
+                                    <span>error</span>
+                                </div>
+                                
+                            </div>
+                            <div>
+                                <div class="group">
+                                    <label for="">Description</label>
+                                    <textarea type="text" ></textarea>
+                                    <span>error</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="summary-item box-content">
+                                <div class="group">
+                                    <label for="">before Discount</label>
+                                    <input type="number" >
+                                    <span>error</span>
+                                </div>
+                                <div class="group">
+                                    <label for="">before Tax</label>
+                                    <input type="number" >
+                                    <span>error</span>
+                                </div>
+                                <div class="group">
+                                    <label for="">Total Amount</label>
+                                    <input type="number" >
+                                    <span>error</span>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="right-box box-content">
                         <div>
                             <div class="group">
-                                <label for="">Product Name</label>
-                                <input type="text" >
-                                <span>error</span>
-                            </div>
-                            
-                            <div class="group">
-                                <label for="">Quentity</label>
-                                <input type="number" >
+                                <label for="">Tax type</label>
+                                <select name="" id="">
+                                    <option value="0">Select tax</option>
+        
+                                </select>
                                 <span>error</span>
                             </div>
                             <div class="group">
-                                <label for="">Unit Price</label>
-                                <input type="number" >
+                                <label for="">Sub Tax type</label>
+                                <select name="" id="">
+                                    <option value="0">Select Sub tax</option>
+                                </select>
                                 <span>error</span>
                             </div>
-                            
                             <div class="group">
-                                <label for="">Discount</label>
-                                <input type="number" >
+                                <label for="">Precent</label>
+                                <input type="number" />
                                 <span>error</span>
                             </div>
-                            
+                            <button>Add Tax</button>
                         </div>
-                        <div>
-                            <div class="group">
-                                <label for="">Description</label>
-                                <textarea type="text" ></textarea>
-                                <span>error</span>
-                            </div>
-                        </div>
-                    </div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Sub Type</th>
+                                    <th>Rate</th>
+                                    <th>Ammount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
     
-                    <div class="summary-item box-content">
-                            <div class="group">
-                                <label for="">before Discount</label>
-                                <input type="number" >
-                                <span>error</span>
-                            </div>
-                            <div class="group">
-                                <label for="">before Tax</label>
-                                <input type="number" >
-                                <span>error</span>
-                            </div>
-                            <div class="group">
-                                <label for="">Total Amount</label>
-                                <input type="number" >
-                                <span>error</span>
-                            </div>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                <div class="right-box box-content">
-                    <div>
-                        <div class="group">
-                            <label for="">Tax type</label>
-                            <select name="" id="">
-                                <option value="0">Select tax</option>
-    
-                            </select>
-                            <span>error</span>
-                        </div>
-                        <div class="group">
-                            <label for="">Sub Tax type</label>
-                            <select name="" id="">
-                                <option value="0">Select Sub tax</option>
-                            </select>
-                            <span>error</span>
-                        </div>
-                        <div class="group">
-                            <label for="">Precent</label>
-                            <input type="number" />
-                            <span>error</span>
-                        </div>
-                        <button>Add Tax</button>
-                    </div>
+                <div class="receipt-items-table box-content">
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>Type</th>
-                                <th>Sub Type</th>
-                                <th>Rate</th>
-                                <th>Ammount</th>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Discription</th>
+                                <th>Quantity</th>
+                                <th>Unit Price</th>
+                                <th>Tax amount</th>
+                                <th>Total before Tax</th>
+                                <th>Total after Tax</th>
+                                <th></th>
                             </tr>
                         </thead>
+    
                         <tbody>
-
+                            
                         </tbody>
                     </table>
                 </div>
             </div>
-            <div class="receipt-items-table box-content">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Discription</th>
-                            <th>Quantity</th>
-                            <th>Unit Price</th>
-                            <th>Tax amount</th>
-                            <th>Total before Tax</th>
-                            <th>Total after Tax</th>
-                            <th></th>
-                        </tr>
-                    </thead>
 
-                    <tbody>
-                        
-                    </tbody>
-                </table>
-            </div>
+            
         </div>
 
     </main>
+    
     <footer>
         <div class="footer-content container">
             <section class="">
@@ -198,5 +221,53 @@
             </section>
         </div>
     </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Select2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        
+        $(document).ready(function() {
+        $('#mySelect2').select2({
+        ajax: {
+            url: 'https://localhost:7229/Products/RetrieveProduct', // رابط API الذي سيتم إرسال الطلب إليه
+            dataType: 'json', // نوع البيانات المتوقعة من الخادم
+            delay: 250, // تأخير بين كتابة المستخدم وإرسال الطلب (بالمللي ثانية)
+            data: function(params) {
+                return {
+                    q: params.term, // الكلمة التي يكتبها المستخدم في حقل البحث
+                    page: params.page || 1 // رقم الصفحة (للتقسيم pagination)
+                };
+            },
+            processResults: function(data, params) {
+                params.page = params.page || 1;
+
+                // تحويل البيانات الواردة من الخادم إلى التنسيق الذي تفهمه Select2
+                return {
+                    results: data.items, // البيانات التي سيتم عرضها في القائمة
+                    pagination: {
+                        more: data.more // هل هناك المزيد من النتائج لتحميلها؟
+                    }
+                };
+            },
+            cache: true // تخزين النتائج مؤقتًا لتحسين الأداء
+        },
+        minimumInputLength: 1, // الحد الأدنى لعدد الأحرف قبل إرسال الطلب
+        placeholder: 'ابحث عن عنصر...', // نص افتراضي في حقل البحث
+        templateResult: function(item) {
+            if (item.loading) {
+                return "جاري التحميل...";
+            }
+            return item.text; // كيفية عرض العنصر في القائمة
+        },
+        templateSelection: function(item) {
+            return item.text; // كيفية عرض العنصر المحدد
+        }
+    });
+});
+    </script>
+
+
 </body>
 </html>

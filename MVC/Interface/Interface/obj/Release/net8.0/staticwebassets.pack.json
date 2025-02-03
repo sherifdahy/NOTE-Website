@@ -77,8 +77,20 @@
       "PackagePath": "staticwebassets\\imgs\\logo.png"
     },
     {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\handle_receipt.js",
+      "PackagePath": "staticwebassets\\js\\handle_receipt.js"
+    },
+    {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\productSearchAjax.js",
       "PackagePath": "staticwebassets\\js\\productSearchAjax.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\json file\\SubTaxType.json",
+      "PackagePath": "staticwebassets\\json file\\SubTaxType.json"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\json file\\TaxType.json",
+      "PackagePath": "staticwebassets\\json file\\TaxType.json"
     },
     {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\bootstrap\\LICENSE",

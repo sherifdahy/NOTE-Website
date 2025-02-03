@@ -3,6 +3,7 @@ using Entities.Models;
 using Interface.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using NuGet.Protocol;
 using System.Security.Claims;
 
 namespace Interface.Controllers.Receipt
@@ -12,12 +13,13 @@ namespace Interface.Controllers.Receipt
     {
         public ProductsController(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
-
         }
 
         [HttpGet]
         public IActionResult Index(int skip = 0)
         {
+            
+
             int id = int.Parse(User.Claims.FirstOrDefault(i => i.Type == ClaimTypes.NameIdentifier).Value);
             ViewBag.Products = IUnitOfWork.Products.FindAll(x => x.ApplicationUserId == id, new string[] { }, skip, 10).OrderByDescending(x => x.Id);
             ViewBag.count = IUnitOfWork.Products.Count();
@@ -26,20 +28,21 @@ namespace Interface.Controllers.Receipt
             return View();
         }
 
+        
 
-        public IActionResult fuck(string q)
+        public IActionResult RetrieveProduct(string q)
         {
             int id = int.Parse(User.Claims.FirstOrDefault(i => i.Type == ClaimTypes.NameIdentifier).Value);
 
             var products = IUnitOfWork.Products.FindAll(x => x.ApplicationUserId == id && x.Name.Contains(q), new string[] { })
-                .Select(p => new { id = p.Id, text = p.Name, test = p.Code })
+                .Select(p => new { id = p.Id, name = p.Name, unitprice = p.UnitPrice , description = p.Description })
                 .ToList();
 
             return Json(new { results = products });
         }
 
 
-        [HttpGet("[Controller]/[action]/{text}")]
+        [HttpGet]
         public IActionResult SearchProduct(string text)
         {
             #region code
@@ -76,8 +79,7 @@ namespace Interface.Controllers.Receipt
             }
             return RedirectToAction(nameof(Index), vM);
         }
-
-        [ValidateAntiForgeryToken]
+        [HttpGet]
         public IActionResult Delete(int id)
         {
             if (id != 0)
@@ -98,8 +100,7 @@ namespace Interface.Controllers.Receipt
         }
 
 
-        [Route("[Controller]/[action]/{id}")]
-        [HttpGet("[controller]/[action]/{id}")]
+        
         // recProduct/edit/1
         public IActionResult Edit(int id)
         {
