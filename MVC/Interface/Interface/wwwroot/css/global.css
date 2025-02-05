@@ -1,0 +1,86 @@
+:root{
+    --main-color:#c1c1c1;
+    --body-color:#5b8ea0;
+    --active-color:#2E5077;
+    --hover-color:#A5BFCC;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+    font-family: "Noto Sans Arabic", serif;
+    font-optical-sizing: auto;
+    
+}
+
+body{
+    background-color: var(--main-color);
+}
+
+
+.group{
+    display: flex;
+    flex-direction: column;
+    margin-block : 1.2rem;
+}
+
+
+input,textarea,select{
+    border: none;
+    border-bottom: 1px solid var(--body-color);
+    padding: 0.3rem;
+}
+
+
+
+
+.btn-primary {
+    background-color: var(--body-color);
+    color: white;
+    cursor: pointer;
+    min-width: 5rem;
+}
+
+
+.layout{
+}
+
+.layout .slider-main{
+    display: flex;
+    justify-content: space-between;
+    & slider{
+        width: 15rem;
+    }
+
+& main {
+    margin-block: 1.2rem;
+    margin-left: 1.2rem;
+    margin-right: 16.2rem;
+    flex-grow: 1;
+}
+
+}
+
+
+.error{
+    color:red;
+}
+
+
+.box-area {
+    padding: 1.2rem;
+    background-color: white;
+    margin-block: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+

@@ -30,7 +30,7 @@ namespace DAL.Repository
         
 
 
-        public IEnumerable<T> FindAll(Expression<Func<T, bool>> criteria,string[] includes, int skip = 0, int take = 10)
+        public IQueryable<T> FindAll(Expression<Func<T, bool>> criteria,string[] includes)
         {
             IQueryable<T> query = context.Set<T>();
 
@@ -41,7 +41,7 @@ namespace DAL.Repository
                     query.Include(include);
                 }
             }
-            return query.Where(criteria).Skip(skip).Take(take).ToList();
+            return query.Where(criteria);
         }
         public T GetById(int id)
         {

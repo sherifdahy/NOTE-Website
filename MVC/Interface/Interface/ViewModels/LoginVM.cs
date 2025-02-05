@@ -8,7 +8,7 @@ namespace Interface.ViewModels
     {
         [Required]
         [MaxLength(100)]
-        public string Username { get; set; }
+        public string Email { get; set; }
         [Required]
         [MaxLength(100)]
         [DataType(DataType.Password)]

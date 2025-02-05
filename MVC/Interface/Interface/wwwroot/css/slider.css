@@ -1,0 +1,44 @@
+slider{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--body-color);
+    position: fixed;
+    height: calc(100vh - 4rem);
+    overflow-y: scroll;
+    font-weight: 600;
+    font-size: 15px;
+    z-index:100;
+    & a{
+        color: white;
+        text-decoration: none;
+        padding-block: 1.2rem;
+
+        & i{
+            width: 15%;
+            text-align: center;
+        }
+    }
+
+    & a:hover{
+        background-color: var(--hover-color);
+    }
+
+    & div{
+        display: flex;
+        flex-direction: column;
+        
+        & a{
+            padding-right: 2.5rem;
+        }
+    }
+
+    
+}
+
+.active{
+    background-color: var(--active-color);
+}
+
+.display-none{
+    display: none;
+}

@@ -1,104 +1,85 @@
 ﻿@using Interface.ViewModels
 @model ProductVM
 
-<link rel="stylesheet" href="~/css/afterUserLogin/slider.css">
-<link rel="stylesheet" href="~/css/afterUserLogin/products.css">
+<link href="~/lib/datatables/css/datatables.bootstrap4.css" rel="stylesheet" />
+<link rel="stylesheet" href="~/css/pages/Receipts/index.css" />
 
 
-<div class="container">
-    
-    <partial name="_sliderPartial"></partial>
-    <section class="main-content ">
-        <div class="box-content btn-operation">
-            <form asp-controller="Products">
-                <button>Insert From EXCEL</button>
-                <button type="submit" asp-action="DeleteAll">Delete All</button>
-            </form>
+
+<form class="form-data box-area" method="post" asp-controller="Products" asp-action="Add">
+    <div class="first-row">
+        <div class="group">
+            <label for="">كود داخلي</label>
+            <input asp-for="InternalId" placeholder="كود داخلي">
+            <span asp-validation-for="InternalId" class="error"></span>
         </div>
-        <div class="box-content">
-            <div class="inside-box">
-                <form asp-action="add" asp-controller="Products">
-                    <div class=" input-fields">
-                        <div class="group-content">
-                            <label for="">Internal Id</label>
-                            <input asp-for="InternalId" >
-                            <span asp-validation-for="InternalId" style="color:red;margin-bottom:0.2rem"></span>
-                        </div>
-                        <div class="group-content">
-                            <label for="">Name</label>
-                            <input asp-for="Name">
-                            <span asp-validation-for="Name" style="color:red;margin-bottom:0.2rem"></span>
-                        </div>
-
-                        <div class="group-content">
-                            <label for="">Unit Price</label>
-                            <input type="number" asp-for="UnitPrice">
-                            <span asp-validation-for="UnitPrice" style="color:red;margin-bottom:0.2rem"></span>
-                        </div>
-                        <div class="group-content">
-                            <label for="">Unit Type</label>
-                            <select name="unittype" id="">
-                                <option value="EA">EA</option>
-                            </select>
-                        </div>
-                        <div class="group-content">
-                            <label for="">Code</label>
-                            <input asp-for="Code">
-                            <span asp-validation-for="Code" style="color:red;margin-bottom:0.2rem"></span>
-                        </div>
-                        <div class="group-content">
-                            <label for="">Code Type</label>
-                            <select name="codetype" id="">
-                                <option value="EGS">EGS</option>
-                                <OPTION value="GS1">GS1</OPTION>
-                            </select>
-                        </div>
-
-                    </div>
-                    <div class="group-content">
-                        <label for="">Description</label>
-                        <textarea asp-for="Description"></textarea>
-                        <span asp-validation-for="Description" style="color:red;margin-bottom:0.2rem"></span>
-                    </div>
-                    <div class="operation">
-                        <button type="submit">Add Product</button>
-                    </div>
-                </form>
-                
-            </div>
-
+        <div class="group">
+            <label for="">اسم السلعة او الخدمة</label>
+            <input asp-for="Name" placeholder="اسم المنتج">
+            <span asp-validation-for="Name" class="error"></span>
         </div>
-
-        <div class="box-content">
-            <div class="search-box">
-                <input type="search" id="txt-search" onchange="getProduct(event)" placeholder="Type to Search for Product..." />
-                <i class="fa-solid fa-magnifying-glass"></i>
-
-            </div>
-
-            <partial name="_tablePartial"></partial>
-
-
-
+        <div class="group">
+            <label for="">سعر الوحدة</label>
+            <input asp-for="UnitPrice"  placeholder="سعر القطعة">
+            <span asp-validation-for="UnitPrice" class="error"></span>
         </div>
+        <div class="group">
+            <label for="">وحدة القياس</label>
+            <select asp-for="UnitType">
+                <option value="EA">EA</option>
+            </select>
+            <span asp-validation-for="UnitType" class="error"></span>
+        </div>
+        <div class="group">
+            <label for="">كود السلعة او الخدمة</label>
+            <input asp-for="Code" placeholder="كود المنتج" />
+            <span asp-validation-for="Code" class="error"></span>
+        </div>
+        <div class="group">
+            <label for="">نوع الكود</label>
+            <select asp-for="CodeType">
+                <option value="EGS">EGS</option>
+                <option value="GS1">GS1</option>
+            </select>
+            <span asp-validation-for="CodeType" class="error"></span>
+        </div>
+    </div>
+    <div class="second-row">
+        <div class="group">
+            <label for="">وصف السلعة او الخدمة</label>
+            <textarea asp-for="Description"></textarea>
+            <span asp-validation-for="Description" class="error"></span>
+        </div>
+        <div class="btns">
+            <input type="submit" value="اضافة" class="btn-primary">
+        </div>
+    </div>
 
-    </section>
+</form>
+<div class="datatable box-area">
+    <table id="datatable" class="table table-striped table-bordered dt-responsive nowrap">
+        <thead>
+            <tr>
+                <th>كود</th>
+                <th>اسم</th>
+                <th>وصف</th>
+                <th>سعر</th>
+                <th>وحدة</th>
+                <th>كود</th>
+                <th>نوع</th>
+                <th></th>
+            </tr>
+        </thead>
+    </table>
 </div>
-        
 
 
 @section Scripts {
 
-    <script>
-        
-        document.querySelector(".slider").childNodes[1].childNodes[5].childNodes[1].classList.add("active");
-    </script>
 
-    <script src="~/js/productSearchAjax.js">
-        
-    </script>
-
-
+    <script src="~/lib/datatables/js/jquery.datatables.js"></script>
+    <script src="~/lib/datatables/js/datatables.bootstrap4.js"></script>
+    <script src="/js/pages/Products.js"></script>
 
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");

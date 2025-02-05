@@ -1,49 +1,12 @@
 header{
-    padding-block: 1.2rem;
-    margin-bottom: 1.2rem;
-    background-color: var(--header-color);
-    box-shadow: 0px 1px 12px 0px #888888;
-    & .header-content{
-        display: flex;
-        justify-content: space-between;
-        
-        & .logo{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1.2rem;
-            & img{
-                width: 2rem;
-            }
-        }
-
-        & .nav-links-page{
-            display: flex;
-            align-items: center;
-            & ul{
-                display: flex;
-                gap: 1.2rem;
-                & a{
-                    color: black;
-                }
-            }
-        }
-
-        & .nav-links-auth{
-            display: flex;
-            align-items: center;
-            & ul{
-                display: flex;
-                gap: 1.2rem;
-                & a{
-                    color: black;
-                }
-            }
-        }
-
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: white;
+    height: 4rem;
+    box-shadow: -1px -5px 20px 4px #000000;
+    & .img-box{
+        padding-inline: 1rem;
+        padding-block: 0.5rem;
     }
-    
-
-
-    
 }

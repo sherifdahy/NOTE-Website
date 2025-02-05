@@ -27,7 +27,7 @@ namespace Interface.ViewModels
         [StringLength(3)]
         public string CodeType { get; set; }
 
-        public Product Casting(int id)
+        public Product CastingToModel(int id)
         {
             return new Product { 
                 Name = Name,
@@ -40,6 +40,19 @@ namespace Interface.ViewModels
                 InternalId = InternalId
                
 
+            };
+        }
+        public ProductVM CastingFromModel(Product product)
+        {
+            return new ProductVM
+            {
+                Name = product.Name,
+                Description = product.Description,
+                Code = product.Code,
+                CodeType = product.CodeType,
+                InternalId= product.InternalId,
+                UnitPrice= product.UnitPrice,
+                UnitType= product.UnitType,
             };
         }
     }

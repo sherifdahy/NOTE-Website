@@ -1,25 +1,19 @@
-﻿using Interface.Services;
+﻿using Entities.InterfacesOfRepo;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Hosting;
 
 namespace Interface.Controllers
 {
-    public class HomeController : Controller
+    [Authorize]
+    public class HomeController : BaseController
     {
-        IWebHostEnvironment hostEnvironment;
-        public HomeController(IWebHostEnvironment hostEnvironment)
+        public HomeController(IUnitOfWork unitOfWork):base(unitOfWork)
         {
-            this.hostEnvironment = hostEnvironment;
+            
         }
-        // GET: HomeController
-        
-        public ActionResult Index()
+        public IActionResult Index()
         {
             return View();
         }
-        
-
     }
 }

@@ -10,6 +10,5 @@ namespace Entities.ConfigurationSettings
     public static class ConfigSettings
     {
         public const int stringLength = 50;
-        public static string ConnectionString { get; } = "data source=.;initial catalog= NOTE-SOLUTION-WEBSITE;Integrated security=true;TrustServerCertificate=True";
     }
 }

@@ -1,0 +1,1 @@
+document.querySelector(".fa-house").parentNode.classList = 'active'

@@ -13,7 +13,8 @@ namespace Entities.InterfacesOfRepo
         public void Delete(T entity);
         T UpdateById(T entity);
         void Insert(T entity);
-        public IEnumerable<T> FindAll(Expression<Func<T, bool>> criteria, string[] includes, int skip = 0, int take = 10);
+        public  IQueryable<T> FindAll(Expression<Func<T, bool>> criteria, string[] includes);
+
         public int Count();
 
         public T GetById(int id);

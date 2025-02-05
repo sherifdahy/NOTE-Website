@@ -1,31 +1,36 @@
 ﻿@using Interface.ViewModels
 @model RegisterVM
-<link rel="stylesheet" href="~/css/signup.css">
+@{
+    Layout = "_LayoutAccount";
+}
 
-<div class="main-content container box-content">
-    <section class="">
-        <div class="img-box ">
-            <img src="~/imgs/2869279.jpg" alt="">
-        </div>
-        <div class="input-field ">
-            <h3>Sign up for NOTE Solution.</h3>
-            <form method="post" asp-controller="Account" asp-action="Register">
-                <input type="text" asp-for="@Model.Username" placeholder="Username" />
-                <span asp-validation-for="Username" style="color:red"></span>
-                <input type="email" asp-for="@Model.Email" placeholder="Email Address" />
-                <span asp-validation-for="Email" style="color:red"></span>
-                <input type="password" asp-for="@Model.Password" placeholder="Password" />
-                <span asp-validation-for="Password" style="color:red"></span>
-                <input type="password" asp-for="@Model.ConfirmPassword" placeholder="Confirm Password" />
-                <span asp-validation-for="ConfirmPassword" style="color:red"></span>
-                <label for="">
-                    <input type="checkbox"> I Accept the Terms and Privacy Policy
-                </label>
-                <button type="submit">Signup</button>
-            </form>
-        </div>
-    </section>
-</div>
+<link rel="stylesheet" href="~/css/pages/registration.css">
+
+
+<form asp-action="Register" asp-controller="Account" method="post">
+    <div class="group">
+        <input type="text" asp-for=Username placeholder="اسم المستخدم">
+        <span asp-validation-for="Username" class="error"></span>
+    </div>
+    <div class="group">
+        <input type="email" asp-for="Email" placeholder="البريد الالكتروني">
+        <span asp-validation-for="Email" class="error"></span>
+
+    </div>
+    <div class="group">
+        <input type="password" asp-for="Password" placeholder="كلمة السر">
+        <span asp-validation-for="Password" class="error"></span>
+
+    </div>
+    <div class="group">
+        <input type="password" asp-for="ConfirmPassword" placeholder="تأكيد كلمة السر">
+        <span asp-validation-for="ConfirmPassword" class="error"></span>
+
+    </div>
+    <div class="group">
+        <input type="submit" class="btn-primary" value="تسيجل">
+    </div>
+</form>
 
 
 

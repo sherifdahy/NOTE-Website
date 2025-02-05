@@ -299,3 +299,4 @@ D:\WebApplication\NOTE-Website\MVC\Interface\Interface\obj\Debug\net8.0\refint\I
 D:\WebApplication\NOTE-Website\MVC\Interface\Interface\obj\Debug\net8.0\Interface.pdb
 D:\WebApplication\NOTE-Website\MVC\Interface\Interface\obj\Debug\net8.0\Interface.genruntimeconfig.cache
 D:\WebApplication\NOTE-Website\MVC\Interface\Interface\obj\Debug\net8.0\ref\Interface.dll
+D:\WebApplication\NOTE-Website\MVC\Interface\Interface\bin\Debug\net8.0\libman.json

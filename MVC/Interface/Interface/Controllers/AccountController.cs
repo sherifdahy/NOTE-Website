@@ -90,7 +90,7 @@ namespace Interface.Controllers
         {
             if (ModelState.IsValid == true) 
             {
-                ApplicationUser applicationUser = await IUnitOfWork.UserManager.FindByNameAsync(loginVM.Username);
+                ApplicationUser applicationUser = await IUnitOfWork.UserManager.FindByEmailAsync(loginVM.Email);
                 if (applicationUser != null) 
                 {
                     bool found = await IUnitOfWork.UserManager.CheckPasswordAsync(applicationUser,loginVM.Password);

@@ -1,33 +1,32 @@
 ﻿@using Interface.ViewModels
 @model LoginVM
 
-<link rel="stylesheet" href="~/css/login.css">
+@{
+   
+    Layout = "_LayoutAccount";
+}
 
+<link rel="stylesheet" href="~/css/pages/login.css">
 
-<div class="main-content container box-content">
-    <section class="">
-        <div class="img-box ">
-            <img src="~/imgs/4957136.jpg" alt="">
-        </div>
-        <div class="input-field ">
-            <h3>Welcome Back.</h3>
-            <form action="" method="post">
-                <input asp-for="Username" placeholder="Username" />
-                <span asp-validation-for="Username" style="color:red"></span>
-                <input type="password" asp-for="Password" placeholder="Password" />
-                <span asp-validation-for="Password" style="color:red"></span>
-                <label>
-                    <input type="checkbox" asp-for="RememberMe"> Remember me
-                </label>
-                <button type="submit">Login</button>
-            </form>
-            <div asp-validation-summary="All" style="color:red;"></div>
+<form  asp-controller="Account" method="post">
+    <div class="group">
+        <input type="email" asp-for="Email" placeholder="البريد الالكتروني">
+        <span asp-validation-for="Email" class="error"></span>
+    </div>
+    <div class="group">
+        <input type="password" asp-for="Password" placeholder="كلمة السر">
+        <span asp-validation-for="Password" class="error"></span>
+    </div>
+    <div class="">
+        <input asp-for=RememberMe type="checkbox">
+        <span>تذكرني</span>
+    </div>
+    <div class="group">
+        <input type="submit" asp-action="Login" class="btn-primary" value="تسجيل دخول">
+    </div>
+    <div asp-validation-summary="ModelOnly" class="error"></div>
 
-        </div>
-    </section>
-</div>
-
-
+</form>
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");

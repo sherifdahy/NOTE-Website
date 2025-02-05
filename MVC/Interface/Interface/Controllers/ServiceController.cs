@@ -20,7 +20,7 @@ namespace Interface.Controllers
 
 
 
-        [Authorize(Roles ="Admin")]
+        //[Authorize(Roles ="Admin")]
         [HttpGet]
 
         public IActionResult NewRole()
@@ -30,7 +30,7 @@ namespace Interface.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
 
         public async Task<IActionResult> NewRole(RoleVM vM)
         {
