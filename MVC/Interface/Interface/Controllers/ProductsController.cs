@@ -1,7 +1,9 @@
 ﻿using Entities.InterfacesOfRepo;
+using Entities.Models;
 using Interface.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.FlowAnalysis;
 using System.Security.Claims;
 
 namespace Interface.Controllers
@@ -28,7 +30,8 @@ namespace Interface.Controllers
             int recordsTotals = query.Count();
             int skip = int.Parse(Request.Form["start"]);
             int take = int.Parse(Request.Form["length"]);
-            var products = query.Skip(skip).Take(take).ToList();
+            string value = Request.Form["search[value]"];
+            var products = query.Where(x=> string.IsNullOrEmpty(value)? true : x.InternalId.Contains(value) || x.Name.Contains(value) || x.Description.Contains(value) || x.Code.Contains(value)).OrderByDescending(x=>x.Id).Skip(skip).Take(take).ToList();
 
             return Json(new
             {
@@ -58,7 +61,7 @@ namespace Interface.Controllers
 
             IUnitOfWork.Products.Delete(IUnitOfWork.Products.GetById(id));
             IUnitOfWork.Save();
-            return RedirectToAction(nameof(Index));
+            return Json(true);
 
         }
 
@@ -66,7 +69,32 @@ namespace Interface.Controllers
         [HttpGet]
         public IActionResult Edit(int id)
         {
+            return View(new ProductVM().CastingFromModel(IUnitOfWork.Products.GetById(id)));
+
+        }
+        [HttpPost]
+        public IActionResult Edit(int id ,ProductVM vM)
+        {
+            IUnitOfWork.Products.Update(vM.CastingToModel(int.Parse(User.Claims.FirstOrDefault(x=>x.Type == ClaimTypes.NameIdentifier).Value),id));
+            IUnitOfWork.Save();
             return RedirectToAction("Index");
+
+        }
+
+        [HttpGet]
+        public IActionResult getDataToDropdownList(string query,int page = 1)
+        {
+            int pageSize = 10; 
+            int id = int.Parse(User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier).Value);
+
+            var hasMore = IUnitOfWork.Products.FindAll(x => x.ApplicationUserId == id, new string[] { }).Where(x => x.Name.Contains(query)).Count();
+            var obj = IUnitOfWork.Products.FindAll(x => x.ApplicationUserId == id, new string[] { }).Where(x => x.Name.Contains(query)).Skip((page - 1) * pageSize).Take(pageSize).ToList();
+            return Json(new
+            {
+                items = obj,
+                more = hasMore
+            });
+
 
         }
     }

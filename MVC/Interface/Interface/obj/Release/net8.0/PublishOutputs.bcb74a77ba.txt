@@ -1,6 +1,7 @@
 D:\WebApplication\NOTE-Website\MVC\Interface\Interface\obj\Release\net8.0\PubTmp\Out\Interface.exe
 D:\WebApplication\NOTE-Website\MVC\Interface\Interface\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
 D:\WebApplication\NOTE-Website\MVC\Interface\Interface\obj\Release\net8.0\PubTmp\Out\appsettings.json
+D:\WebApplication\NOTE-Website\MVC\Interface\Interface\obj\Release\net8.0\PubTmp\Out\libman.json
 D:\WebApplication\NOTE-Website\MVC\Interface\Interface\obj\Release\net8.0\PubTmp\Out\Interface.dll
 D:\WebApplication\NOTE-Website\MVC\Interface\Interface\obj\Release\net8.0\PubTmp\Out\Interface.runtimeconfig.json
 D:\WebApplication\NOTE-Website\MVC\Interface\Interface\obj\Release\net8.0\PubTmp\Out\Interface.pdb

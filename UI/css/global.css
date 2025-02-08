@@ -1,75 +1,38 @@
 :root{
-    --main-color:#c1c1c1;
-    --body-color:#5b8ea0;
-    --active-color:#2E5077;
-    --hover-color:#A5BFCC;
+    --main-color:#050833;
+    --body-color: rgb(153, 153, 153);
+    --active-color:#A7E6FF;
+    --hover-color:#3ABEF9;
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    direction: rtl;
     font-family: "Noto Sans Arabic", serif;
     font-optical-sizing: auto;
     
 }
 
 body{
-    background-color: var(--main-color);
-}
-
-
-.group{
-    display: flex;
-    flex-direction: column;
-    margin-block : 1.2rem;
-}
-
-
-input,textarea{
-    border: none;
-    border-bottom: 1px solid var(--body-color);
-    padding: 0.3rem;
-}
-
-
-
-
-.btn-primary{
     background-color: var(--body-color);
-    color: white;
-    cursor: pointer;
-    min-width: 5rem;
 }
 
 
-.layout{
-}
-
-.layout .slider-main{
-    display: flex;
-    justify-content: space-between;
-    & slider{
-        width: 15rem;
-    }
-
-    & main{
-        margin-right: calc(16rem);
-    }
-
-}
-
-
-.error{
-    color:red;
-}
-
-.box-area{
-    padding: 1.2rem;
+.box-content{
     background-color: white;
-    margin-block: 1.2rem;
+    border-radius: 5px;
+    margin: 1.2rem;
+    padding: 1.2rem;
 }
+
+
+
+
+
+
+
+
 
 
 

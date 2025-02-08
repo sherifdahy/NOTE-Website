@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Entities.Models.Receipt
 {
-    public class TaxableItems
+    public class TaxableItem
     {
-        public int TaxableItemsId { get; set; }
+        public int TaxableItemId { get; set; }
         public string TaxType { get; set; }
         public string SubType { get; set; }
         public decimal Rate { get; set; }

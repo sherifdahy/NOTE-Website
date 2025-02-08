@@ -38,10 +38,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/WebApplication/NOTE-Website/MVC/Interface/Interface/Views/Products/data.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcZGF0YS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/WebApplication/NOTE-Website/MVC/Interface/Interface/Views/Products/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -50,8 +46,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/WebApplication/NOTE-Website/MVC/Interface/Interface/Views/Products/_tablePartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcX3RhYmxlUGFydGlhbC5jc2h0bWw=
+[D:/WebApplication/NOTE-Website/MVC/Interface/Interface/Views/Products/_inputPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcX2lucHV0UGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/WebApplication/NOTE-Website/MVC/Interface/Interface/Views/Receipts/Index.cshtml]
@@ -62,12 +58,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWlwdHNcTmV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/WebApplication/NOTE-Website/MVC/Interface/Interface/Views/Receipts/_receiptPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWlwdHNcX3JlY2VpcHRQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/WebApplication/NOTE-Website/MVC/Interface/Interface/Views/Service/NewRole.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxOZXdSb2xlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/WebApplication/NOTE-Website/MVC/Interface/Interface/Views/Shared/_headerPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9oZWFkZXJQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/WebApplication/NOTE-Website/MVC/Interface/Interface/Views/Shared/_LayoutAccount.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBY2NvdW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication/NOTE-Website/MVC/Interface/Interface/Views/Shared/_sliderPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9zbGlkZXJQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/WebApplication/NOTE-Website/MVC/Interface/Interface/Views/Shared/_ValidationScriptsPartial.cshtml]

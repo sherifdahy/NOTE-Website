@@ -5,44 +5,24 @@
       "PackagePath": "staticwebassets\\Interface.bundle.scp.css"
     },
     {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\Home.css",
-      "PackagePath": "staticwebassets\\css\\Home.css"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\afterUserLogin\\dashboard.css",
-      "PackagePath": "staticwebassets\\css\\afterUserLogin\\dashboard.css"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\afterUserLogin\\newreceipt.css",
-      "PackagePath": "staticwebassets\\css\\afterUserLogin\\newreceipt.css"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\afterUserLogin\\products.css",
-      "PackagePath": "staticwebassets\\css\\afterUserLogin\\products.css"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\afterUserLogin\\slider.css",
-      "PackagePath": "staticwebassets\\css\\afterUserLogin\\slider.css"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\footer.css",
-      "PackagePath": "staticwebassets\\css\\footer.css"
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\global.css",
+      "PackagePath": "staticwebassets\\css\\global.css"
     },
     {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\header.css",
       "PackagePath": "staticwebassets\\css\\header.css"
     },
     {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\login.css",
-      "PackagePath": "staticwebassets\\css\\login.css"
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\home.css",
+      "PackagePath": "staticwebassets\\css\\home.css"
     },
     {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\main.css",
-      "PackagePath": "staticwebassets\\css\\main.css"
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\products.css",
+      "PackagePath": "staticwebassets\\css\\products.css"
     },
     {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\signup.css",
-      "PackagePath": "staticwebassets\\css\\signup.css"
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\slider.css",
+      "PackagePath": "staticwebassets\\css\\slider.css"
     },
     {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\favicon.ico",
@@ -77,12 +57,40 @@
       "PackagePath": "staticwebassets\\imgs\\logo.png"
     },
     {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\handle_receipt.js",
-      "PackagePath": "staticwebassets\\js\\handle_receipt.js"
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Products.js",
+      "PackagePath": "staticwebassets\\js\\Products.js"
     },
     {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\productSearchAjax.js",
-      "PackagePath": "staticwebassets\\js\\productSearchAjax.js"
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipts\\AJAX.js",
+      "PackagePath": "staticwebassets\\js\\Receipts\\AJAX.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipts\\Classes.js",
+      "PackagePath": "staticwebassets\\js\\Receipts\\Classes.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipts\\Select2.js",
+      "PackagePath": "staticwebassets\\js\\Receipts\\Select2.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipts\\handle_item.js",
+      "PackagePath": "staticwebassets\\js\\Receipts\\handle_item.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipts\\handle_receipt.js",
+      "PackagePath": "staticwebassets\\js\\Receipts\\handle_receipt.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipts\\pageNew.js",
+      "PackagePath": "staticwebassets\\js\\Receipts\\pageNew.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\home.js",
+      "PackagePath": "staticwebassets\\js\\home.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\slider.js",
+      "PackagePath": "staticwebassets\\js\\slider.js"
     },
     {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\json file\\SubTaxType.json",
@@ -91,6 +99,30 @@
     {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\json file\\TaxType.json",
       "PackagePath": "staticwebassets\\json file\\TaxType.json"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\autocomplete.js\\autocomplete.angular.js",
+      "PackagePath": "staticwebassets\\lib\\autocomplete.js\\autocomplete.angular.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\autocomplete.js\\autocomplete.angular.min.js",
+      "PackagePath": "staticwebassets\\lib\\autocomplete.js\\autocomplete.angular.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\autocomplete.js\\autocomplete.jquery.js",
+      "PackagePath": "staticwebassets\\lib\\autocomplete.js\\autocomplete.jquery.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\autocomplete.js\\autocomplete.jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\autocomplete.js\\autocomplete.jquery.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\autocomplete.js\\autocomplete.js",
+      "PackagePath": "staticwebassets\\lib\\autocomplete.js\\autocomplete.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\autocomplete.js\\autocomplete.min.js",
+      "PackagePath": "staticwebassets\\lib\\autocomplete.js\\autocomplete.min.js"
     },
     {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\bootstrap\\LICENSE",
@@ -273,6 +305,170 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.bootstrap.css"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.bootstrap4.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.bootstrap4.css"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.bootstrap4.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.bootstrap4.min.css"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.foundation.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.foundation.css"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.foundation.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.foundation.min.css"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.jqueryui.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.jqueryui.css"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.jqueryui.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.jqueryui.min.css"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.material.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.material.css"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.material.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.material.min.css"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.semanticui.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.semanticui.css"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.semanticui.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.semanticui.min.css"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.uikit.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.uikit.css"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.uikit.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.uikit.min.css"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\jquery.datatables.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\jquery.datatables.css"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\jquery.datatables.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\jquery.datatables.min.css"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\jquery.datatables_themeroller.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\jquery.datatables_themeroller.css"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\jquery.datatables_themeroller.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\jquery.datatables_themeroller.min.css"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\images\\sort_asc.png",
+      "PackagePath": "staticwebassets\\lib\\datatables\\images\\sort_asc.png"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\images\\sort_asc_disabled.png",
+      "PackagePath": "staticwebassets\\lib\\datatables\\images\\sort_asc_disabled.png"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\images\\sort_both.png",
+      "PackagePath": "staticwebassets\\lib\\datatables\\images\\sort_both.png"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\images\\sort_desc.png",
+      "PackagePath": "staticwebassets\\lib\\datatables\\images\\sort_desc.png"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\images\\sort_desc_disabled.png",
+      "PackagePath": "staticwebassets\\lib\\datatables\\images\\sort_desc_disabled.png"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.bootstrap.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.bootstrap4.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.bootstrap4.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.bootstrap4.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.bootstrap4.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.datatables.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.datatables.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.datatables.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.datatables.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.foundation.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.foundation.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.foundation.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.foundation.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.jqueryui.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.jqueryui.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.jqueryui.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.jqueryui.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.material.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.material.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.material.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.material.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.semanticui.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.semanticui.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.semanticui.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.semanticui.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.uikit.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.uikit.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.uikit.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.uikit.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\jquery.datatables.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\jquery.datatables.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\jquery.datatables.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\jquery.datatables.min.js"
+    },
+    {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
@@ -319,6 +515,502 @@
     {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\css\\select2.css",
+      "PackagePath": "staticwebassets\\lib\\select2\\css\\select2.css"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\css\\select2.min.css",
+      "PackagePath": "staticwebassets\\lib\\select2\\css\\select2.min.css"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\af.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\af.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\af.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\af.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\ar.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ar.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\ar.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ar.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\az.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\az.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\az.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\az.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\bg.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\bg.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\bg.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\bg.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\bn.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\bn.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\bn.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\bn.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\bs.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\bs.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\bs.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\bs.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\ca.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ca.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\ca.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ca.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\cs.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\cs.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\cs.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\cs.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\da.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\da.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\da.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\da.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\de.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\de.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\de.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\de.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\dsb.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\dsb.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\dsb.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\dsb.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\el.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\el.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\el.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\el.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\en.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\en.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\en.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\en.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\es.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\es.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\es.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\es.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\et.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\et.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\et.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\et.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\eu.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\eu.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\eu.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\eu.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\fa.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\fa.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\fa.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\fa.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\fi.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\fi.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\fi.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\fi.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\fr.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\fr.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\fr.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\fr.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\gl.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\gl.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\gl.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\gl.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\he.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\he.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\he.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\he.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\hi.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\hi.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\hi.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\hi.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\hr.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\hr.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\hr.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\hr.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\hsb.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\hsb.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\hsb.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\hsb.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\hu.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\hu.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\hu.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\hu.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\hy.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\hy.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\hy.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\hy.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\id.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\id.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\id.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\id.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\is.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\is.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\is.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\is.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\it.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\it.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\it.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\it.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\ja.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ja.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\ja.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ja.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\ka.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ka.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\ka.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ka.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\km.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\km.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\km.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\km.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\ko.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ko.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\ko.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ko.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\lt.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\lt.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\lt.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\lt.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\lv.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\lv.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\lv.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\lv.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\mk.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\mk.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\mk.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\mk.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\ms.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ms.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\ms.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ms.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\nb.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\nb.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\nb.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\nb.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\ne.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ne.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\ne.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ne.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\nl.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\nl.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\nl.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\nl.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\pl.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\pl.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\pl.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\pl.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\ps.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ps.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\ps.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ps.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\pt-br.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\pt-br.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\pt-br.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\pt-br.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\pt.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\pt.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\pt.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\pt.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\ro.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ro.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\ro.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ro.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\ru.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ru.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\ru.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ru.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\sk.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\sk.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\sk.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\sk.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\sl.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\sl.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\sl.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\sl.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\sq.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\sq.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\sq.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\sq.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\sr-cyrl.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\sr-cyrl.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\sr-cyrl.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\sr-cyrl.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\sr.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\sr.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\sr.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\sr.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\sv.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\sv.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\sv.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\sv.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\th.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\th.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\th.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\th.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\tk.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\tk.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\tk.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\tk.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\tr.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\tr.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\tr.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\tr.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\uk.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\uk.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\uk.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\uk.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\vi.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\vi.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\vi.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\vi.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\zh-cn.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\zh-cn.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\zh-cn.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\zh-cn.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\zh-tw.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\zh-tw.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\i18n\\zh-tw.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\zh-tw.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\select2.full.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\select2.full.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\select2.full.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\select2.full.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\select2.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\select2.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\select2.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\select2.min.js"
     },
     {
       "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.Interface.Microsoft.AspNetCore.StaticWebAssets.props",

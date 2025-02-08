@@ -19,7 +19,7 @@ namespace Entities.Models.Receipt
         public decimal NetSale { get; set; }
         public decimal TotalSale { get; set; }
         public decimal Total { get; set; }
-        public virtual ICollection<TaxableItems> TaxableItems { get; set; } = new HashSet<TaxableItems>();
+        public virtual ICollection<TaxableItem> TaxableItems { get; set; } = new HashSet<TaxableItem>();
         public virtual ICollection<CommercialDiscountData> CommercialDiscountData { get; set; } = new HashSet<CommercialDiscountData>();
 
     }

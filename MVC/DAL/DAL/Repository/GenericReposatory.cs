@@ -53,8 +53,9 @@ namespace DAL.Repository
             context.Set<T>().Add(entity);
         }
 
-        public T UpdateById(T entity)
+        public T Update( T entity)
         {
+            
             context.Set<T>().Update(entity);
             return entity;
         }

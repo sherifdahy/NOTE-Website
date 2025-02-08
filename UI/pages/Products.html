@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>السلع و الخدمات</title>
+    <link rel="stylesheet" href="/MVC/Interface/Interface/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/UI/css/global.css">
+    <link rel="stylesheet" href="/UI/css/header.css">
+    <link rel="stylesheet" href="/UI/css/slider.css">
+    <link rel="stylesheet" href="/UI/css/products.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <!-- end of font -->
+
+    <!-- CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- end of cdn -->
+
+    <link href="/MVC/Interface/Interface/wwwroot/lib/datatables/css/datatables.bootstrap4.css" rel="stylesheet" />
+</head>
+<body >
+    <div class="container-fluid">
+        <div class="row header">
+            <h3 class="col p-2 ">
+                NOTE Solution
+            </h3>
+        </div>
+        <div class="row body">
+            <div class="col-10">
+                <form class="row  box-content">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-1 flex-row-reverse text-end">
+                        <div class="form-group mb-2 ">
+                            <label >الكود الداخلي</label>
+                            <input type="text" class="form-control text-end" placeholder="الكود الداخلي">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label>اسم السلعة او الخدمة</label>
+                            <input type="text" class="form-control  text-end"  placeholder="اسم السلعة او الخدمة">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label>سعر الوحدة</label>
+                            <input type="number" class="form-control  text-end" placeholder="سعر الوحدة">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label >نوع الوحدة</label>
+                            <select name="" id="" class="form-select  text-end">
+                                <option value="EA" >EA</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label>كود عالمي</label>
+                            <input type="text" class="form-control  text-end" placeholder="كود عالمي">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label >نوع الكود العالمي</label>
+                            <select name="" id="" class="form-select  text-end">
+                                <option value="EGS" >EGS</option>
+                                <option value="GS1">GS1</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                    <div class="row g-1">
+                        <div class="form-group mb-2  text-end">
+                            <label >وصف السلعة او الخدمة</label>
+                            <textarea  class="form-control  text-end" placeholder="وصف السلعة او الخدمة"></textarea>
+                        </div>
+                    </div>
+                    <div class="row g-1">
+                        <a href="#" class="btn btn-success col-1">Add</a>
+                    </div>
+                </form>
+                
+
+                <div class="row  box-content">
+                    <div class="col">
+                        <h3 class="text-primary text-end">السلع و الخدمات</h3>
+                        <hr>
+                        <table id="datatable" class="table table-striped table-bordered" style="width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>#</th>
+                                    <th>الاسم</th>
+                                    <th>الوصف</th>
+                                    <th>سعر</th>
+                                    <th>نوع الوحدة</th>
+                                    <th>كود عالمي</th>
+                                    <th>نوع الكود العالمي</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+
+            
+            <div class="col-2 slider text-end text-light link py-3 ">
+                <a class="d-block text-decoration-none text-light py-3 " href="index.html">
+                    الصفحة الرئيسية
+                    <i class="fa-solid fa-house mx-2"></i>
+                </a>
+                <a id="Receipts-dept" class=" d-block text-decoration-none text-light py-3" href="#" >
+                    قسم الايصالات
+                    <i class="fa-solid fa-circle-chevron-down mx-2"></i>
+                </a>
+                <div id="Receipt-div" class="d-none nested-link my-3">
+                    <a  class="d-block text-decoration-none text-light py-3 pe-5 " href="receipts.html">
+                        الايصالات
+                        <i class="fa-solid fa-receipt mx-2"></i>
+                    </a>
+                    <a   class= "d-block text-decoration-none text-light py-3 pe-5 " href="receipts.html">
+                        انشاء ايصال
+                        <i class="fa-solid fa-plus mx-2"></i>
+                    </a>
+                    <a  class="d-block text-decoration-none text-light py-3 pe-5 " href="receipts.html">
+                        حافظة الايصالات
+                        <i class="fa-solid fa-database mx-2"></i>
+                    </a>
+                </div>
+                <a id="Invoices-dept" class=" d-block text-decoration-none text-light py-3" href="#">
+                    قسم الفواتير
+                    <i class="fa-solid fa-circle-chevron-down mx-2"></i>
+                </a>
+                <div id="Invoice-div" class="d-none nested-link  my-3">
+                    <a class=" d-block text-decoration-none text-light py-3 pe-5 " href="receipts.html">
+                        الفواتير
+                        <i class="fa-solid fa-receipt mx-2"></i>
+                    </a>
+                    <a class=" d-block text-decoration-none text-light py-3 pe-5 " href="receipts.html">
+                        انشاء فاتورة
+                        <i class="fa-solid fa-plus mx-2"></i>
+                    </a>
+                    <a class="d-block text-decoration-none text-light py-3 pe-5 " href="receipts.html">
+                        حافظة الفواتير
+                        <i class="fa-solid fa-database mx-2"></i>
+                    </a>
+                </div>
+                <a class="d-block text-decoration-none text-light py-3" href="goods-services.html">
+                    السلع و الخدمات
+                    <i class="fa-solid fa-sitemap mx-2"></i>
+                </a>
+                <a class="d-block text-decoration-none text-light py-3" href="settings.html">
+                    الاعدادات
+                    <i class="fa-solid fa-gear mx-2"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row footer">
+            <div class="col">
+                <!-- محتوى التذييل -->
+            </div>
+        </div>
+    </div>
+
+    <script src="/UI/js/slider.js"></script>
+
+    <script src="/MVC/Interface/Interface/wwwroot/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/MVC/Interface/Interface/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/MVC/Interface/Interface/wwwroot/lib/datatables/js/jquery.datatables.js"></script>
+    <script src="/MVC/Interface/Interface/wwwroot/lib/datatables/js/datatables.bootstrap4.js"></script>
+    <script src="/UI/js/Products.js"></script>
+</body>
+</html>

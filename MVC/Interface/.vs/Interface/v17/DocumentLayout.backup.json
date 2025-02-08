@@ -3,35 +3,36 @@
   "WorkspaceRootPath": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\wwwroot\\js\\receipts\\pagenew.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\wwwroot\\js\\receipts\\pagenew.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\viewmodels\\productvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\viewmodels\\productvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\controllers\\receiptscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\controllers\\receiptscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\viewmodels\\receiptvm\\receiptvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\viewmodels\\receiptvm\\receiptvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\wwwroot\\js\\pages\\products.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\wwwroot\\js\\pages\\products.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\views\\receipts\\new.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\views\\receipts\\new.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\wwwroot\\css\\pages\\receipts\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\wwwroot\\css\\pages\\receipts\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\wwwroot\\js\\receipts\\select2.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\wwwroot\\js\\receipts\\select2.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45FCD9BE-5F0D-4913-99D7-611E050F3F91}|..\\DAL\\DAL\\DAL.csproj|d:\\webapplication\\note-website\\mvc\\dal\\dal\\repository\\genericreposatory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\wwwroot\\js\\receipts\\ajax.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\wwwroot\\js\\receipts\\ajax.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\views\\receipts\\_receiptpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\views\\receipts\\_receiptpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\wwwroot\\js\\pages\\receipts\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\wwwroot\\js\\pages\\receipts\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|d:\\webapplication\\note-website\\mvc\\interface\\interface\\wwwroot\\js\\receipts\\classes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\wwwroot\\js\\receipts\\classes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -41,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -53,105 +54,112 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductVM.cs",
-              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\ViewModels\\ProductVM.cs",
-              "RelativeDocumentMoniker": "Interface\\ViewModels\\ProductVM.cs",
-              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\ViewModels\\ProductVM.cs",
-              "RelativeToolTip": "Interface\\ViewModels\\ProductVM.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAwwB0AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T21:35:52.059Z",
+              "DocumentIndex": 3,
+              "Title": "New.cshtml",
+              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\Receipts\\New.cshtml",
+              "RelativeDocumentMoniker": "Interface\\Views\\Receipts\\New.cshtml",
+              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\Receipts\\New.cshtml*",
+              "RelativeToolTip": "Interface\\Views\\Receipts\\New.cshtml*",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACAAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-08T12:07:30.861Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "GenericReposatory.cs",
-              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\DAL\\DAL\\Repository\\GenericReposatory.cs",
-              "RelativeDocumentMoniker": "..\\DAL\\DAL\\Repository\\GenericReposatory.cs",
-              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\DAL\\DAL\\Repository\\GenericReposatory.cs",
-              "RelativeToolTip": "..\\DAL\\DAL\\Repository\\GenericReposatory.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T21:18:04.958Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Interface\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Interface\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAAAF0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-04T20:47:26.711Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "index.js",
-              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\pages\\Receipts\\index.js",
-              "RelativeDocumentMoniker": "Interface\\wwwroot\\js\\pages\\Receipts\\index.js",
-              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\pages\\Receipts\\index.js",
-              "RelativeToolTip": "Interface\\wwwroot\\js\\pages\\Receipts\\index.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAABKAAAAAAAAAA==",
+              "Title": "AJAX.js",
+              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipts\\AJAX.js",
+              "RelativeDocumentMoniker": "Interface\\wwwroot\\js\\Receipts\\AJAX.js",
+              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipts\\AJAX.js",
+              "RelativeToolTip": "Interface\\wwwroot\\js\\Receipts\\AJAX.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-02-04T20:27:14.809Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "index.css",
-              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\pages\\Receipts\\index.css",
-              "RelativeDocumentMoniker": "Interface\\wwwroot\\css\\pages\\Receipts\\index.css",
-              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\pages\\Receipts\\index.css",
-              "RelativeToolTip": "Interface\\wwwroot\\css\\pages\\Receipts\\index.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-02-04T20:19:56.123Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\Products\\Index.cshtml",
-              "RelativeDocumentMoniker": "Interface\\Views\\Products\\Index.cshtml",
-              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\Products\\Index.cshtml",
-              "RelativeToolTip": "Interface\\Views\\Products\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-04T18:26:52.055Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Products.js",
-              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\pages\\Products.js",
-              "RelativeDocumentMoniker": "Interface\\wwwroot\\js\\pages\\Products.js",
-              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\pages\\Products.js",
-              "RelativeToolTip": "Interface\\wwwroot\\js\\pages\\Products.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-02-04T17:57:56.536Z",
+              "WhenOpened": "2025-02-08T12:04:03.036Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "Interface\\Controllers\\ProductsController.cs",
-              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "Interface\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBMAAAAaAAAAAAAAAA==",
+              "Title": "pageNew.js",
+              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipts\\pageNew.js",
+              "RelativeDocumentMoniker": "Interface\\wwwroot\\js\\Receipts\\pageNew.js",
+              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipts\\pageNew.js",
+              "RelativeToolTip": "Interface\\wwwroot\\js\\Receipts\\pageNew.js",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAAB0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-08T07:37:43.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ReceiptVM.cs",
+              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\ViewModels\\ReceiptVM\\ReceiptVM.cs",
+              "RelativeDocumentMoniker": "Interface\\ViewModels\\ReceiptVM\\ReceiptVM.cs",
+              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\ViewModels\\ReceiptVM\\ReceiptVM.cs",
+              "RelativeToolTip": "Interface\\ViewModels\\ReceiptVM\\ReceiptVM.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA8AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T17:44:32.477Z",
+              "WhenOpened": "2025-02-08T07:43:03.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReceiptsController.cs",
+              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Controllers\\ReceiptsController.cs",
+              "RelativeDocumentMoniker": "Interface\\Controllers\\ReceiptsController.cs",
+              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Controllers\\ReceiptsController.cs",
+              "RelativeToolTip": "Interface\\Controllers\\ReceiptsController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA6wBwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-08T07:21:42.987Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Select2.js",
+              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipts\\Select2.js",
+              "RelativeDocumentMoniker": "Interface\\wwwroot\\js\\Receipts\\Select2.js",
+              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipts\\Select2.js",
+              "RelativeToolTip": "Interface\\wwwroot\\js\\Receipts\\Select2.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-08T12:02:42.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_receiptPartial.cshtml",
+              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\Receipts\\_receiptPartial.cshtml",
+              "RelativeDocumentMoniker": "Interface\\Views\\Receipts\\_receiptPartial.cshtml",
+              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\Views\\Receipts\\_receiptPartial.cshtml",
+              "RelativeToolTip": "Interface\\Views\\Receipts\\_receiptPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-08T08:46:05.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Classes.js",
+              "DocumentMoniker": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipts\\Classes.js",
+              "RelativeDocumentMoniker": "Interface\\wwwroot\\js\\Receipts\\Classes.js",
+              "ToolTip": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipts\\Classes.js",
+              "RelativeToolTip": "Interface\\wwwroot\\js\\Receipts\\Classes.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-08T11:07:19.734Z",
               "EditorCaption": ""
             }
           ]

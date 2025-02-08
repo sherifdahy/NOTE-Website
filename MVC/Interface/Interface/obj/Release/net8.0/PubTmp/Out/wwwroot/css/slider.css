@@ -1,0 +1,22 @@
+.slider{
+    background-color: var(--main-color);
+    box-shadow: 0px 4px 9px 0px black;
+    min-height: 100vh;
+    
+}
+
+.link :hover {
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.nested-link :hover {
+    background-color: rgba(84, 84, 84, 0.992);
+    transition: 0.1s ease-in-out;
+}
+
+.active {
+    border: 2px solid white;
+    border-radius:5px;
+    font-weight: bold;
+}

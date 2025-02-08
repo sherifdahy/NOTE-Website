@@ -436,13 +436,13 @@ namespace DAL.Migrations
                     b.ToTable("TaxTotal");
                 });
 
-            modelBuilder.Entity("Entities.Models.Receipt.TaxableItems", b =>
+            modelBuilder.Entity("Entities.Models.Receipt.TaxableItem", b =>
                 {
-                    b.Property<int>("TaxableItemsId")
+                    b.Property<int>("TaxableItemId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TaxableItemsId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TaxableItemId"));
 
                     b.Property<decimal>("Amount")
                         .HasColumnType("decimal(18,2)");
@@ -461,11 +461,11 @@ namespace DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("TaxableItemsId");
+                    b.HasKey("TaxableItemId");
 
                     b.HasIndex("ItemId");
 
-                    b.ToTable("TaxableItems");
+                    b.ToTable("TaxableItem");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<int>", b =>
@@ -679,7 +679,7 @@ namespace DAL.Migrations
                         .HasForeignKey("ReceiptId");
                 });
 
-            modelBuilder.Entity("Entities.Models.Receipt.TaxableItems", b =>
+            modelBuilder.Entity("Entities.Models.Receipt.TaxableItem", b =>
                 {
                     b.HasOne("Entities.Models.Receipt.Item", null)
                         .WithMany("TaxableItems")

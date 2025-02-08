@@ -21,7 +21,7 @@ namespace Interface
 
             //  built in service need to regiser 
             builder.Services.AddDbContext<ApplicationDbContext>
-                (option => option.UseSqlServer(builder.Configuration.GetConnectionString("local")));
+                (option => option.UseSqlServer(builder.Configuration.GetConnectionString("online")));
 
 
             // custom service need to register

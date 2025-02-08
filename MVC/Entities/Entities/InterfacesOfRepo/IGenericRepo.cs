@@ -11,7 +11,7 @@ namespace Entities.InterfacesOfRepo
     {
         public IEnumerable<T> GetAll();
         public void Delete(T entity);
-        T UpdateById(T entity);
+        T Update(T entity);
         void Insert(T entity);
         public  IQueryable<T> FindAll(Expression<Func<T, bool>> criteria, string[] includes);
 

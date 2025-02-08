@@ -1,16 +1,5 @@
-header{
-    display: flex;
-    align-items: center;
-    justify-content: left;
+.header{
     background-color: white;
-    height: 4rem;
-    box-shadow: -1px -5px 20px 4px #000000;
-    position:sticky;
-    top:0;
-    left:0;
-    z-index:99;
-    & .img-box{
-        padding-inline: 1rem;
-        padding-block: 0.5rem;
-    }
+    box-shadow: 0px -1px 17px 0px #312d2d;
+    z-index: 99;
 }
