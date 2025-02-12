@@ -18,7 +18,7 @@ namespace Interface.ViewModels.ReceiptVM
         public decimal NetSale { get; set; }
         public decimal TotalSale { get; set; }
         public decimal Total { get; set; }
-        public virtual ICollection<TaxableItem> TaxableItems { get; set; } = new HashSet<TaxableItem>();
+        public virtual ICollection<TaxableItemVM> TaxableItems { get; set; } = new HashSet<TaxableItemVM>();
         public virtual ICollection<CommercialDiscountDataVM> CommercialDiscountData { get; set; } = new HashSet<CommercialDiscountDataVM>();
 
     }

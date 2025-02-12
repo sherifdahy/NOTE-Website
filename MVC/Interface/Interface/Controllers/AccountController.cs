@@ -2,6 +2,7 @@
 using Entities.InterfacesOfRepo;
 using Entities.Models;
 using Interface.ViewModels;
+using Interface.ViewModels.ReceiptVM;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -12,6 +13,7 @@ using System.Security.Claims;
 namespace Interface.Controllers
 {
 
+    [Authorize]
     public class AccountController : BaseController
     {
 
@@ -21,10 +23,9 @@ namespace Interface.Controllers
         }
 
 
-
-
         #region Register
         [HttpGet]
+        [AllowAnonymous]
         public IActionResult Register()
         {
             return View();
@@ -37,7 +38,7 @@ namespace Interface.Controllers
             if (ModelState.IsValid == true)
             {
                 //casting
-                ApplicationUser applicationUser = registerVM.Casting();
+                applicationUser applicationUser = registerVM.Casting();
                 // creating
                 IdentityResult result = await IUnitOfWork.UserManager.CreateAsync(applicationUser, registerVM.Password);
                 if (result.Succeeded)
@@ -79,6 +80,7 @@ namespace Interface.Controllers
 
         #region Login
         [HttpGet]
+        [AllowAnonymous]
         public IActionResult Login()
         {
             return View();
@@ -86,11 +88,12 @@ namespace Interface.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public async Task<IActionResult> Login(LoginVM loginVM)
         {
             if (ModelState.IsValid == true) 
             {
-                ApplicationUser applicationUser = await IUnitOfWork.UserManager.FindByEmailAsync(loginVM.Email);
+                applicationUser applicationUser = await IUnitOfWork.UserManager.FindByEmailAsync(loginVM.Email);
                 if (applicationUser != null) 
                 {
                     bool found = await IUnitOfWork.UserManager.CheckPasswordAsync(applicationUser,loginVM.Password);
@@ -110,7 +113,6 @@ namespace Interface.Controllers
 
 
         #region Singout
-
         [HttpGet]
         public async Task<IActionResult> Signout()
         {
@@ -119,5 +121,77 @@ namespace Interface.Controllers
         }
         #endregion
 
+
+        #region TaxpyerProfile
+        [HttpGet]
+        public async Task<IActionResult> TaxpayerProfile()
+        {
+            int id = int.Parse(User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier).Value);
+            applicationUser applicationUser = await IUnitOfWork.UserManager.Users.FirstOrDefaultAsync(x=>x.Id == id );
+            return View(CastingToViewModel(applicationUser));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> TaxpayerProfile(TaxpyerProfileVM vM)
+        {
+            if (ModelState.IsValid) {
+                applicationUser applicationUser = await IUnitOfWork.UserManager.FindByIdAsync(User.Claims.FirstOrDefault(x=>x.Type == ClaimTypes.NameIdentifier).Value);
+                IdentityResult result = await IUnitOfWork.UserManager.UpdateAsync(CastingToModel(vM,applicationUser));
+                if (!result.Succeeded) {
+                    foreach(var item in result.Errors)
+                    {
+                        ModelState.AddModelError("", item.Description);
+                    }
+                }
+            }
+            return View(vM);
+        }
+        #endregion
+
+
+        #region Casting
+        public TaxpyerProfileVM CastingToViewModel(applicationUser applicationUser)
+        {
+            return new TaxpyerProfileVM()
+            {
+                Name = applicationUser.Name,
+                RegistrationNumber = applicationUser.RegistrationNumber,
+                Email = applicationUser.Email,
+                Mobile = applicationUser.Mobile,
+                POSSerial = applicationUser.POSSerial,
+                POSClientId = applicationUser.POSClientId,
+                POSClientSecret = applicationUser.POSClientSecret,
+                ActivityCodes = applicationUser.ActivityCodes,
+                BranchCode = applicationUser.BranchCode,
+                BranchAddress = new BranchAddressVM()
+                {
+                    BuildingNumber = applicationUser.BuildingNumber,
+                    Country = applicationUser.Country,
+                    Governate = applicationUser.Governate,
+                    RegionCity = applicationUser.RegionCity,
+                    Street = applicationUser.Street,
+                }
+            };
+        }
+
+        public applicationUser CastingToModel(TaxpyerProfileVM vM,applicationUser applicationUser)
+        {
+            applicationUser.Name = vM.Name;
+            applicationUser.RegistrationNumber = vM.RegistrationNumber;
+            applicationUser.Country = vM.BranchAddress.Country;
+            applicationUser.Governate = vM.BranchAddress.Governate;
+            applicationUser.RegionCity = vM.BranchAddress.RegionCity;
+            applicationUser.Street = vM.BranchAddress.Street;
+            applicationUser.ActivityCodes = vM.ActivityCodes;
+            applicationUser.BuildingNumber = vM.BranchAddress.BuildingNumber;
+            applicationUser.Mobile = vM.Mobile;
+            applicationUser.POSSerial = vM.POSSerial;
+            applicationUser.POSClientId = vM.POSClientId;
+            applicationUser.POSClientSecret = vM.POSClientSecret;
+            applicationUser.BranchCode = vM.BranchCode;
+            return applicationUser;
+        }
+        #endregion
     }
 }

@@ -7,5 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
     var now = new Date();
     var timezoneOffset = now.getTimezoneOffset() * 60000;
     var localISOTime = (new Date(now - timezoneOffset)).toISOString().slice(0, 16);
-    document.getElementById('currentDateTime').value = localISOTime;
+    document.getElementById('DateTime').value = localISOTime;
 });
+

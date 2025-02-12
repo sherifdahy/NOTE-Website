@@ -1,9 +1,10 @@
 ﻿class Receipt {
-    constructor(data = {}) {
-        this.Header = data.Header || null;
-        this.DocumentType = data.DocumentType || null;
-        this.Seller = data.Seller || null;
-        this.itemData = data.itemData || [];
+    constructor(data = {}) {ReceiptNumber
+        this.ReceiptNumber = data.ReceiptNumber || null;
+        this.DateTime = data.DateTime || null;
+        this.IssuedName = IssuedName || null;
+        this.IssuedNumber = IssuedNumber || null;
+        this.itemData = data.itemData || null;
         this.TotalSales = data.TotalSales || 0;
         this.TotalCommercialDiscount = data.TotalCommercialDiscount || 0;
         this.NetAmount = data.NetAmount || 0;
@@ -14,38 +15,6 @@
 }
 
 
-class Header {
-    constructor(data = {}) {
-        this.DateTimeIssued = data.DateTimeIssued || null;
-        this.ReceiptNumber = data.ReceiptNumber || null;
-        this.Uuid = data.Uuid || null;
-        this.PreviousUUID = data.PreviousUUID || null;
-        this.ReferenceOldUUID = data.ReferenceOldUUID || null;
-        this.Currency = data.Currency || null;
-        this.ExchangeRate = data.ExchangeRate || 0;
-        this.SOrderNameCode = data.SOrderNameCode || null;
-        this.OrderdeliveryMode = data.OrderdeliveryMode || null;
-    }
-}
-
-
-class DocumentType {
-    constructor(data = {}) {
-        this.ReceiptType = data.ReceiptType || null;
-        this.TypeVersion = data.TypeVersion || null;
-    }
-}
-
-class Seller {
-    constructor(data = {}) {
-        this.Rin = data.Rin || null;
-        this.CompanyTradeName = data.CompanyTradeName || null;
-        this.BranchCode = data.BranchCode || null;
-        this.BranchAddress = data.BranchAddress || null;
-        this.DeviceSerialNumber = data.DeviceSerialNumber || null;
-        this.ActivityCode = data.ActivityCode || null;
-    }
-}
 
 
 class Item {

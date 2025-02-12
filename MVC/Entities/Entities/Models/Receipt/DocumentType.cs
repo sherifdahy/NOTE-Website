@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,10 +7,12 @@ using System.Threading.Tasks;
 
 namespace Entities.Models.Receipt
 {
-    public class DocumentType
+    [JsonObject]
+    public class documentType
     {
-        public int DocumentTypeId { get; set; }
-        public string ReceiptType { get; set; }
-        public string TypeVersion { get; set; }
+        [JsonIgnore]
+        public int documentTypeId { get; set; }
+        public string receiptType { get; set; }
+        public string typeVersion { get; set; }
     }
 }

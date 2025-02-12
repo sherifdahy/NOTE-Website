@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.SymbolStore;
@@ -9,32 +10,40 @@ using System.Threading.Tasks;
 
 namespace Entities.Models.Receipt
 {
-    public class Receipt
+    [JsonObject]
+    public class receipt
     {
-        public int ReceiptId { get; set; }
+        [JsonIgnore]
+        public int receiptId { get; set; }
+        [JsonIgnore]
+        [ForeignKey("applicationUser")]
+        public int applicationUserId { get; set; }
+        [JsonIgnore]
+        public applicationUser applicationUser { get; set; }
+        [JsonIgnore]
+        [ForeignKey("header")]
+        public int headerId { get; set; }
+        public virtual header header {  get; set; }
+        [JsonIgnore]
+        [ForeignKey("documentType")]
+        public int documentTypeId { get; set; }
+        public virtual documentType documentType { get; set; }
+        [JsonIgnore]
+        [ForeignKey("seller")]
+        public int sellerId { get; set; }
+        public virtual seller seller { get; set; }
+        [JsonIgnore]
+        [ForeignKey("buyer")]
+        public int buyerId { get; set; }
 
-        [ForeignKey("ApplicationUser")]
-        public int ApplicationUserId { get; set; }
-        public ApplicationUser ApplicationUser { get; set; }
+        public virtual buyer buyer { get; set; }
 
-        [ForeignKey("Header")]
-        public int HeaderId { get; set; }
-        public virtual Header Header {  get; set; }
-
-        [ForeignKey("DocumentType")]
-        public int DocumentTypeId { get; set; }
-        public virtual DocumentType DocumentType { get; set; }
-
-        [ForeignKey("Seller")]
-        public int SellerId { get; set; }
-        public virtual Seller Seller { get; set; }
-
-        public virtual ICollection<Item> itemData { get; set; } = new HashSet<Item>();
-        public decimal TotalSales { get; set; }
-        public decimal TotalCommercialDiscount { get; set; }
-        public decimal NetAmount { get; set; }
-        public decimal TotalAmount { get; set; }
-        public virtual ICollection<TaxTotal> TaxTotals { get; set; } = new HashSet<TaxTotal>();
-        public string PaymentMethod { get; set; }
+        public virtual ICollection<item> itemData { get; set; } = new HashSet<item>();
+        public decimal totalSales { get; set; }
+        public decimal totalCommercialDiscount { get; set; }
+        public decimal netAmount { get; set; }
+        public decimal totalAmount { get; set; }
+        public virtual ICollection<taxTotal> taxTotals { get; set; } = new HashSet<taxTotal>();
+        public string paymentMethod { get; set; }
     }
 }

@@ -61,6 +61,18 @@
       "PackagePath": "staticwebassets\\js\\Products.js"
     },
     {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipt\\NewReceiptPage.js",
+      "PackagePath": "staticwebassets\\js\\Receipt\\NewReceiptPage.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipt\\modules\\ItemComponent.js",
+      "PackagePath": "staticwebassets\\js\\Receipt\\modules\\ItemComponent.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipt\\modules\\TaxComponent.js",
+      "PackagePath": "staticwebassets\\js\\Receipt\\modules\\TaxComponent.js"
+    },
+    {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipts\\AJAX.js",
       "PackagePath": "staticwebassets\\js\\Receipts\\AJAX.js"
     },

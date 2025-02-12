@@ -1,51 +1,272 @@
 ﻿@using Interface.ViewModels.ReceiptVM
-@model ReceiptVM
 
+@model ReceiptVM
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@@ttskch/select2-bootstrap4-theme/dist/select2-bootstrap4.min.css">
 
-<div class="col m-2" >
-    <div id="_receiptPartial">
-        <partial  name="_receiptPartial" model="Model"></partial>
+<form id="page" class="col m-2" dir="rtl" style="position:relative" asp-controller="Receipts" asp-action="New" method="post">
+    <div class="row gap-1  ">
+        <div class="col-lg col-sm-12 box-content">
+            <div class="form-group mb-2 ">
+                <label class="">رقم الايصال<span class="text-danger">*</span></label>
+                <input type="text" asp-for="ReceiptNumber" class="form-control  ">
+                <span asp-validation-for="ReceiptNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-2 ">
+                <label>تاريخ<span class="text-danger">*</span></label>
+                <input type="datetime-local" class="form-control" asp-for="DateTime">
+                <span asp-validation-for="DateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-2 ">
+                <label>نوع<span class="text-danger">*</span></label>
+                <select asp-for="Type" class="form-select">
+                    <option value="S">ايصال جديد</option>
+                    <option value="R">ايصال مرتجع</option>
+                </select>
+                <span asp-validation-for="Type" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-2 ">
+                <label>اصدار<span class="text-danger">*</span></label>
+                <select asp-for="Version" class="form-select">
+                    <option value="1.2">1.2</option>
+                </select>
+                <span asp-validation-for="Version" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-2">
+                <label>طريقة الدفع<span class="text-danger">*</span></label>
+                <select asp-for="PaymentMethod" class="form-select">
+                    <option selected value="C">Cash</option>
+                    <option value="V">Visa</option>
+                </select>
+                <span asp-validation-for="PaymentMethod" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-lg col-sm-12 box-content">
+            <div class="form-group mb-2 ">
+                <label>اسم العميل<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" asp-for="IssuedName">
+                <span asp-validation-for="IssuedName" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-2 ">
+                <label>نوع العميل<span class="text-danger">*</span></label>
+                <select asp-for="IssuedType" class="form-select">
+                    <option value="P">شخص</option>
+                    <option value="B">شركة</option>
+                    <option value="F">اجنبي</option>
+
+                </select>
+                <span asp-validation-for="IssuedType" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-2 ">
+                <label>رقم تعريفي</label>
+                <input type="text" class="form-control" asp-for="IssuedNumber">
+                <span asp-validation-for="IssuedNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-2 ">
+                <label>رقم تليفون</label>
+                <input type="text" class="form-control" asp-for="IssuedPhone">
+                <span asp-validation-for="IssuedPhone" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="w-100 g-0 box-content">
+
+            <button type="button" id="itemAreaToggleBtn" class="btn btn-primary mb-2">اضافة بند جديد</button>
+            <button type="button" class="btn btn-danger mb-2">حذف الكل</button>
+            <table class="table  table-hover table-bordered table-light" style="border-radius:2px">
+                <thead>
+                    <tr>
+                        <th>كود الداخلي</th>
+                        <th>وصف المنتج</th>
+                        <th>سعر الوحدة</th>
+                        <th>كمية</th>
+                        <th>خصم</th>
+                        <th>ضريبة</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="table_item_body">
+                    @foreach(ItemVM item in Model.itemData?.Any() == true ? Model.itemData : new List<ItemVM>())
+                    {
+                        <tr>
+
+                            <td>@item.InternalCode</td>
+                            <td>@item.Description</td>
+                            <td>@item.UnitPrice</td>
+                            <td>@item.Quantity</td>
+                            <td>@item.CommercialDiscountData.Select(x => x.Amount).FirstOrDefault()</td>
+                            <td>@item.TaxableItems.Select(x=>x.Amount).Sum()</td>
+                            <td>
+                                <button class="btn btn-primary">تعديل</button>
+                                <button class="btn btn-danger" onclick="Page.DeleteItem(${index})">حذف</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot id="table_item_footer">
+                    <tr>
+                        <td colspan=2>اجمالي الخصم : 0</td>
+                        <td colspan=2>اجمالي الضريبة : 0</td>
+                        <td colspan=3>الاجمالي بعد الخصم والضريبة : 0</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <span asp-validation-for="itemData" class="text-danger"></span>
+
+        </div>
+
+        <div class="box-content">
+            <input asp-for="itemData" type="text"   />
+            <input asp-for="TotalCommercialDiscount" type="text"  />
+            <input asp-for="TotalSales" type="text" />
+            <input asp-for="NetAmount" type="text" />
+            <input asp-for="TotalAmount" type="text" />
+            <input asp-for="TaxTotals" type="text" />
+
+
+        </div>
+
+        <div class=" box-content" dir="rtl">
+            <button type="button" id="saveBtn" class="btn btn-success ">
+                حفظ بدون ارسال
+            </button>
+            <button type="submit" id="sendBtn" class="btn btn-primary">
+                ارسال
+            </button>
+        </div>
+
+
+        <div class="box-content">
+            <h3>ملاحظات</h3>
+            <hr />
+            <div asp-validation-summary="All" class="text-danger"></div>
+        </div>
+    </div>
+
+    <div id="itemArea" class="box-content ">
+        <div class="form-group mb-2">
+            <label>اسم المنتج</label>
+            <select class="custom-select" data-live-search="true" id="ProductName">
+            </select>
+            <span class="text-danger"></span>
+        </div>
+        <div class=" form-group mb-2">
+            <label>سعر الوحدة</label>
+            <input type="number" id="UnitPrice" class="form-control">
+            <span class="text-danger"></span>
+        </div>
+        <div class="form-group mb-2">
+            <label>كمية</label>
+            <input type="number" id="Quantity" class="form-control  ">
+            <span class="text-danger"></span>
+        </div>
+        <div class=" form-group mb-2 ">
+            <label>خصم</label>
+            <input type="number" id="Discount" class="form-control  ">
+            <span class="text-danger"></span>
+        </div>
+        <div class="form-group mb-2 ">
+            <label>وصف المنتج</label>
+            <textarea id="Description" class="form-control"></textarea>
+            <span class="text-danger"></span>
+        </div>
+        <hr />
+        <button type="button" id="taxAreaToggleBtn" class="btn w-100 btn-light ">الضرايب</button>
+        <div id="taxArea" class="visually-hidden">
+            <div class="w-100 form-group mb-2 ">
+                <label>نوع الضريبة</label>
+                <select id="TaxTypeSelect" class="form-select">
+                    <option value="0">-- اختر نوع الضريبة --</option>
+                </select>
+            </div>
+            <div class="w-100 form-group mb-2">
+                <label>تفاصيل الضريبة</label>
+                <select id="SubTaxTypeSelect" class="form-select">
+                    <option value="0">-- اختر تفاصيل الضريبة --</option>
+                </select>
+            </div>
+            <div class="form-group mb-2 col">
+                <label>نسبة الضريبة</label>
+                <input id="itemTaxRate" class="form-control " type="number" />
+            </div>
+            <div class="form-group mb-2 col">
+                <label>قيمة الضريبة</label>
+                <input id="itemTaxAmount" class="form-control" type="number" />
+            </div>
+            <div class="form-group w-100">
+                <button type="button" id="addTaxBtn" class="form-control btn btn-secondary">اضافة ضريبة</button>
+            </div>
+            <table class="table  table-striped table-responsive">
+                <thead>
+                    <tr>
+                        <th>نوع الضريبة</th>
+                        <th>تفاصيل الضريبة</th>
+                        <th>نسبة</th>
+                        <th>قيمة</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="itemTaxTable"></tbody>
+            </table>
+        </div>
+        <hr />
+        <div class="row row-cols-2">
+            <div class="form-group">
+                <label>الاجمالي بدون خصم و ضريبة</label>
+                <input id="itemTotalSale" class="form-control mb-2" type="number" disabled />
+            </div>
+            <div class="form-group">
+                <label>الجمالي بعد الخصم</label>
+                <input id="itemNetSale" class="form-control mb-2" type="number" disabled />
+            </div>
+            <div class="form-group">
+                <label>اجمالي الضريبة</label>
+                <input id="itemTotalTax" class="form-control mb-2" type="number" disabled />
+            </div>
+            <div class="form-group">
+                <label>اجمالي بعد الضريبة والخصم</label>
+                <input id="itemTotal" class="form-control mb-2" type="number" disabled />
+            </div>
+        </div>
+        <hr />
+
+        <button id="addItemBtn" type="button" class="btn btn-success w-100 mt-2">اضافة البند</button>
+
+
 
     </div>
-    <form onsubmit="Send(event)" class="row box-content mt-2 " dir="rtl">
-        <input type="submit" class="btn btn-success col-2 ms-2" value="حفظ بدون ارسال" />
-        <input type="submit" class="btn btn-primary col-2" value="ارسال" />
 
-    </form>
-</div>
+</form>
 
 
 
+<style>
+    #itemArea {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: 0.2s ease-in-out;
+        background-color: var(--active-color);
+        width: 30%;
+        overflow-y: auto;
+    }
 
-
-
+    #taxArea {
+        transition: 0.2s ease-in-out;
+    }
+</style>
 
 
 @section Scripts {
-    
-
-    <script src="~/js/Receipts/Classes.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
-    <script src="~/js/Receipts/Select2.js">
-    </script> 
+    <script src="~/js/Receipts/Classes.js"></script>
+    <script type="module" src="~/js/Receipt/NewReceiptPage.js">
 
-    <script src="~/js/Receipts/AJAX.js">
     </script>
-
-    
-
-    <script src="~/js/receipts/pageNew.js">
-    </script>
-
-    <script src="~/js/Receipts/handle_item.js"></script>
-    <script src="~/js/Receipts/handle_receipt.js"></script>
 
 
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
-    
 }
+
+

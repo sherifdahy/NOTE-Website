@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,21 +7,24 @@ using System.Threading.Tasks;
 
 namespace Entities.Models.Receipt
 {
-    public class Item
+    [JsonObject]
+
+    public class item
     {
-        public int ItemId { get; set; }
-        public string InternalCode { get; set; }
-        public string Description { get; set; }
-        public string ItemType { get; set; }
-        public string ItemCode { get; set; }
-        public string UnitType { get; set; }
-        public decimal Quantity { get; set; }
-        public decimal UnitPrice { get; set; }
-        public decimal NetSale { get; set; }
-        public decimal TotalSale { get; set; }
-        public decimal Total { get; set; }
-        public virtual ICollection<TaxableItem> TaxableItems { get; set; } = new HashSet<TaxableItem>();
-        public virtual ICollection<CommercialDiscountData> CommercialDiscountData { get; set; } = new HashSet<CommercialDiscountData>();
+        [JsonIgnore]
+        public int itemId { get; set; }
+        public string internalCode { get; set; }
+        public string description { get; set; }
+        public string itemType { get; set; }
+        public string itemCode { get; set; }
+        public string unitType { get; set; }
+        public decimal quantity { get; set; }
+        public decimal unitPrice { get; set; }
+        public decimal netSale { get; set; }
+        public decimal totalSale { get; set; }
+        public decimal total { get; set; }
+        public virtual ICollection<taxableItem> taxableItems { get; set; } = new HashSet<taxableItem>();
+        public virtual ICollection<commercialDiscountData> commercialDiscountData { get; set; } = new HashSet<commercialDiscountData>();
 
     }
 }

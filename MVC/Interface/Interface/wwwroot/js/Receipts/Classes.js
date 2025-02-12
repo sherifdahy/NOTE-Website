@@ -1,10 +1,15 @@
-﻿class Receipt {
-    constructor(data = {}) {ReceiptNumber
+﻿
+class Receipt {
+    constructor(data = {}) {
         this.ReceiptNumber = data.ReceiptNumber || null;
         this.DateTime = data.DateTime || null;
+        this.Type = data.Type || null;
+        this.Version = data.Version || null;
         this.IssuedName = IssuedName || null;
         this.IssuedNumber = IssuedNumber || null;
-        this.itemData = data.itemData || [];
+        this.IssuedType = this.IssuedType || null;
+        this.IssuedPhone = this.IssuedPhone || null;
+        this.itemData = data.itemData || null;
         this.TotalSales = data.TotalSales || 0;
         this.TotalCommercialDiscount = data.TotalCommercialDiscount || 0;
         this.NetAmount = data.NetAmount || 0;

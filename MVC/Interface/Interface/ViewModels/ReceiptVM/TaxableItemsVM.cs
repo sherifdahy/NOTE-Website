@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Interface.ViewModels.ReceiptVM
 {
-    public class TaxableItem
+    public class TaxableItemVM
     {
         public string TaxType { get; set; }
         public string SubType { get; set; }

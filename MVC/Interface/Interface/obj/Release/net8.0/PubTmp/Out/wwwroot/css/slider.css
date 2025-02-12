@@ -11,6 +11,7 @@
 }
 
 .nested-link :hover {
+    border : none;
     background-color: rgba(84, 84, 84, 0.992);
     transition: 0.1s ease-in-out;
 }

@@ -26,9 +26,9 @@ namespace Interface.ViewModels
 
         public string ConfirmPassword { get; set; }
 
-        public  ApplicationUser Casting()
+        public  applicationUser Casting()
         {
-            return new ApplicationUser()
+            return new applicationUser()
             {
                 UserName = this.Username,
                 Email = this.Email,

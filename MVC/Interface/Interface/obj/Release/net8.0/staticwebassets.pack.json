@@ -69,6 +69,10 @@
       "PackagePath": "staticwebassets\\js\\Receipts\\Classes.js"
     },
     {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipts\\Methods.js",
+      "PackagePath": "staticwebassets\\js\\Receipts\\Methods.js"
+    },
+    {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipts\\Select2.js",
       "PackagePath": "staticwebassets\\js\\Receipts\\Select2.js"
     },

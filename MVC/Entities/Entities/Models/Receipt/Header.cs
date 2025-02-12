@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,20 +7,22 @@ using System.Threading.Tasks;
 
 namespace Entities.Models.Receipt
 {
-    public class Header
+    [JsonObject]
+    public class header
     {
-        public int HeaderId { get; set; }
-        public string DateTimeIssued { get; set; }
-        public string ReceiptNumber { get; set; }
-        public string Uuid { get; set; }
-        public string PreviousUUID { get; set; }
-        public string ReferenceOldUUID { get; set; }
-        public string Currency { get; set; }
-        public int ExchangeRate { get; set; }
-        public string SOrderNameCode { get; set; }
-        public string OrderdeliveryMode { get; set; }
+        [JsonIgnore]
+        public int headerId { get; set; }
+        public DateTime dateTimeIssued { get; set; }
+        public string receiptNumber { get; set; }
+        public string uuid { get; set; }
+        public string previousUUID { get; set; }
+        public string referenceOldUUID { get; set; }
+        public string currency { get; set; }
+        public int exchangeRate { get; set; }
+        public string sOrderNameCode { get; set; }
+        public string orderdeliveryMode { get; set; }
 
-
+        
 
     }
 }

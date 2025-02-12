@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,11 +7,13 @@ using System.Threading.Tasks;
 
 namespace Entities.Models.Receipt
 {
-    public class CommercialDiscountData
+    [JsonObject]
+    public class commercialDiscountData
     {
-        public int CommercialDiscountDataId { get; set; }
-        public decimal Amount { get; set; }
-        public string Description { get; set; }
-        public decimal Rate { get; set; }
+        [JsonIgnore]
+        public int commercialDiscountDataId { get; set; }
+        public decimal amount { get; set; }
+        public string description { get; set; }
+        public decimal rate { get; set; }
     }
 }

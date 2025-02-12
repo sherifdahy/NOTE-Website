@@ -22,74 +22,6 @@ namespace DAL.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Entities.Models.ApplicationUser", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("AccessFailedCount")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .IsConcurrencyToken()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<bool>("EmailConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("LockoutEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTimeOffset?>("LockoutEnd")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<string>("NormalizedEmail")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("NormalizedUserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("PasswordHash")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("PhoneNumberConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("SecurityStamp")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("TwoFactorEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("UserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NormalizedEmail")
-                        .HasDatabaseName("EmailIndex");
-
-                    b.HasIndex("NormalizedUserName")
-                        .IsUnique()
-                        .HasDatabaseName("UserNameIndex")
-                        .HasFilter("[NormalizedUserName] IS NOT NULL");
-
-                    b.ToTable("AspNetUsers", (string)null);
-                });
-
             modelBuilder.Entity("Entities.Models.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -141,331 +73,472 @@ namespace DAL.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("Entities.Models.Receipt.BranchAddress", b =>
+            modelBuilder.Entity("Entities.Models.Receipt.branchAddress", b =>
                 {
-                    b.Property<int>("BranchAddressId")
+                    b.Property<int>("branchAddressId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BranchAddressId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("branchAddressId"));
 
-                    b.Property<string>("BuildingNumber")
+                    b.Property<string>("buildingNumber")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Country")
+                    b.Property<string>("country")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Governate")
+                    b.Property<string>("governate")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("RegionCity")
+                    b.Property<string>("regionCity")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Street")
+                    b.Property<string>("street")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("BranchAddressId");
+                    b.HasKey("branchAddressId");
 
-                    b.ToTable("BranchAddress");
+                    b.ToTable("branchAddress");
                 });
 
-            modelBuilder.Entity("Entities.Models.Receipt.CommercialDiscountData", b =>
+            modelBuilder.Entity("Entities.Models.Receipt.buyer", b =>
                 {
-                    b.Property<int>("CommercialDiscountDataId")
+                    b.Property<int>("buyerId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CommercialDiscountDataId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("buyerId"));
 
-                    b.Property<decimal>("Amount")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<string>("id")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Description")
+                    b.Property<string>("mobileNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("ItemId")
-                        .HasColumnType("int");
+                    b.Property<string>("paymentNumber")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("Rate")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<string>("type")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("CommercialDiscountDataId");
+                    b.HasKey("buyerId");
 
-                    b.HasIndex("ItemId");
-
-                    b.ToTable("CommercialDiscountData");
+                    b.ToTable("buyer");
                 });
 
-            modelBuilder.Entity("Entities.Models.Receipt.DocumentType", b =>
+            modelBuilder.Entity("Entities.Models.Receipt.commercialDiscountData", b =>
                 {
-                    b.Property<int>("DocumentTypeId")
+                    b.Property<int>("commercialDiscountDataId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DocumentTypeId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("commercialDiscountDataId"));
 
-                    b.Property<string>("ReceiptType")
+                    b.Property<decimal>("amount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TypeVersion")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("itemId")
+                        .HasColumnType("int");
 
-                    b.HasKey("DocumentTypeId");
+                    b.Property<decimal>("rate")
+                        .HasColumnType("decimal(18,2)");
 
-                    b.ToTable("DocumentType");
+                    b.HasKey("commercialDiscountDataId");
+
+                    b.HasIndex("itemId");
+
+                    b.ToTable("commercialDiscountData");
                 });
 
-            modelBuilder.Entity("Entities.Models.Receipt.Header", b =>
+            modelBuilder.Entity("Entities.Models.Receipt.documentType", b =>
                 {
-                    b.Property<int>("HeaderId")
+                    b.Property<int>("documentTypeId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("HeaderId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("documentTypeId"));
 
-                    b.Property<string>("Currency")
+                    b.Property<string>("receiptType")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("DateTimeIssued")
+                    b.Property<string>("typeVersion")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ExchangeRate")
-                        .HasColumnType("int");
+                    b.HasKey("documentTypeId");
 
-                    b.Property<string>("OrderdeliveryMode")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PreviousUUID")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ReceiptNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ReferenceOldUUID")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SOrderNameCode")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Uuid")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("HeaderId");
-
-                    b.ToTable("Header");
+                    b.ToTable("documentType");
                 });
 
-            modelBuilder.Entity("Entities.Models.Receipt.Item", b =>
+            modelBuilder.Entity("Entities.Models.Receipt.header", b =>
                 {
-                    b.Property<int>("ItemId")
+                    b.Property<int>("headerId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ItemId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("headerId"));
 
-                    b.Property<string>("Description")
+                    b.Property<string>("currency")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("InternalCode")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("dateTimeIssued")
+                        .HasColumnType("datetime2");
 
-                    b.Property<string>("ItemCode")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ItemType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("NetSale")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<decimal>("Quantity")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int?>("ReceiptId")
+                    b.Property<int>("exchangeRate")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("Total")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<decimal>("TotalSale")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<decimal>("UnitPrice")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("UnitType")
+                    b.Property<string>("orderdeliveryMode")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ItemId");
+                    b.Property<string>("previousUUID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasIndex("ReceiptId");
+                    b.Property<string>("receiptNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.ToTable("Item");
+                    b.Property<string>("referenceOldUUID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("sOrderNameCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("uuid")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("headerId");
+
+                    b.ToTable("header");
                 });
 
-            modelBuilder.Entity("Entities.Models.Receipt.Receipt", b =>
+            modelBuilder.Entity("Entities.Models.Receipt.item", b =>
                 {
-                    b.Property<int>("ReceiptId")
+                    b.Property<int>("itemId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReceiptId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("itemId"));
 
-                    b.Property<int>("ApplicationUserId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("DocumentTypeId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("HeaderId")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("NetAmount")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("PaymentMethod")
+                    b.Property<string>("description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("SellerId")
+                    b.Property<string>("internalCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("itemCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("itemType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("netSale")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("quantity")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int?>("receiptId")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("TotalAmount")
+                    b.Property<decimal>("total")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<decimal>("TotalCommercialDiscount")
+                    b.Property<decimal>("totalSale")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<decimal>("TotalSales")
+                    b.Property<decimal>("unitPrice")
                         .HasColumnType("decimal(18,2)");
 
-                    b.HasKey("ReceiptId");
+                    b.Property<string>("unitType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasIndex("ApplicationUserId");
+                    b.HasKey("itemId");
 
-                    b.HasIndex("DocumentTypeId");
+                    b.HasIndex("receiptId");
 
-                    b.HasIndex("HeaderId");
+                    b.ToTable("item");
+                });
 
-                    b.HasIndex("SellerId");
+            modelBuilder.Entity("Entities.Models.Receipt.receipt", b =>
+                {
+                    b.Property<int>("receiptId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("receiptId"));
+
+                    b.Property<int>("applicationUserId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("buyerId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("documentTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("headerId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("netAmount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("paymentMethod")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("sellerId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("totalAmount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("totalCommercialDiscount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("totalSales")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("receiptId");
+
+                    b.HasIndex("applicationUserId");
+
+                    b.HasIndex("buyerId");
+
+                    b.HasIndex("documentTypeId");
+
+                    b.HasIndex("headerId");
+
+                    b.HasIndex("sellerId");
 
                     b.ToTable("Receipts");
                 });
 
-            modelBuilder.Entity("Entities.Models.Receipt.Seller", b =>
+            modelBuilder.Entity("Entities.Models.Receipt.seller", b =>
                 {
-                    b.Property<int>("SellerId")
+                    b.Property<int>("sellerId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SellerId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("sellerId"));
 
-                    b.Property<string>("ActivityCode")
+                    b.Property<string>("activityCode")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("BranchAddressId")
+                    b.Property<int>("branchAddressId")
                         .HasColumnType("int");
+
+                    b.Property<string>("branchCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("companyTradeName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("deviceSerialNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("rin")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("sellerId");
+
+                    b.HasIndex("branchAddressId");
+
+                    b.ToTable("seller");
+                });
+
+            modelBuilder.Entity("Entities.Models.Receipt.taxTotal", b =>
+                {
+                    b.Property<int>("taxTotalId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("taxTotalId"));
+
+                    b.Property<decimal>("amount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int?>("receiptId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("taxType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("taxTotalId");
+
+                    b.HasIndex("receiptId");
+
+                    b.ToTable("taxTotal");
+                });
+
+            modelBuilder.Entity("Entities.Models.Receipt.taxableItem", b =>
+                {
+                    b.Property<int>("taxableItemId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("taxableItemId"));
+
+                    b.Property<decimal>("amount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int?>("itemId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("rate")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("subType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("taxType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("taxableItemId");
+
+                    b.HasIndex("itemId");
+
+                    b.ToTable("taxableItem");
+                });
+
+            modelBuilder.Entity("Entities.Models.applicationUser", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ActivityCodes")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("BranchCode")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CompanyTradeName")
-                        .IsRequired()
+                    b.Property<string>("BuildingNumber")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("DeviceSerialNumber")
-                        .IsRequired()
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Rin")
-                        .IsRequired()
+                    b.Property<string>("Country")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("SellerId");
+                    b.Property<string>("Email")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
 
-                    b.HasIndex("BranchAddressId");
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
 
-                    b.ToTable("Seller");
-                });
-
-            modelBuilder.Entity("Entities.Models.Receipt.TaxTotal", b =>
-                {
-                    b.Property<int>("TaxTotalId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TaxTotalId"));
-
-                    b.Property<decimal>("Amount")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int?>("ReceiptId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("TaxType")
-                        .IsRequired()
+                    b.Property<string>("Governate")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("TaxTotalId");
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
 
-                    b.HasIndex("ReceiptId");
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
 
-                    b.ToTable("TaxTotal");
-                });
-
-            modelBuilder.Entity("Entities.Models.Receipt.TaxableItem", b =>
-                {
-                    b.Property<int>("TaxableItemId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TaxableItemId"));
-
-                    b.Property<decimal>("Amount")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int?>("ItemId")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("Rate")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("SubType")
-                        .IsRequired()
+                    b.Property<string>("Mobile")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TaxType")
-                        .IsRequired()
+                    b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("TaxableItemId");
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
 
-                    b.HasIndex("ItemId");
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
 
-                    b.ToTable("TaxableItem");
+                    b.Property<string>("POSClientId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("POSClientSecret")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("POSSerial")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("RegionCity")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RegistrationNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Street")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("AspNetUsers", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<int>", b =>
@@ -496,6 +569,20 @@ namespace DAL.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "User",
+                            NormalizedName = "USER"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
@@ -603,7 +690,7 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("Entities.Models.Product", b =>
                 {
-                    b.HasOne("Entities.Models.ApplicationUser", "ApplicationUser")
+                    b.HasOne("Entities.Models.applicationUser", "ApplicationUser")
                         .WithMany("Products")
                         .HasForeignKey("ApplicationUserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -612,78 +699,86 @@ namespace DAL.Migrations
                     b.Navigation("ApplicationUser");
                 });
 
-            modelBuilder.Entity("Entities.Models.Receipt.CommercialDiscountData", b =>
+            modelBuilder.Entity("Entities.Models.Receipt.commercialDiscountData", b =>
                 {
-                    b.HasOne("Entities.Models.Receipt.Item", null)
-                        .WithMany("CommercialDiscountData")
-                        .HasForeignKey("ItemId");
+                    b.HasOne("Entities.Models.Receipt.item", null)
+                        .WithMany("commercialDiscountData")
+                        .HasForeignKey("itemId");
                 });
 
-            modelBuilder.Entity("Entities.Models.Receipt.Item", b =>
+            modelBuilder.Entity("Entities.Models.Receipt.item", b =>
                 {
-                    b.HasOne("Entities.Models.Receipt.Receipt", null)
+                    b.HasOne("Entities.Models.Receipt.receipt", null)
                         .WithMany("itemData")
-                        .HasForeignKey("ReceiptId");
+                        .HasForeignKey("receiptId");
                 });
 
-            modelBuilder.Entity("Entities.Models.Receipt.Receipt", b =>
+            modelBuilder.Entity("Entities.Models.Receipt.receipt", b =>
                 {
-                    b.HasOne("Entities.Models.ApplicationUser", "ApplicationUser")
+                    b.HasOne("Entities.Models.applicationUser", "applicationUser")
                         .WithMany("Receipts")
-                        .HasForeignKey("ApplicationUserId")
+                        .HasForeignKey("applicationUserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Entities.Models.Receipt.DocumentType", "DocumentType")
+                    b.HasOne("Entities.Models.Receipt.buyer", "buyer")
                         .WithMany()
-                        .HasForeignKey("DocumentTypeId")
+                        .HasForeignKey("buyerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Entities.Models.Receipt.Header", "Header")
+                    b.HasOne("Entities.Models.Receipt.documentType", "documentType")
                         .WithMany()
-                        .HasForeignKey("HeaderId")
+                        .HasForeignKey("documentTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Entities.Models.Receipt.Seller", "Seller")
+                    b.HasOne("Entities.Models.Receipt.header", "header")
                         .WithMany()
-                        .HasForeignKey("SellerId")
+                        .HasForeignKey("headerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("ApplicationUser");
+                    b.HasOne("Entities.Models.Receipt.seller", "seller")
+                        .WithMany()
+                        .HasForeignKey("sellerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("DocumentType");
+                    b.Navigation("applicationUser");
 
-                    b.Navigation("Header");
+                    b.Navigation("buyer");
 
-                    b.Navigation("Seller");
+                    b.Navigation("documentType");
+
+                    b.Navigation("header");
+
+                    b.Navigation("seller");
                 });
 
-            modelBuilder.Entity("Entities.Models.Receipt.Seller", b =>
+            modelBuilder.Entity("Entities.Models.Receipt.seller", b =>
                 {
-                    b.HasOne("Entities.Models.Receipt.BranchAddress", "BranchAddress")
+                    b.HasOne("Entities.Models.Receipt.branchAddress", "branchAddress")
                         .WithMany()
-                        .HasForeignKey("BranchAddressId")
+                        .HasForeignKey("branchAddressId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("BranchAddress");
+                    b.Navigation("branchAddress");
                 });
 
-            modelBuilder.Entity("Entities.Models.Receipt.TaxTotal", b =>
+            modelBuilder.Entity("Entities.Models.Receipt.taxTotal", b =>
                 {
-                    b.HasOne("Entities.Models.Receipt.Receipt", null)
-                        .WithMany("TaxTotals")
-                        .HasForeignKey("ReceiptId");
+                    b.HasOne("Entities.Models.Receipt.receipt", null)
+                        .WithMany("taxTotals")
+                        .HasForeignKey("receiptId");
                 });
 
-            modelBuilder.Entity("Entities.Models.Receipt.TaxableItem", b =>
+            modelBuilder.Entity("Entities.Models.Receipt.taxableItem", b =>
                 {
-                    b.HasOne("Entities.Models.Receipt.Item", null)
-                        .WithMany("TaxableItems")
-                        .HasForeignKey("ItemId");
+                    b.HasOne("Entities.Models.Receipt.item", null)
+                        .WithMany("taxableItems")
+                        .HasForeignKey("itemId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
@@ -697,7 +792,7 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<int>", b =>
                 {
-                    b.HasOne("Entities.Models.ApplicationUser", null)
+                    b.HasOne("Entities.Models.applicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -706,7 +801,7 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<int>", b =>
                 {
-                    b.HasOne("Entities.Models.ApplicationUser", null)
+                    b.HasOne("Entities.Models.applicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -721,7 +816,7 @@ namespace DAL.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Entities.Models.ApplicationUser", null)
+                    b.HasOne("Entities.Models.applicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -730,32 +825,32 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<int>", b =>
                 {
-                    b.HasOne("Entities.Models.ApplicationUser", null)
+                    b.HasOne("Entities.Models.applicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Entities.Models.ApplicationUser", b =>
+            modelBuilder.Entity("Entities.Models.Receipt.item", b =>
+                {
+                    b.Navigation("commercialDiscountData");
+
+                    b.Navigation("taxableItems");
+                });
+
+            modelBuilder.Entity("Entities.Models.Receipt.receipt", b =>
+                {
+                    b.Navigation("itemData");
+
+                    b.Navigation("taxTotals");
+                });
+
+            modelBuilder.Entity("Entities.Models.applicationUser", b =>
                 {
                     b.Navigation("Products");
 
                     b.Navigation("Receipts");
-                });
-
-            modelBuilder.Entity("Entities.Models.Receipt.Item", b =>
-                {
-                    b.Navigation("CommercialDiscountData");
-
-                    b.Navigation("TaxableItems");
-                });
-
-            modelBuilder.Entity("Entities.Models.Receipt.Receipt", b =>
-                {
-                    b.Navigation("TaxTotals");
-
-                    b.Navigation("itemData");
                 });
 #pragma warning restore 612, 618
         }

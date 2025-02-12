@@ -1,4 +1,5 @@
 ﻿using Entities.Models;
+using Entities.Models.Receipt;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
@@ -11,10 +12,10 @@ namespace Entities.InterfacesOfRepo
     public interface IUnitOfWork
     {
         IGenericRepo<Product> Products { get; }
-        UserManager<ApplicationUser> UserManager { get; }
+        UserManager<applicationUser> UserManager { get; }
         RoleManager<IdentityRole<int>> RoleManager { get; }
-        
-        SignInManager<ApplicationUser> SignInManager { get; }
+        IGenericRepo<receipt> Receipts { get; }
+        SignInManager<applicationUser> SignInManager { get; }
 
         void Save();
         

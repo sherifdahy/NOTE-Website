@@ -38,6 +38,6 @@ namespace Entities.Models
         [Required] 
         public int ApplicationUserId { get; set; }
 
-        public virtual ApplicationUser ApplicationUser { get; set; }
+        public virtual applicationUser ApplicationUser { get; set; }
     }
 }
