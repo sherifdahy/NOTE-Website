@@ -1,56 +1,58 @@
-﻿using Newtonsoft.Json;
+﻿using ETA.eReceipt.IntegrationToolkit.Application.Dtos;
+using ETA.eReceipt.IntegrationToolkit.Application.Models;
+using Newtonsoft.Json;
 
 namespace Interface.Dto
 {
-    public class SubmissionDTO
+    public class SubmissionDTO : BaseResponseDto
     {
-        [JsonProperty("submissionId")]
-        public string SubmissionId { get; set; }
+        public string? submissionId { get; set; }
 
-        [JsonProperty("acceptedDocuments")]
-        public List<AcceptedDocument> AcceptedDocuments { get; set; }
+        public List<ReceiptsAcceptedDto>? acceptedDocuments { get; set; }
 
-        [JsonProperty("rejectedDocuments")]
-        public List<object> RejectedDocuments { get; set; } // فارغ في المثال، يمكن تغييره لاحقًا
+        public List<ReceiptsRejectedDto>? rejectedDocuments { get; set; }
 
-        [JsonProperty("header")]
-        public Header Header { get; set; }
+        public HeaderDto? header { get; set; }
     }
 
-    public class AcceptedDocument
+    public class ReceiptsAcceptedDto
     {
-        [JsonProperty("uuid")]
-        public string Uuid { get; set; }
+        public string submissionUuid { get; set; } = null;
 
-        [JsonProperty("longId")]
-        public string LongId { get; set; }
 
-        [JsonProperty("receiptNumber")]
-        public string ReceiptNumber { get; set; }
+        public string uuid { get; set; } = null;
 
-        [JsonProperty("hashKey")]
-        public string HashKey { get; set; }
+
+        public string longId { get; set; } = null;
+
+
+        public string receiptNumber { get; set; } = null;
+
+
+        public string hashKey { get; set; } = null;
     }
 
-    public class Header
+    public class ReceiptsRejectedDto
     {
-        [JsonProperty("statusCode")]
-        public string StatusCode { get; set; }
+        public string receiptNumber { get; set; } = null;
 
-        [JsonProperty("code")]
-        public string Code { get; set; }
 
-        [JsonProperty("details")]
-        public List<object> Details { get; set; }
+        public string uuid { get; set; } = null;
 
-        [JsonProperty("correlationId")]
-        public string CorrelationId { get; set; }
 
-        [JsonProperty("requestTime")]
-        public DateTime RequestTime { get; set; }
+        public HttpCustomErrorResponseModel error { get; set; } = null;
+    }
 
-        [JsonProperty("responseProcessingTimeInTicks")]
-        public long ResponseProcessingTimeInTicks { get; set; }
+    public class HeaderDto
+    {
+
+
+        public string? statusCode { get; set; }
+        public string? code { get; set; }
+        public List<string>? details { get; set; }
+        public string? correlationId { get; set; }
+        public string? requestTime { get; set; }
+        public long responseProcessingTimeInTicks { get; set; }
     }
 
 }

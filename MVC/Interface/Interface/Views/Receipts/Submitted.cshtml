@@ -1,6 +1,15 @@
 ﻿
-
-
-<div class="col">
-    <img width="64" height="64" src="https://img.icons8.com/cute-clipart/64/ok.png" alt="ok" /> 
+<div class="card mt-5" dir="rtl">
+    <div class="card-body text-center">
+        <img src="https://img.icons8.com/cute-clipart/64/ok.png" alt="ok" />
+        <hr />
+        <h3>تم ارسال الايصال .</h3>
+        <h5>@Model.subId</h5>
+        <hr />
+        <div class="d-flex justify-content-center gap-2">
+            <a class="btn btn-success " asp-controller="receipts" asp-action="index">حافظة الايصالات</a>
+            <a class="btn btn-primary " asp-controller="receipts" asp-action="new">ايصال جديد</a>
+        </div>
+    </div>
 </div>
+

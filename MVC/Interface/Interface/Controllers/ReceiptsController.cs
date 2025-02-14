@@ -18,6 +18,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
+using System;
 using System.Collections;
 using System.Security.Claims;
 
@@ -89,12 +90,12 @@ namespace Interface.Controllers
                 applicationUser applicationUser = await IUnitOfWork.UserManager.FindByIdAsync(User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier).Value);
 
 
-                var initializeRequestDto = new InitializeRequestDto();
+                //var initializeRequestDto = new InitializeRequestDto();
 
-                initializeRequestDto.SaveCredential = false;
-                initializeRequestDto.ResumeWithInvalidCache = false;
-                initializeRequestDto.MaximumSubmissionDocumentCount = 500;
-                initializeRequestDto.CachLookupDurationInHours = 1;
+                //initializeRequestDto.SaveCredential = false;
+                //initializeRequestDto.ResumeWithInvalidCache = false;
+                //initializeRequestDto.MaximumSubmissionDocumentCount = 500;
+                //initializeRequestDto.CachLookupDurationInHours = 1;
 
 
                 var authenticateRequestDto =
@@ -118,13 +119,15 @@ namespace Interface.Controllers
                 }));
 
                 receipt.header.uuid = response.Uuid?.ToString();
-                IssueReceiptResponseDto temp = await toolkit.IssueReceipt(JsonConvert.SerializeObject(receipt, new JsonSerializerSettings()
-                {
-                    Formatting = Formatting.Indented,
-                    NullValueHandling = NullValueHandling.Ignore
-                }));
-                if (temp.Details == null)
-                {
+                //IssueReceiptResponseDto temp = await toolkit.IssueReceipt(JsonConvert.SerializeObject(receipt, new JsonSerializerSettings()
+                //{
+                //    Formatting = Formatting.Indented,
+                //    NullValueHandling = NullValueHandling.Ignore
+                //}));
+                //if (temp.Details == null)
+                //{
+                    
+
 
                     SubmissionDTO submissionDTO = await api.Submissions<SubmissionDTO>("api/v1/receiptsubmissions", JsonConvert.SerializeObject(
                         new
@@ -140,20 +143,20 @@ namespace Interface.Controllers
                         }), respose.Token);
                     IUnitOfWork.Receipts.Insert(receipt);
                     IUnitOfWork.Save();
-                    return RedirectToAction(nameof(Submitted));
+                    return RedirectToAction(nameof(Submitted),new { subId = submissionDTO.submissionId });
 
-                }
+                //}
 
-                else
-                {
-                    foreach (dynamic error in (IEnumerable)temp.Details)
-                    {
-                        foreach (dynamic mess in error.Details)
-                        {
-                            ModelState.AddModelError("", mess.Message.ToString());
-                        }
-                    }
-                }
+                //else
+                //{
+                //    foreach (dynamic error in (IEnumerable)temp.Details)
+                //    {
+                //        foreach (dynamic mess in error.Details)
+                //        {
+                //            ModelState.AddModelError("", mess.Message.ToString());
+                //        }
+                //    }
+                //}
             }
             return View(t);
         }
@@ -280,9 +283,9 @@ namespace Interface.Controllers
             return receipt;
         }
         [HttpGet]
-        public IActionResult Submitted()
+        public IActionResult Submitted(string subId)
         {
-            return View();
+            return View(new { subId});
         }
 
         [HttpGet]
