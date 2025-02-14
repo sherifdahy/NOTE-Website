@@ -35,14 +35,48 @@ namespace Interface.Controllers
             env = webHostEnvironment;
             toolkit = toolkitHandler;
         }
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
+        [HttpPost]
+        public IActionResult Index(int ij)
+        {
+            int id = int.Parse(User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier).Value);
+            
+            var query = IUnitOfWork.Receipts.FindAll(x => x.applicationUserId == id, new string[] { });
+            int recordsTotals = query.Count();
+            int skip = int.Parse(Request.Form["start"]);
+            int take = int.Parse(Request.Form["length"]);
+            string value = Request.Form["search[value]"];
+            var receipts = query.Where(x => string.IsNullOrEmpty(value) ?
+                true : x.header.receiptNumber.Contains(value) || x.header.uuid.Contains(value) || x.documentType.receiptType.Contains(value) ||
+                x.buyer.name.Contains(value) || x.buyer.id.Contains(value)
+            ).OrderByDescending(x => x.receiptId).Skip(skip).Take(take).Select(
+                x => new { id = x.receiptId , receiptNumber = x.header.receiptNumber , dateTime = x.header.dateTimeIssued , type = x.documentType.receiptType , issuesName = x.buyer.name , issuesId = x.buyer.id ,total = x.totalAmount }
+                ).ToList();
+
+            return Json(new
+            {
+                recordsFiltered = recordsTotals,
+                recordsTotals,
+                data = receipts
+            });
+        }
         [HttpGet]
         public IActionResult New()
         {
-            return View(new ReceiptVM());
+            int id = int.Parse(User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier).Value);
+            var t = IUnitOfWork.Receipts.FindAll(x => x.applicationUserId == id, new [] { "header" }).OrderByDescending(x => x.header.receiptNumber).FirstOrDefault();
+            if (t == null)
+            {
+                return View(new ReceiptVM() { ReceiptNumber = "REC-0001" });
+            }
+            string lastNumber = t.header.receiptNumber.Split('-')[1];
+            int nextNumber = int.Parse(lastNumber) + 1;
+
+            return View(new ReceiptVM() { ReceiptNumber = $"REC-{nextNumber.ToString().PadLeft(4, '0')}" });
         }
 
         [HttpPost]
@@ -106,7 +140,7 @@ namespace Interface.Controllers
                         }), respose.Token);
                     IUnitOfWork.Receipts.Insert(receipt);
                     IUnitOfWork.Save();
-                    return RedirectToAction(nameof(New));
+                    return RedirectToAction(nameof(Submitted));
 
                 }
 
@@ -123,6 +157,9 @@ namespace Interface.Controllers
             }
             return View(t);
         }
+
+
+
         private async Task<receipt> CastingToModel(ReceiptVM receiptVM)
         {
             receipt receipt = new receipt();
@@ -241,6 +278,11 @@ namespace Interface.Controllers
             receipt.totalAmount = receiptVM.TotalAmount;
             receipt.paymentMethod = receiptVM.PaymentMethod;
             return receipt;
+        }
+        [HttpGet]
+        public IActionResult Submitted()
+        {
+            return View();
         }
 
         [HttpGet]

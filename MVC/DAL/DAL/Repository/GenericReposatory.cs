@@ -38,7 +38,7 @@ namespace DAL.Repository
             {
                 foreach(string include in includes)
                 {
-                    query.Include(include);
+                    query = query.Include(include);
                 }
             }
             return query.Where(criteria);
@@ -72,8 +72,6 @@ namespace DAL.Repository
             return context.Set<T>().Count();
         }
 
-
-
-
+        
     }
 }

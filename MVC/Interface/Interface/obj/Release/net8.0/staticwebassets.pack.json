@@ -5,24 +5,16 @@
       "PackagePath": "staticwebassets\\Interface.bundle.scp.css"
     },
     {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\account.css",
+      "PackagePath": "staticwebassets\\css\\account.css"
+    },
+    {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\global.css",
       "PackagePath": "staticwebassets\\css\\global.css"
     },
     {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\header.css",
       "PackagePath": "staticwebassets\\css\\header.css"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\home.css",
-      "PackagePath": "staticwebassets\\css\\home.css"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\products.css",
-      "PackagePath": "staticwebassets\\css\\products.css"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\slider.css",
-      "PackagePath": "staticwebassets\\css\\slider.css"
     },
     {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\favicon.ico",
@@ -61,32 +53,24 @@
       "PackagePath": "staticwebassets\\js\\Products.js"
     },
     {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipts\\AJAX.js",
-      "PackagePath": "staticwebassets\\js\\Receipts\\AJAX.js"
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipt\\Classes.js",
+      "PackagePath": "staticwebassets\\js\\Receipt\\Classes.js"
     },
     {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipts\\Classes.js",
-      "PackagePath": "staticwebassets\\js\\Receipts\\Classes.js"
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipt\\Index.js",
+      "PackagePath": "staticwebassets\\js\\Receipt\\Index.js"
     },
     {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipts\\Methods.js",
-      "PackagePath": "staticwebassets\\js\\Receipts\\Methods.js"
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipt\\NewReceiptPage.js",
+      "PackagePath": "staticwebassets\\js\\Receipt\\NewReceiptPage.js"
     },
     {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipts\\Select2.js",
-      "PackagePath": "staticwebassets\\js\\Receipts\\Select2.js"
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipt\\modules\\ItemComponent.js",
+      "PackagePath": "staticwebassets\\js\\Receipt\\modules\\ItemComponent.js"
     },
     {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipts\\handle_item.js",
-      "PackagePath": "staticwebassets\\js\\Receipts\\handle_item.js"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipts\\handle_receipt.js",
-      "PackagePath": "staticwebassets\\js\\Receipts\\handle_receipt.js"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipts\\pageNew.js",
-      "PackagePath": "staticwebassets\\js\\Receipts\\pageNew.js"
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\Receipt\\modules\\TaxComponent.js",
+      "PackagePath": "staticwebassets\\js\\Receipt\\modules\\TaxComponent.js"
     },
     {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\js\\home.js",

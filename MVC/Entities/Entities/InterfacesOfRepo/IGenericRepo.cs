@@ -22,6 +22,5 @@ namespace Entities.InterfacesOfRepo
         public void DeleteAll(Expression<Func<T, bool>> expression);
 
 
-
     }
 }

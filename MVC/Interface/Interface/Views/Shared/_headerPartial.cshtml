@@ -1,3 +1,64 @@
-﻿<h3 class="col p-2 ">
-    NOTE Solution
-</h3>
+﻿<nav class="container navbar navbar-expand-md navbar-dark  p-2">
+    <a class="navbar-brand">NOTE Solution</a>
+    <button data-bs-toggle="collapse" data-bs-target="#ul" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+    <ul class="navbar-nav collapse navbar-collapse gap-3" id="ul" dir="rtl">
+        <li class="nav-item ">
+            <a class="nav-link active" asp-controller="home" asp-action="index">
+                <i class="fa-solid fa-house mx-2"></i>
+                الصفحة الرئيسية
+            </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa-solid fa-circle-chevron-down mx-2"></i>
+                قسم الايصالات
+            </a>
+            <div class="dropdown-menu text-end" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" asp-controller="receipts" asp-action="index">
+                    <i class="fa-solid fa-receipt mx-2"></i>
+                    الايصالات
+                </a>
+                <a class="dropdown-item" asp-controller="receipts" asp-action="new">
+                    <i class="fa-solid fa-plus mx-2 new-receipt"></i>
+                    انشاء ايصال
+                </a>
+                <a class="dropdown-item" asp-controller="receipts" asp-action="stored">
+                    <i class="fa-solid fa-database mx-2"></i>
+                    حافظة الايصالات
+                </a>
+            </div>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa-solid fa-circle-chevron-down mx-2"></i>
+                قسم الفواتير
+            </a>
+            <div class="dropdown-menu dropdown text-end" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">
+                    <i class="fa-solid fa-receipt mx-2"></i>
+                    الفواتير
+                </a>
+                <a class="dropdown-item" href="#">
+                    <i class="fa-solid fa-plus mx-2"></i>
+                    انشاء فاتورة
+                </a>
+                <a class="dropdown-item" href="#">
+                    <i class="fa-solid fa-database mx-2"></i>
+                    حافظة الفواتير
+                </a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-controller="products" asp-action="index">
+                <i class="fa-solid fa-sitemap mx-2"></i>
+                السلع والخدمات
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-controller="account" asp-action="TaxpayerProfile">
+                <i class="fa-solid fa-gear mx-2"></i>
+                الملف الشخصي
+            </a>
+        </li>
+    </ul>
+</nav>
