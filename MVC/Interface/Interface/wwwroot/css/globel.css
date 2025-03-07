@@ -1,0 +1,35 @@
+:root {
+    --dark-color: #4169b4;
+    --green-color: #2cc4c1;
+    --section-color: #eff7fa;
+    --yellow-color: #ffc400;
+    --body-color: #c8d5eb;
+}
+
+
+body{
+    font-family: "Roboto","sans-serif";
+}
+.form{
+    width: 20rem;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.form-header{
+    padding: 1.2rem;
+    text-align: center;
+    background-color: var(--dark-color);
+    color: white;
+}
+
+.form .form-body{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.2rem;
+}
+
+
+

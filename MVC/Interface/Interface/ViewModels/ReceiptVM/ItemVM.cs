@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,8 +19,10 @@ namespace Interface.ViewModels.ReceiptVM
         public decimal NetSale { get; set; }
         public decimal TotalSale { get; set; }
         public decimal Total { get; set; }
-        public virtual ICollection<TaxableItemVM> TaxableItems { get; set; } = new HashSet<TaxableItemVM>();
-        public virtual ICollection<CommercialDiscountDataVM> CommercialDiscountData { get; set; } = new HashSet<CommercialDiscountDataVM>();
+        [ModelBinder(BinderType = typeof(TaxableItemVMModelBinder))]
+        public virtual List<TaxableItemVM> TaxableItems { get; set; }
+        [ModelBinder(BinderType = typeof(CommercialDiscountDataVMBinder))]
+        public virtual List<CommercialDiscountDataVM> CommercialDiscountData { get; set; } 
 
     }
 }

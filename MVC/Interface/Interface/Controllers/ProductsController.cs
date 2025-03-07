@@ -19,26 +19,9 @@ namespace Interface.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            int id = int.Parse(User.Claims.FirstOrDefault(x=>x.Type == ClaimTypes.NameIdentifier).Value);
+            ViewBag.Products = IUnitOfWork.Products.FindAll(x => x.ApplicationUserId == id, new string[] { }).OrderByDescending(X=>X.Id).ToList();
             return View();
-        }
-
-        [HttpPost]
-        public IActionResult getData()
-        {
-            int id = int.Parse(User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier).Value);
-            var query = IUnitOfWork.Products.FindAll(x => x.ApplicationUserId == id, new string[] { });
-            int recordsTotals = query.Count();
-            int skip = int.Parse(Request.Form["start"]);
-            int take = int.Parse(Request.Form["length"]);
-            string value = Request.Form["search[value]"];
-            var products = query.Where(x=> string.IsNullOrEmpty(value)? true : x.InternalId.Contains(value) || x.Name.Contains(value) || x.Description.Contains(value) || x.Code.Contains(value)).OrderByDescending(x=>x.Id).Skip(skip).Take(take).ToList();
-
-            return Json(new
-            {
-                recordsFiltered = recordsTotals,
-                recordsTotals,
-                data = products
-            });
         }
 
         [HttpPost]
@@ -56,13 +39,12 @@ namespace Interface.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        [HttpDelete]
+        [HttpGet]
         public IActionResult Delete(int id) {
 
             IUnitOfWork.Products.Delete(IUnitOfWork.Products.GetById(id));
             IUnitOfWork.Save();
-            return Json(true);
-
+            return RedirectToAction(nameof(Index));
         }
 
 

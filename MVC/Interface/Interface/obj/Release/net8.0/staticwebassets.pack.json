@@ -1,20 +1,28 @@
 {
   "Files": [
     {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\Interface.bundle.scp.css",
-      "PackagePath": "staticwebassets\\Interface.bundle.scp.css"
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\authentication.css",
+      "PackagePath": "staticwebassets\\css\\authentication.css"
     },
     {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\account.css",
-      "PackagePath": "staticwebassets\\css\\account.css"
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\customNav.css",
+      "PackagePath": "staticwebassets\\css\\customNav.css"
     },
     {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\global.css",
-      "PackagePath": "staticwebassets\\css\\global.css"
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\globel.css",
+      "PackagePath": "staticwebassets\\css\\globel.css"
     },
     {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\header.css",
-      "PackagePath": "staticwebassets\\css\\header.css"
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\navbar.css",
+      "PackagePath": "staticwebassets\\css\\navbar.css"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\pages\\Receipt\\index.css",
+      "PackagePath": "staticwebassets\\css\\pages\\Receipt\\index.css"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\css\\pages\\home.css",
+      "PackagePath": "staticwebassets\\css\\pages\\home.css"
     },
     {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\favicon.ico",
@@ -89,28 +97,12 @@
       "PackagePath": "staticwebassets\\json file\\TaxType.json"
     },
     {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\autocomplete.js\\autocomplete.angular.js",
-      "PackagePath": "staticwebassets\\lib\\autocomplete.js\\autocomplete.angular.js"
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\all.min.css",
+      "PackagePath": "staticwebassets\\lib\\all.min.css"
     },
     {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\autocomplete.js\\autocomplete.angular.min.js",
-      "PackagePath": "staticwebassets\\lib\\autocomplete.js\\autocomplete.angular.min.js"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\autocomplete.js\\autocomplete.jquery.js",
-      "PackagePath": "staticwebassets\\lib\\autocomplete.js\\autocomplete.jquery.js"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\autocomplete.js\\autocomplete.jquery.min.js",
-      "PackagePath": "staticwebassets\\lib\\autocomplete.js\\autocomplete.jquery.min.js"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\autocomplete.js\\autocomplete.js",
-      "PackagePath": "staticwebassets\\lib\\autocomplete.js\\autocomplete.js"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\autocomplete.js\\autocomplete.min.js",
-      "PackagePath": "staticwebassets\\lib\\autocomplete.js\\autocomplete.min.js"
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\all.min.js",
+      "PackagePath": "staticwebassets\\lib\\all.min.js"
     },
     {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\bootstrap\\LICENSE",
@@ -291,170 +283,6 @@
     {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.bootstrap.css",
-      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.bootstrap.css"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.bootstrap.min.css",
-      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.bootstrap.min.css"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.bootstrap4.css",
-      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.bootstrap4.css"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.bootstrap4.min.css",
-      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.bootstrap4.min.css"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.foundation.css",
-      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.foundation.css"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.foundation.min.css",
-      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.foundation.min.css"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.jqueryui.css",
-      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.jqueryui.css"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.jqueryui.min.css",
-      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.jqueryui.min.css"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.material.css",
-      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.material.css"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.material.min.css",
-      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.material.min.css"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.semanticui.css",
-      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.semanticui.css"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.semanticui.min.css",
-      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.semanticui.min.css"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.uikit.css",
-      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.uikit.css"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\datatables.uikit.min.css",
-      "PackagePath": "staticwebassets\\lib\\datatables\\css\\datatables.uikit.min.css"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\jquery.datatables.css",
-      "PackagePath": "staticwebassets\\lib\\datatables\\css\\jquery.datatables.css"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\jquery.datatables.min.css",
-      "PackagePath": "staticwebassets\\lib\\datatables\\css\\jquery.datatables.min.css"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\jquery.datatables_themeroller.css",
-      "PackagePath": "staticwebassets\\lib\\datatables\\css\\jquery.datatables_themeroller.css"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\css\\jquery.datatables_themeroller.min.css",
-      "PackagePath": "staticwebassets\\lib\\datatables\\css\\jquery.datatables_themeroller.min.css"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\images\\sort_asc.png",
-      "PackagePath": "staticwebassets\\lib\\datatables\\images\\sort_asc.png"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\images\\sort_asc_disabled.png",
-      "PackagePath": "staticwebassets\\lib\\datatables\\images\\sort_asc_disabled.png"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\images\\sort_both.png",
-      "PackagePath": "staticwebassets\\lib\\datatables\\images\\sort_both.png"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\images\\sort_desc.png",
-      "PackagePath": "staticwebassets\\lib\\datatables\\images\\sort_desc.png"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\images\\sort_desc_disabled.png",
-      "PackagePath": "staticwebassets\\lib\\datatables\\images\\sort_desc_disabled.png"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.bootstrap.js",
-      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.bootstrap.js"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.bootstrap.min.js",
-      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.bootstrap.min.js"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.bootstrap4.js",
-      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.bootstrap4.js"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.bootstrap4.min.js",
-      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.bootstrap4.min.js"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.datatables.js",
-      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.datatables.js"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.datatables.min.js",
-      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.datatables.min.js"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.foundation.js",
-      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.foundation.js"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.foundation.min.js",
-      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.foundation.min.js"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.jqueryui.js",
-      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.jqueryui.js"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.jqueryui.min.js",
-      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.jqueryui.min.js"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.material.js",
-      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.material.js"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.material.min.js",
-      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.material.min.js"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.semanticui.js",
-      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.semanticui.js"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.semanticui.min.js",
-      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.semanticui.min.js"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.uikit.js",
-      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.uikit.js"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\datatables.uikit.min.js",
-      "PackagePath": "staticwebassets\\lib\\datatables\\js\\datatables.uikit.min.js"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\jquery.datatables.js",
-      "PackagePath": "staticwebassets\\lib\\datatables\\js\\jquery.datatables.js"
-    },
-    {
-      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\datatables\\js\\jquery.datatables.min.js",
-      "PackagePath": "staticwebassets\\lib\\datatables\\js\\jquery.datatables.min.js"
     },
     {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
@@ -999,6 +827,46 @@
     {
       "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\lib\\select2\\js\\select2.min.js",
       "PackagePath": "staticwebassets\\lib\\select2\\js\\select2.min.js"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\reports\\receipt.rdlc",
+      "PackagePath": "staticwebassets\\reports\\receipt.rdlc"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\webfonts\\fa-v4compatibility.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-v4compatibility.ttf"
+    },
+    {
+      "Id": "D:\\WebApplication\\NOTE-Website\\MVC\\Interface\\Interface\\wwwroot\\webfonts\\fa-v4compatibility.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-v4compatibility.woff2"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.Interface.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.Interface.Microsoft.AspNetCore.StaticWebAssets.props",

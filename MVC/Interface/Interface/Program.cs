@@ -8,7 +8,9 @@ using ETA.eReceipt.IntegrationToolkit.Application.Dtos;
 using ETA.eReceipt.IntegrationToolkit.Application.Interfaces;
 using ETA.eReceipt.IntegrationToolkit.Application.Services;
 using ETA.eReceipt.IntegrationToolkit.Infrastructure.Services;
+using Interface.ApplicationConfiguration;
 using Interface.Services.ApiCall;
+using Interface.Services.Report;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
@@ -45,21 +47,36 @@ namespace Interface
             builder.Services.AddTransient<IApiCall, ApiCall>();
 
 
-            builder.Services
-            .AddToolkit(builder.Configuration, ServiceLifetime.Transient);
+            builder.Services.AddScoped<IServiceReport, ServiceReport>();
 
-            builder.Services.AddScoped<IToolkitHandler, ToolkitHandler>();
+            builder.Services.AddDistributedMemoryCache();
+
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromHours(2);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
+            builder.Services.AddScoped<TokenAttribute>();
+
+            builder.Services.AddScoped<IAppConfig, AppConfigDevelopment>();
+
 
             builder.Services.AddControllers(options =>
             {
-                options.ModelBinderProviders.Insert(0, new ItemVMModelBinderProvider());
+                options.ModelBinderProviders.Insert(0, new CommercialDiscountDataVMBinderProvider());
             });
 
             builder.Services.AddControllers(options =>
             {
-                options.ModelBinderProviders.Insert(0, new TaxTotalVMModelBinderProvider());
+                options.ModelBinderProviders.Insert(0, new TaxableItemVMModelBinderProvider());
             });
 
+            builder.Services.AddControllers(options =>
+            {
+                options.ModelBinderProviders.Insert(0, new TaxTotalsVMModelBinderProvider());
+            });
 
             var app = builder.Build();
 
@@ -70,17 +87,18 @@ namespace Interface
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                
                 app.UseHsts();
             }
             app.UseCors();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseDeveloperExceptionPage();
 
             app.UseRouting();
+            app.UseSession();
             app.UseAuthentication();
             app.UseAuthorization();
-
 
             app.MapControllerRoute(
                 name: "default",

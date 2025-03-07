@@ -67,20 +67,29 @@ const TaxComponent = {
                 <td>${item.SubType}</td>
                 <td>${item.Rate}</td>
                 <td>${item.Amount}</td>
-                <td>
-                    <button class="btn btn-danger" onclick="Page.DeleteTax(${index})">Delete</button>    
+                <td class="text-start">
+                    <button class="btn btn-danger" onclick="Page.DeleteTax(${index})">حذف</button>    
                 </td>
             `;
             itemTaxTable.appendChild(tr);
         })
     },
     addTax: function () {
+        if (this.arrayOfTax.length > 0) {
+            for (let i = 0; i < this.arrayOfTax.length; i++) {
+                if (this.arrayOfTax[i].TaxType == TaxTypeSelect.value) {
+                    Page.notification("error", "لقد قمت بأضافة هذا النوع من الضريبة من قبل . ");
+                    return;
+                }
+            }
+        }
         TaxComponent.arrayOfTax.push(new TaxableItem({
             TaxType: TaxTypeSelect.value,
             SubType: SubTaxTypeSelect.value,
             Amount: +itemTaxAmount.value,
             Rate: +itemTaxRate.value,
         }));
+
         
     },
 

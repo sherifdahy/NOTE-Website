@@ -7,7 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="AspNetCore.Reporting" Version="2.1.0" />
+    <PackageReference Include="Dapper" Version="2.1.66" />
     <PackageReference Include="ETA.eReceipt.IntegrationToolkit" Version="3.1.3-rc" />
     <PackageReference Include="microsoft.entityframeworkcore.design" Version="9.0.2">
       <PrivateAssets>all</PrivateAssets>
@@ -19,11 +20,24 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
-    <PackageReference Include="RestSharp" Version="106.15.1-alpha.0.1" />
+    <PackageReference Include="ReportViewerCore.NETCore" Version="15.1.26" />
+    <PackageReference Include="RestSharp" Version="112.1.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\DAL\DAL\DAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="ReportData.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ReportData.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\css\" />
   </ItemGroup>
 
 </Project>

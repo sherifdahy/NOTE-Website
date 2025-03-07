@@ -1,12 +1,16 @@
 ﻿using DAL.Data;
 using Entities.InterfacesOfRepo;
 using Entities.Models;
+using Interface.Dto;
+using Interface.Services.ApiCall;
 using Interface.ViewModels;
 using Interface.ViewModels.ReceiptVM;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using System.Data;
 using System.Security.Claims;
 
@@ -16,10 +20,10 @@ namespace Interface.Controllers
     [Authorize]
     public class AccountController : BaseController
     {
-
-        public AccountController(IUnitOfWork unitOfWork):base(unitOfWork) 
+        IApiCall apiCall;
+        public AccountController(IUnitOfWork unitOfWork,IApiCall apiCall):base(unitOfWork) 
         {
-            
+            this.apiCall = apiCall;
         }
 
 
@@ -101,6 +105,7 @@ namespace Interface.Controllers
                         await IUnitOfWork.SignInManager.SignInWithClaimsAsync(applicationUser, loginVM.RememberMe, new List<Claim>() {
                         
                         });
+                        
                         return RedirectToAction("index", "Home");
                     }
                 }
@@ -142,8 +147,11 @@ namespace Interface.Controllers
                     foreach(var item in result.Errors)
                     {
                         ModelState.AddModelError("", item.Description);
+                        return View(vM);
                     }
                 }
+                TempData["success"] = "تم حفظ الاعدادات بنجاح";
+                return RedirectToAction(nameof(TaxpayerProfile));
             }
             return View(vM);
         }

@@ -1,6 +1,7 @@
 ﻿using Entities.Models.Receipt;
 using Interface.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -15,38 +16,41 @@ namespace Interface.ViewModels.ReceiptVM
 {
     public class ReceiptVM
     {
-        [Required]
+        [Required(ErrorMessage = "يجب ادخال رقم الايصال")]
+        [RegularExpression(@"\d{1,6}",ErrorMessage = "جيب ان يكون رقم الايصال ارقام فقط ولا يزيد عن 6 ارقام")]
+
         public string ReceiptNumber { get; set; }
         [Required]
-        public DateTime DateTime { get; set; }  
-        [Required] 
+        public DateTime DateTime { get; set; }
+        [Required]
         public string Type { get; set; }
         [Required]
         public string Version { get; set; }
-        [Required]
+        [Required(ErrorMessage ="يجب ادخال اسم العميل")]
         public string IssuedName { get; set; }
-        
+
         public string? IssuedNumber { get; set; }
 
         public string IssuedType { get; set; }
         public string? IssuedPhone { get; set; }
 
-        [Required]
-        [ModelBinder(BinderType = typeof(ItemVMModelBinder))]
-        public ICollection<ItemVM> itemData { get; set; }
+        [Required (ErrorMessage = "لا يمكن تقديم الايصال فارغ من البنود")]
+        public List<ItemVM> itemData { get; set; }
         [Required]
         public decimal TotalSales { get; set; }
 
         public decimal TotalCommercialDiscount { get; set; }
         [Required]
         public decimal NetAmount { get; set; }
-        [Required]  
+        [Required]
         public decimal TotalAmount { get; set; }
-        [ModelBinder(BinderType = typeof(TaxTotalVMModelBinder))]
-        public ICollection<TaxTotalVM> TaxTotals { get; set; } 
+        [Required]
+        [ModelBinder(BinderType = typeof(TaxTotalsVMModelBinder))]
+        public List<TaxTotalVM> TaxTotals { get; set; }
         [Required]
         public string PaymentMethod { get; set; }
 
-        
+
     }
+    
 }

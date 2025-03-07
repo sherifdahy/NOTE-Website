@@ -1,8 +1,11 @@
 ﻿using Newtonsoft.Json;
+using QRCoder;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.SymbolStore;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -35,9 +38,7 @@ namespace Entities.Models.Receipt
         [JsonIgnore]
         [ForeignKey("buyer")]
         public int buyerId { get; set; }
-
         public virtual buyer buyer { get; set; }
-
         public virtual ICollection<item> itemData { get; set; } = new HashSet<item>();
         public decimal totalSales { get; set; }
         public decimal totalCommercialDiscount { get; set; }
@@ -45,5 +46,16 @@ namespace Entities.Models.Receipt
         public decimal totalAmount { get; set; }
         public virtual ICollection<taxTotal> taxTotals { get; set; } = new HashSet<taxTotal>();
         public string paymentMethod { get; set; }
+
+        [JsonIgnore]
+        public string? status { get; set; }
+        [JsonIgnore]
+        public string? submissionUuid {  get; set; }
+
+        [JsonIgnore]
+        [NotMapped]
+        public byte[] QRCode { get; set; }
+        
+        
     }
 }

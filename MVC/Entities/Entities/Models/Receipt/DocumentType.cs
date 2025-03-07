@@ -10,9 +10,15 @@ namespace Entities.Models.Receipt
     [JsonObject]
     public class documentType
     {
+        string _receiptType;
+
         [JsonIgnore]
         public int documentTypeId { get; set; }
-        public string receiptType { get; set; }
+        public string receiptType 
+        {
+            get { return _receiptType; }
+            set { _receiptType = value; }
+        }
         public string typeVersion { get; set; }
     }
 }

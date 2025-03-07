@@ -1,4 +1,5 @@
 ﻿using Entities.InterfacesOfRepo;
+using Interface.Dto;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,5 +16,7 @@ namespace Interface.Controllers
         {
             return View();
         }
+
+        
     }
 }

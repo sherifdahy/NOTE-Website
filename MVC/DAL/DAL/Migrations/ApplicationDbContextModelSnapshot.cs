@@ -17,7 +17,7 @@ namespace DAL.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.1")
+                .HasAnnotation("ProductVersion", "9.0.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -219,6 +219,9 @@ namespace DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("referenceUUID")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("sOrderNameCode")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -314,6 +317,12 @@ namespace DAL.Migrations
 
                     b.Property<int>("sellerId")
                         .HasColumnType("int");
+
+                    b.Property<string>("status")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("submissionUuid")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("totalAmount")
                         .HasColumnType("decimal(18,2)");

@@ -1,0 +1,56 @@
+﻿<nav class="navbar navbar-expand-lg p-4" dir="rtl">
+    <a class="navbar-brand" href="#">NOTE Solution</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav  text-end" style="font-size:1.2rem">
+            <li class="nav-item active">
+                <a class="nav-link" asp-controller="home" asp-action="index">البداية</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    قسم الايصالات
+                </a>
+                <div class="dropdown-menu text-end" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item active" asp-action="index" asp-controller="receipts" >الايصالات</a>
+                     
+                    <a class="dropdown-item" asp-action="new" asp-controller="receipts">ايصال جديد</a>
+                     
+                    <a class="dropdown-item" asp-action="index" asp-controller="receipts" >حافظة الايصالات</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    قسم الفواتير
+                </a>
+                <div class="dropdown-menu text-end" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item active" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-end" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    قسم السلع والخدمات
+                </a>
+                <div class="dropdown-menu text-end" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item active" asp-controller="products" asp-action="index" >السلع والخدمات</a>
+                </div>
+            </li>
+
+        </ul>
+        <div class="dropdown show me-auto">
+            <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa-regular fa-user"></i>
+                الحساب
+            </a>
+            <div class="dropdown-menu text-end" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" asp-controller="account" asp-action="TaxpayerProfile">ادارة الحساب</a>
+                <a class="dropdown-item" asp-controller="account" asp-action="signout">تسجيل الخروج</a>
+            </div>
+        </div>
+    </div>
+
+
+</nav>

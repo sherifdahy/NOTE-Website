@@ -4,9 +4,10 @@ const ItemComponent = {
     
     init: function () {
         ItemComponent.InitializeSelect("/products/getDataToDropdownList");
-        ItemComponent.LoadDataInItemsTable();
+        
 
     },
+    
     Handler: function (taxes) {
         
         let result = 0;
@@ -21,7 +22,53 @@ const ItemComponent = {
         itemTotal.value = (+itemNetSale.value + +itemTotalTax.value).toFixed(2) || 0;
     },
 
-    addItem : function (taxes) {
+    
+
+    castingModelItemToHtmlRow: function (item) {
+        let index = table_item_body.rows.length;
+        let tr = document.createElement('tr');
+
+        tr.innerHTML = `
+                        <td><input class="form-control" name="itemData[${index}].InternalCode" value="${item.InternalCode}"/></td>
+                        <td><input class="form-control " name="itemData[${index}].Description" value="${item.Description}"/></td>
+                        <td hidden><input class="form-control" name="itemData[${index}].ItemType" value="${item.ItemType}"/></td>
+                        <td hidden><input class="form-control" name="itemData[${index}].ItemCode" value="${item.ItemCode}"/></td>
+                        <td hidden><input class="form-control" name="itemData[${index}].UnitType" value="${item.UnitType}"/></td>
+                        <td><input class="form-control" name="itemData[${index}].Quantity" value="${item.Quantity}"/></td>
+                        <td><input class="form-control" name="itemData[${index}].UnitPrice" value="${item.UnitPrice}"/></td>
+                        <td><input class="form-control" name="itemData[${index}].CommercialDiscountData" value='${item.CommercialDiscountData}'/></td>
+                        <td hidden><input class="form-control" name="itemData[${index}].NetSale" value="${item.NetSale}"/></td>
+                        <td hidden><input class="form-control" name="itemData[${index}].TotalSale" value="${item.TotalSale}"/></td>
+                        <td hidden><input class="form-control" name="itemData[${index}].Total" value="${item.Total}"/></td>
+                        <td><input class="form-control" name="itemData[${index}].TaxableItems" value='${item.TaxableItems}'/></td>
+                        <td>
+                            <button type="button" onClick="Page.deleteRow(event.target)" class="btn btn-danger">delete</button>
+                        </td>
+                        `;
+        return tr;
+    },
+
+    castingHtmlRowToModelItem: function (tr) {
+        let inputs = tr.querySelectorAll('input');
+
+        let item = new Item({
+            InternalCode: inputs[0].value,
+            Description: inputs[1].value,
+            ItemType: inputs[2].value,
+            ItemCode: inputs[3].value,
+            UnitType: inputs[4].value,
+            Quantity: +inputs[5].value,
+            UnitPrice: +inputs[6].value,
+            CommercialDiscountData: JSON.parse(inputs[7].value),
+            NetSale: +inputs[8].value,
+            TotalSale: +inputs[9].value,
+            Total: +inputs[10].value,
+            TaxableItems: JSON.parse(inputs[11].value),
+        });
+        return item;
+    },
+
+    addItem: function (taxes) {
         let item = new Item({
             InternalCode: ProductName.options[ProductName.selectedIndex].getAttribute('data-internalcode'),
             Description: Description.value,
@@ -33,74 +80,17 @@ const ItemComponent = {
             NetSale: +itemNetSale.value,
             TotalSale: +itemTotalSale.value,
             Total: +itemTotal.value,
-            TaxableItems: taxes,
-            CommercialDiscountData: +Discount.value > 0 ? [new CommercialDiscountData({
+            TaxableItems: JSON.stringify(taxes),
+            CommercialDiscountData: +Discount.value > 0 ? JSON.stringify([new CommercialDiscountData({
                 Amount: +Discount.value,
                 Description: "xyz",
-                Rate: (+Discount.value / +itemTotalSale.value).toFixed(2)
-            })] : [],
+                Rate: ((+Discount.value / +itemTotalSale.value)*100).toFixed(2)
+            })]) : JSON.stringify([]),
         });
 
-        
-        ItemComponent.updateItemData(item);
+        return item;
     },
 
-    updateItemData: function (item) {
-        if (!itemData.value) {
-            itemData.value = JSON.stringify([item]);
-            return;
-        }
-        let temp = JSON.parse(itemData.value);
-        temp.push(item);
-        itemData.value = JSON.stringify(temp);
-    },
-    
-
-
-    LoadDataInItemsTable: function () {
-        
-
-
-        table_item_body.innerHTML = '';
-        table_item_footer.innerHTML = '';
-        let footerTotal = 0;
-        let footerDiscountTotal = 0;
-        let footerTaxTotal = 0;
-        if (itemData.value !== '') {
-            JSON.parse(itemData.value).forEach((item, index) => {
-                let tr = document.createElement('tr');
-                tr.innerHTML = `
-            <td>${item.InternalCode}</td>
-            <td>${item.Description}</td>
-            <td>${item.UnitPrice}</td>
-            <td>${item.Quantity}</td>
-            <td>${item.CommercialDiscountData.length != 0 ? item.CommercialDiscountData[0].Amount : 0}</td>
-            <td>${item.TaxableItems.length > 0 ? ItemComponent.calculate_tax_item(item.TaxableItems) : 0}</td>
-            <td>
-                
-                <button class="btn btn-danger" onclick="Page.DeleteItem(${index})">
-                    <i class="fa-solid fa-trash"></i>
-                </button>
-
-            </td>
-
-            `;
-                footerTotal += item.Total;
-                footerDiscountTotal += item.CommercialDiscountData.length != 0 ? item.CommercialDiscountData[0].Amount : 0;
-                footerTaxTotal += item.TaxableItems.length > 0 ? ItemComponent.calculate_tax_item(item.TaxableItems) : 0;
-                table_item_body.appendChild(tr);
-            });
-
-            let tr = document.createElement('tr');
-            tr.innerHTML = `
-            <td colspan=2>اجمالي الخصم : ${footerDiscountTotal}</td>
-            <td colspan=2>اجمالي الضريبة : ${footerTaxTotal}</td>
-            <td colspan=3>الاجمالي بعد الخصم والضريبة : ${footerTotal}</td>
-
-        `;
-            table_item_footer.appendChild(tr);
-        }
-    },
     calculate_tax_item: function (taxes) {
         let result = 0.0;
         taxes.forEach(item => {
@@ -109,12 +99,7 @@ const ItemComponent = {
         return result;
 
     },
-    Delete: function (index) {
-
-        itemData.value = JSON.stringify(
-            JSON.parse(itemData.value).filter((item, i) => i !== index)
-        );
-    },
+    
     toggleItemArea : function () {
         itemArea.classList.toggle('visually-hidden');
     },

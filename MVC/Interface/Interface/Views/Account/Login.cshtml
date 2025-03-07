@@ -1,38 +1,35 @@
 ﻿@using Interface.ViewModels
 @model LoginVM
-
 @{
    
     Layout = "_LayoutAccount";
 }
 
-
-<div class="container-sm">
-    <form class="box-content" asp-action="Login" asp-controller="Account" method="post" dir="rtl">
-        <h3 class="text-center text-primary">
-            <i class="fa-solid fa-people-robbery"></i>
-            تسجيل دخول ..
-        </h3>
-        <hr />
-        <div class="form-group mt-2">
-            <input class="form-control" type="email" asp-for="Email" placeholder="البريد الالكتروني">
-            <span asp-validation-for="Email" class="text-danger"></span>
+        
+<form class="form" asp-action="Login" asp-controller="Account" method="post">
+    <div class="form-header">
+        <h3>Login</h3>
+    </div>
+    <div class="form-body">
+        <div class="form-group d-flex align-items-center">
+            <i class="fa-solid fa-at icon"></i>
+            <input class="form-control " asp-for="Email" placeholder="Email">
         </div>
-        <div class="form-group mt-2">
-            <input class="form-control" type="password" asp-for="Password" placeholder="كلمة السر">
-            <span asp-validation-for="Password" class="text-danger"></span>
+        <div class="form-group d-flex align-items-center">
+            <i class="fa-solid fa-lock icon"></i>
+            <input class="form-control " asp-for="Password" placeholder="Password">
         </div>
-        <div class="form-check">
-            <input asp-for=RememberMe type="checkbox">
-            <span>تذكرني</span>
-        </div>
+        <a href="#">Forgot Password?</a>
         <div class="form-group">
-            <input type="submit" class="form-control btn btn-success" value="تسجيل دخول">
+            <input type="submit" class="btn btn-primary form-control" value="Login">
         </div>
-        <div asp-validation-summary="ModelOnly" class="error"></div>
-    </form>
-</div>
-
+        <div>
+            <span>Don't have an account?</span>
+            <a asp-action="register" asp-controller="account">Signup</a>
+        </div>
+        <div asp-validation-summary="All" class="text-danger"></div>
+    </div>
+</form>
     
 
 @section Scripts {
