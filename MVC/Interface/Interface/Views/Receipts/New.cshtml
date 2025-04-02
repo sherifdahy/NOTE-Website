@@ -1,0 +1,296 @@
+﻿@using Interface.ViewModels.ReceiptVM
+@using Newtonsoft.Json
+
+@model ReceiptVM
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@@ttskch/select2-bootstrap4-theme/dist/select2-bootstrap4.min.css">
+
+
+<form asp-controller="Receipts" asp-action="New" method="post" onsubmit="SweetAlert.confirm(event,'هل تريد الارسال؟','','question')" class="d-flex flex-column gap-3" dir="rtl">
+    <div>
+        <h3 class="text-primary">معلومات اساسية</h3>
+        <hr />
+        <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1">
+            <div class="form-group mb-2">
+                <label class="">رقم الايصال<span class="text-danger">*</span></label>
+                <input type="text" id="ReceiptNumber" name="ReceiptNumber" value="@Model.ReceiptNumber" class="form-control" />
+                <span asp-validation-for="ReceiptNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-2 ">
+                <label>تاريخ<span class="text-danger">*</span></label>
+                <input type="datetime-local" class="form-control" asp-for="DateTime">
+                <span asp-validation-for="DateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-2 ">
+                <label>نوع<span class="text-danger">*</span></label>
+                <select asp-for="Type" class="form-select">
+                    <option value="S">ايصال جديد</option>
+                    <option value="R">ايصال مرتجع</option>
+                </select>
+                <span asp-validation-for="Type" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-2 ">
+                <label>اصدار<span class="text-danger">*</span></label>
+                <select asp-for="Version" class="form-select">
+                    <option value="1.2">1.2</option>
+                </select>
+                <span asp-validation-for="Version" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-2">
+                <label>طريقة الدفع<span class="text-danger">*</span></label>
+                <select asp-for="PaymentMethod" class="form-select">
+                    <option selected value="C">Cash</option>
+                    <option value="V">Visa</option>
+                </select>
+                <span asp-validation-for="PaymentMethod" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h3 class="text-primary">معلومات العميل</h3>
+        <hr />
+        <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1">
+            <div class="form-group mb-2 ">
+                <label>اسم العميل<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" asp-for="IssuedName">
+                <span asp-validation-for="IssuedName" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-2 ">
+                <label>نوع العميل<span class="text-danger">*</span></label>
+                <select asp-for="IssuedType" class="form-select">
+                    <option value="P">شخص</option>
+                    <option value="B">شركة</option>
+                    <option value="F">اجنبي</option>
+                </select>
+                <span asp-validation-for="IssuedType" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-2 ">
+                <label>رقم تعريفي</label>
+                <input type="text" class="form-control" asp-for="IssuedNumber">
+                <span asp-validation-for="IssuedNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-2 ">
+                <label>رقم تليفون</label>
+                <input type="text" class="form-control" asp-for="IssuedPhone">
+                <span asp-validation-for="IssuedPhone" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        ,<div class="d-flex justify-content-between">
+            <h3 class="text-primary">بندود الايصال</h3>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                اضافة بند جديد
+            </button>
+        </div>
+        <hr />
+        <div class="overflow-auto" dir="rtl">
+            <table class="table table-hover  table-bordered w-100 text-center ">
+                <thead class="text-light" style="line-height:3rem;background-color:var(--green-color);font-size:1.2rem">
+                    <tr>
+                        <th class="col-2">كود الداخلي</th>
+                        <th class="col-3">وصف المنتج</th>
+                        <th hidden>ItemType</th>
+                        <th hidden>ItemCode</th>
+                        <th hidden>UnitType</th>
+                        <th class="col-1">كمية</th>
+                        <th class="col-1">سعر الوحدة</th>
+                        <th class="col-1">خصم</th>
+                        <th hidden>NetSale</th>
+                        <th hidden>TotalSale</th>
+                        <th hidden>Total</th>
+                        <th class="col-1">ضريبة</th>
+                        <th class="col-1"></th>
+
+                    </tr>
+                </thead>
+                <tbody id="table_item_body">
+                    @for (int i = 0; i < Model?.itemData?.Count(); i++)
+                    {
+
+                        <tr>
+                            <td><input class="form-control" name="itemData[@i].InternalCode" value="@Model.itemData[i].InternalCode" /></td>
+                            <td><input class="form-control" name="itemData[@i].Description" value="@Model.itemData[i].Description" /></td>
+                            <td hidden><input class="form-control" name="itemData[@i].ItemType" value="@Model.itemData[i].ItemType" /></td>
+                            <td hidden><input class="form-control" name="itemData[@i].ItemCode" value="@Model.itemData[i].ItemCode" /></td>
+                            <td hidden><input class="form-control" name="itemData[@i].UnitType" value="@Model.itemData[i].UnitType" /></td>
+                            <td><input class="form-control" name="itemData[@i].Quantity" value="@Model.itemData[i].Quantity" /></td>
+                            <td><input class="form-control" name="itemData[@i].UnitPrice" value="@Model.itemData[i].UnitPrice" /></td>
+                            <td><input class="form-control" name="itemData[@i].CommercialDiscountData" value="@(JsonConvert.SerializeObject(Model.itemData[i].CommercialDiscountData))" /></td>
+                            <td hidden><input class="form-control" name="itemData[@i].NetSale" value="@Model.itemData[i].NetSale" /></td>
+                            <td hidden><input class="form-control" name="itemData[@i].TotalSale" value="@Model.itemData[i].TotalSale" /></td>
+                            <td hidden><input class="form-control" name="itemData[@i].Total" value="@Model.itemData[i].Total" /></td>
+                            <td><input class="form-control" name="itemData[@i].TaxableItems" value="@(JsonConvert.SerializeObject(Model.itemData[i].TaxableItems))" /></td>
+                            <td>
+                                <button type="button" onClick="Page.deleteRow(event.target)" class="btn btn-danger">delete</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot id="table_item_footer">
+                </tfoot>
+            </table>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+    <span asp-validation-for="itemData" class="text-danger"></span>
+    <div class="text-start">
+        <button type="button" id="saveBtn" class="btn btn-success ">
+            حفظ بدون ارسال
+            <i class="fa-regular fa-floppy-disk"></i>
+        </button>
+        <input type="submit" class="btn btn-primary" value="حفظ وارسال">
+
+    </div>
+
+
+</form>
+
+
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" dir="rtl">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="d-flex flex-column gap-2" id="itemArea">
+
+                    <div class=" row row-cols-md-2 row-cols-sm-1">
+                        <div class="form-group ">
+                            <label>اسم المنتج</label>
+                            <select class="form-control" data-live-search="true" id="ProductName">
+                            </select>
+                            <span class="text-danger"></span>
+                        </div>
+                        <div class=" form-group">
+                            <label>سعر الوحدة</label>
+                            <input type="number" id="UnitPrice" class="form-control">
+                            <span class="text-danger"></span>
+                        </div>
+                        <div class="form-group ">
+                            <label>كمية</label>
+                            <input type="number" id="Quantity" class="form-control  ">
+                            <span class="text-danger"></span>
+                        </div>
+                        <div class=" form-group  ">
+                            <label>خصم</label>
+                            <input type="number" id="Discount" class="form-control  ">
+                            <span class="text-danger"></span>
+                        </div>
+                        <div class="form-group w-100">
+                            <label>وصف المنتج</label>
+                            <textarea id="Description" class="form-control"></textarea>
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="text-start my-2">
+                            <button type="button" id="taxAreaToggleBtn" class="btn btn-outline-secondary w-100">الضرايب</button>
+                        </div>
+                        <div id="taxArea" class="visually-hidden ">
+                            <div class="row row-cols-md-2 row-cols-sm-1">
+                                <div class="form-group">
+                                    <label>نوع الضريبة</label>
+                                    <select id="TaxTypeSelect" class="form-select">
+                                        <option value="0">-- اختر نوع الضريبة --</option>
+                                    </select>
+                                </div>
+                                <div class=" form-group">
+                                    <label>تفاصيل الضريبة</label>
+                                    <select id="SubTaxTypeSelect" class="form-select">
+                                        <option value="0">-- اختر تفاصيل الضريبة --</option>
+                                    </select>
+                                </div>
+                                <div class="form-group ">
+                                    <label>نسبة الضريبة</label>
+                                    <input id="itemTaxRate" class="form-control " type="number" />
+                                </div>
+                                <div class="form-group">
+                                    <label>قيمة الضريبة</label>
+                                    <input id="itemTaxAmount" class="form-control" type="number" />
+                                </div>
+                            </div>
+                            <div class="form-group text-start my-2">
+                                <button type="button" id="addTaxBtn" class=" btn btn-success ">اضافة ضريبة</button>
+                            </div>
+                            <table class="table table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th class="col-2">نوع الضريبة</th>
+                                        <th class="col-2">تفاصيل الضريبة</th>
+                                        <th class="col-3">نسبة</th>
+                                        <th class="col-3">قيمة</th>
+                                        <th class="col-2 text-start"></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="itemTaxTable"></tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div class="row row-cols-md-2 row-cols-sm-1">
+                            <div class="form-group">
+                                <label>الاجمالي بدون خصم و ضريبة</label>
+                                <input id="itemTotalSale" class="form-control mb-2" type="number" disabled />
+                            </div>
+                            <div class="form-group">
+                                <label>الجمالي بعد الخصم</label>
+                                <input id="itemNetSale" class="form-control mb-2" type="number" disabled />
+                            </div>
+                            <div class="form-group">
+                                <label>اجمالي الضريبة</label>
+                                <input id="itemTotalTax" class="form-control mb-2" type="number" disabled />
+                            </div>
+                            <div class="form-group">
+                                <label>اجمالي بعد الضريبة والخصم</label>
+                                <input id="itemTotal" class="form-control mb-2" type="number" disabled />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">اغلاق</button>
+                <button type="button" id="addItemBtn" class="btn btn-primary">
+                    اضافة البند
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <script src="~/js/Receipt/Classes.js"></script>
+
+    <script type="module" src="~/js/Receipt/New.js">
+    </script>
+
+    
+
+
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+
+}
+
+
+
+

@@ -1,0 +1,12 @@
+﻿@using Entities.Models
+@model ProductVM
+
+
+
+<form id="formEdit" >
+    <partial name="_partialInputs"></partial>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">اغلاق</button>
+        <input type="submit" onclick="page.confirmEdit(event,@ViewBag.id)" class="btn btn-success" value="تعديل" />
+    </div>
+</form>

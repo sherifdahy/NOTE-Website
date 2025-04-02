@@ -1,0 +1,166 @@
+﻿@using Entities.Models.Document.BaseComponent
+@using Entities.Models.Document.Receipt
+@model Receipt
+
+<div dir="rtl">
+    
+    <div>
+        <div class="row row-cols-md-2 row-cols-sm-1">
+            <div class="w-100">
+                
+                @{
+                    if(Model.Status == "Valid")
+                    {
+                        <div>
+                            <p class="fs-3 text-success">
+                                @(@Model.DocumentType.ReceiptType == "S" ? "ايصال بيع" : "ايصال مرتجع")
+                                <i class="fa-solid fa-circle-check"></i>
+                            </p>
+                        </div>
+                    }
+                    else if (Model.Status == "Invalid")
+                    {
+                        <div >
+                            <p class="fs-3 text-danger">
+                                @(@Model.DocumentType.ReceiptType == "S" ? "ايصال بيع" : "ايصال مرتجع")
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </p>
+                        </div>
+                    }
+                    else
+                    {
+                        <h4>@(@Model.DocumentType.ReceiptType == "S" ? "ايصال بيع" : "ايصال مرتجع")</h4>
+                    }
+                }
+            </div>
+            <hr class="w-100" />
+            <div class="form-group">
+                <label style="font-weight:bold">رقم الايصال</label>
+                <p class="form-control">@Model.Header.ReceiptNumber</p>
+            </div>
+            <div class="form-group">
+                <label style="font-weight:bold">تاريخ الايصال</label>
+                <p class="form-control">@Model.Header.DateTimeIssued</p>
+            </div>
+            <div class="form-group w-100">
+                <label style="font-weight:bold">معرف الايصال</label>
+                <p class="form-control overflow-auto">@Model.Header.Uuid</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h3 class="text-primary">بيانات الممول</h3>
+        <hr />
+        <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1">
+            <div class="form-group">
+                <label style="font-weight:bold">اسم الشركة</label>
+                <p class="form-control">@Model.Seller.CompanyTradeName</p>
+            </div>
+            <div class="form-group">
+                <label style="font-weight:bold">رقم تسجيل</label>
+                <p class="form-control">@Model.Seller.Rin</p>
+            </div>
+            <div class="form-group">
+                <label style="font-weight:bold">رقم تسجيل</label>
+                <p class="form-control">@Model.Seller.ActivityCode</p>
+            </div>
+            <div class="form-group">
+                <label style="font-weight:bold">العنوان</label>
+                <p class="form-control">@(@Model.Seller.BranchAddress.BuildingNumber),@(Model.Seller.BranchAddress.Street),@(Model.Seller.BranchAddress.Governate),@(Model.Seller.BranchAddress.Country)</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h3 class="text-primary">بيانات العميل</h3>
+        <hr />
+        <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1">
+            <div class="form-group">
+                <label style="font-weight:bold">اسم العميل</label>
+                <p class="form-control">@Model.Buyer.Name</p>
+            </div>
+            @if(Model.Buyer.Id!= null)
+            {
+                <div class="form-group">
+                    <label style="font-weight:bold">معرف العميل</label>
+                    <p class="form-control">@Model.Buyer.Id</p>
+                </div>
+            }
+            @if(Model.Buyer.MobileNumber != null)
+            {
+                <div class="form-group">
+                    <label style="font-weight:bold">رقم تليفون</label>
+                    <p class="form-control">@Model.Buyer.MobileNumber</p>
+                </div>
+            }
+            <div class="form-group">
+                <label style="font-weight:bold">نوع</label>
+                <p class="form-control">@(Model.Buyer.Type == "P" ? "شخص" : Model.Buyer.Type == "B" ? "شركة" : "اجنبي")</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h3 class="text-primary">بنود الايصال</h3>
+        <hr />
+        <div class="overflow-auto">
+            <table class="table table-hover table-bordered w-100 text-center ">
+                <thead class="text-light" style="line-height:3rem;background-color:var(--green-color);font-size:1.2rem">
+                    <tr>
+                        <th class="col-1">كود الداخلي</th>
+                        <th class="col-5">وصف المنتج</th>
+                        <th class="col-1">سعر الوحدة</th>
+                        <th class="col-1">كمية</th>
+                        <th class="col-2">خصم</th>
+                        <th class="col-2">ضريبة</th>
+                    </tr>
+                </thead>
+                <tbody class="">
+                    @foreach (Item item in Model.ItemData)
+                    {
+                        <tr>
+
+                            <td>@item.InternalCode</td>
+                            <td>@item.Description</td>
+                            <td>@item.UnitPrice</td>
+                            <td>@item.Quantity</td>
+                            <td>@item.CommercialDiscountData.Select(x => x.Amount).FirstOrDefault()</td>
+                            <td>@item.TaxableItems.Select(x => x.Amount).Sum()</td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4"></td>
+                        <th colspan="1">اجمالي المبيعات : </th>
+                        <td>@Model.TotalSales</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"></td>
+
+                        <th>اجمالي الخصم : </th>
+                        <td>@Model.TotalCommercialDiscount</td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="4"></td>
+
+                        <th>اجمالي الضريبة : </th>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="4"></td>
+                        <th>اجمالي المبلغ : </th>
+                        <td>@Model.TotalAmount</td>
+
+                    </tr>
+
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <div asp-validation-summary="All" class="text-danger" style="font-weight:bold;font-size:1.2rem">
+    </div>
+</div>
+
+
+

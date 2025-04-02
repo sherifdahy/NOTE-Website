@@ -1,0 +1,18 @@
+:root{
+    --blue-color:#133E87;
+    --hover-color:#4F75FF;
+    --background-color:#f1f1f1;
+}
+
+
+body{
+    background-color: var(--background-color);
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+
+.body{
+    min-height: calc(100vh - 60px);
+}

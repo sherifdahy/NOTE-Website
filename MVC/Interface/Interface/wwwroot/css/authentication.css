@@ -1,0 +1,16 @@
+body{
+    background-color: var(--blue-color);
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+form svg{
+    width: 50px;
+}
+

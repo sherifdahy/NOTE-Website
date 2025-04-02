@@ -1,0 +1,159 @@
+﻿@using Entities.Models
+
+@model IEnumerable<Product>
+
+@{
+    Pager pager = new Pager();
+    int pageNo = 0;
+    if (ViewBag.Pager != null)
+    {
+        pager = ViewBag.Pager;
+        pageNo = pager.CurrentPage;
+
+    }
+}
+
+<div class="row mt-2 box-content">
+    <div class="col">
+        <div class="d-flex justify-content-between" >
+            <h3 class="text-primary text-end">السلع و الخدمات</h3>
+            <div>
+                <button onclick="page.Add()"  class="btn" style="background-color:var(--blue-color);color:white">
+                    <i class="fa-solid fa-plus"></i>
+                    
+                </button>
+                <a class="btn btn-success" syle="color:white">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                </a>
+                <a 
+                    id="deleteAllBtn" 
+                    class="btn btn-danger" 
+                    asp-controller="products" 
+                    asp-action="deleteAll"
+                    onclick="SweetAlert.confirm(event,'هل انت متأكد من حذف جميع السلع والخدمات؟','لن تكون قادر علي استرجاع السلع والخدمات للأبد','warning')">
+
+                    <i class="fa-solid fa-trash"></i>
+                </a>
+
+            </div>
+        </div>
+        <hr>
+        <table id="datatable" class="table table-hover table-responsive table-bordered w-100 text-center " dir="rtl">
+            <thead class="text-light" style="line-height:3rem;background-color:var(--green-color);font-size:1.2rem">
+                <tr class="align-items-center">
+                    <th class="col-1">كود داخلي</th>
+                    <th class="col-2">الاسم</th>
+                    <th class="col-3">الوصف</th>
+                    <th class="col-1">سعر</th>
+                    <th class="col-1">نوع الوحدة</th>
+                    <th class="col-2">كود عالمي</th>
+                    <th class="col-1">نوع الكود العالمي</th>
+                    <th class="col-1"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Product product in Model)
+                {
+                    <tr>
+                        <td >@product.InternalId</td>
+                        <td>@product.Name</td>
+                        <td>@product.Description</td>
+                        <td>@product.UnitPrice</td>
+                        <td>@product.UnitType</td>
+                        <td>@product.Code</td>
+                        <td>@product.CodeType</td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="btn" style="background-color:var(--blue-color)" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-gear text-light"></i>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <li>
+                                        <button onclick="page.Edit(@product.Id)" class="dropdown-item  text-end">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                            تعديل
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <a id="delete" class="dropdown-item  text-end"  
+                                            asp-controller="products" 
+                                            asp-action="delete" 
+                                            asp-route-Id="@product.Id"
+                                            onclick="SweetAlert.confirm(event,'هل انت متأكد من حذف السلعة أو الخدمة؟','','warning')"
+                                            >
+                                            <i class="fa-solid fa-trash"></i>
+                                            حذف
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </td>
+                        
+                    </tr>
+                }
+            
+            </tbody>
+        </table>
+
+        <div class="">
+            @if (pager.TotalPages > 0)
+            {
+                <ul class="pagination flex-row-reverse">
+                    @if (pager.CurrentPage > 1)
+                    {
+                        <li class="page-item">
+                            <a class="page-link" asp-controller="products" asp-action="index" asp-route-pg="1">اول صفحة</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" asp-controller="products" asp-action="index" asp-route-pg="@(pager.CurrentPage -1)">السابق</a>
+                        </li>
+                    }
+                    @for (var pge = pager.StartPage; pge <= pager.EndPage; pge++)
+                    {
+                        <li class="page-item @(pge == pager.CurrentPage ? "active" : "" )">
+                            <a class="page-link" asp-controller="products" asp-action="index" asp-route-pg="@pge">@pge</a>
+                        </li>
+
+                    }
+                    @if (pager.CurrentPage < pager.TotalPages)
+                    {
+                        <li class="page-item">
+                            <a class="page-link" asp-controller="products" asp-action="index" asp-route-pg="@(pager.CurrentPage + 1)">التالي</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" asp-controller="products" asp-action="index" asp-route-pg="@(pager.TotalPages)">اخر صفحة</a>
+                        </li>
+                    }
+                </ul>
+            }
+        </div>
+
+
+    </div>
+</div>
+
+
+<div class="modal fade" id="form" tabindex="-1" aria-labelledby="formEditLabel" aria-hidden="true" dir="rtl">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+@section Scripts {
+    <script src="~/js/Products.js"></script>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+
