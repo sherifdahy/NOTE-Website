@@ -1,5 +1,7 @@
 ﻿using Entities.Models;
 using Interface.Dto;
+using Interface.Dto.POSAuthenticate;
+using Interface.Dto.ReceiptSubmit;
 using Interface.Services.ApiCall;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -34,9 +36,9 @@ namespace Interface
                     var applicationUser = await _userService.FindByIdAsync(userId);
                     if (applicationUser != null)
                     {
-                        ResponseDTO<AuthenticatePosDTO, string, UnprocessableEntityDTO> responseDTO = await _apiCall.GenerateNewTokenAsync<AuthenticatePosDTO, string, UnprocessableEntityDTO>("connect/token", applicationUser);
-                        var newexpireDatetime = DateTime.UtcNow.AddSeconds(int.Parse(responseDTO.Accepted.expires_in));
-                        context.HttpContext.Session.SetString("access_token", responseDTO.Accepted.access_token);
+                        ResponseDTO<POSAuthenticateResponseDTO> responseDTO = await _apiCall.GenerateNewTokenAsync<POSAuthenticateResponseDTO>("connect/token", applicationUser);
+                        var newexpireDatetime = DateTime.UtcNow.AddSeconds(int.Parse(responseDTO.SuccessfulResponse.expires_in));
+                        context.HttpContext.Session.SetString("access_token", responseDTO.SuccessfulResponse.access_token);
                         context.HttpContext.Session.SetString("expire_date", newexpireDatetime.ToString("o"));
                     }
                 }
@@ -54,9 +56,9 @@ namespace Interface
 
                         if (applicationUser != null)
                         {
-                            ResponseDTO<AuthenticatePosDTO, string, UnprocessableEntityDTO> responseDTO = await _apiCall.GenerateNewTokenAsync<AuthenticatePosDTO, string, UnprocessableEntityDTO>("connect/token", applicationUser);
-                            var newexpireDatetime = DateTime.UtcNow.AddSeconds(int.Parse(responseDTO.Accepted.expires_in));
-                            context.HttpContext.Session.SetString("access_token", responseDTO.Accepted.access_token);
+                            ResponseDTO<POSAuthenticateResponseDTO> responseDTO = await _apiCall.GenerateNewTokenAsync<POSAuthenticateResponseDTO>("connect/token", applicationUser);
+                            var newexpireDatetime = DateTime.UtcNow.AddSeconds(int.Parse(responseDTO.SuccessfulResponse.expires_in));
+                            context.HttpContext.Session.SetString("access_token", responseDTO.SuccessfulResponse.access_token);
                             context.HttpContext.Session.SetString("expire_date", newexpireDatetime.ToString("o"));
                         }
                     }

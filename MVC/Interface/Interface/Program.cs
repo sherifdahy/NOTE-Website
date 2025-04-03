@@ -2,23 +2,12 @@
 using DAL.Repository;
 using Entities.InterfacesOfRepo;
 using Entities.Models;
-using Entities.Models.Document.BaseComponent;
 using Entities.Models.Document.Receipt;
-using ETA.eReceipt.IntegrationToolkit;
-using ETA.eReceipt.IntegrationToolkit.Application.Dtos;
-using ETA.eReceipt.IntegrationToolkit.Application.Interfaces;
-using ETA.eReceipt.IntegrationToolkit.Application.Services;
-using ETA.eReceipt.IntegrationToolkit.Infrastructure.Services;
 using Interface.ApplicationConfiguration;
 using Interface.Services.ApiCall;
 using Interface.Services.Report;
-using MediatR;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection;
 
 namespace Interface
 {

@@ -51,8 +51,6 @@ window.Page = (function () {
             
 
         });
-
-        sendBtn.addEventListener('click', Send);
     };
 
     function notification(icon,title) {
@@ -73,22 +71,7 @@ window.Page = (function () {
         });
     }
 
-    function Send(event) {
-        event.preventDefault();
-        Swal.fire({
-            title: "هل تريد الارسال؟",
-            icon: "question",
-            iconHtml: "؟",
-            confirmButtonText: "نعم",
-            cancelButtonText: "لا",
-            showCancelButton: true,
-            showCloseButton: true
-        }).then((result) => {
-            if (result.isConfirmed) {
-                event.target.closest('form').submit();
-            }
-        });
-    };
+    
     function deleteRow (button) {
         button.closest("tr").remove();
         handleFooter();

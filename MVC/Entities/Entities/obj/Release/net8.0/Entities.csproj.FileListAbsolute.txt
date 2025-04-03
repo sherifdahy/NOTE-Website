@@ -23,3 +23,16 @@ E:\NOTE POS\MVC\Entities\Entities\obj\Release\net8.0\Entities.dll
 E:\NOTE POS\MVC\Entities\Entities\obj\Release\net8.0\refint\Entities.dll
 E:\NOTE POS\MVC\Entities\Entities\obj\Release\net8.0\Entities.pdb
 E:\NOTE POS\MVC\Entities\Entities\obj\Release\net8.0\ref\Entities.dll
+E:\NOTE Company\NoteSolution\MVC\Entities\Entities\bin\Release\net8.0\Entities.deps.json
+E:\NOTE Company\NoteSolution\MVC\Entities\Entities\bin\Release\net8.0\Entities.dll
+E:\NOTE Company\NoteSolution\MVC\Entities\Entities\bin\Release\net8.0\Entities.pdb
+E:\NOTE Company\NoteSolution\MVC\Entities\Entities\obj\Release\net8.0\Entities.csproj.AssemblyReference.cache
+E:\NOTE Company\NoteSolution\MVC\Entities\Entities\obj\Release\net8.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+E:\NOTE Company\NoteSolution\MVC\Entities\Entities\obj\Release\net8.0\Entities.AssemblyInfoInputs.cache
+E:\NOTE Company\NoteSolution\MVC\Entities\Entities\obj\Release\net8.0\Entities.AssemblyInfo.cs
+E:\NOTE Company\NoteSolution\MVC\Entities\Entities\obj\Release\net8.0\Entities.csproj.CoreCompileInputs.cache
+E:\NOTE Company\NoteSolution\MVC\Entities\Entities\obj\Release\net8.0\Entities.sourcelink.json
+E:\NOTE Company\NoteSolution\MVC\Entities\Entities\obj\Release\net8.0\Entities.dll
+E:\NOTE Company\NoteSolution\MVC\Entities\Entities\obj\Release\net8.0\refint\Entities.dll
+E:\NOTE Company\NoteSolution\MVC\Entities\Entities\obj\Release\net8.0\Entities.pdb
+E:\NOTE Company\NoteSolution\MVC\Entities\Entities\obj\Release\net8.0\ref\Entities.dll

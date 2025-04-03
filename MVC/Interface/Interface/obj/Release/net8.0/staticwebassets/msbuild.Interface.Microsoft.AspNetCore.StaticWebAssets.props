@@ -108,6 +108,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\home.js'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\PopupMessage.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Interface</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Interface</BasePath>
+      <RelativePath>js/PopupMessage.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lqqfrxotwe</Fingerprint>
+      <Integrity>4+syOTWhKs/W9C3o+n2yElNV/+YaoHKvNVusFqs11SI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\PopupMessage.js'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\Products.js'))">
       <SourceType>Package</SourceType>
       <SourceId>Interface</SourceId>
@@ -120,8 +138,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>pq0aied9fc</Fingerprint>
-      <Integrity>QXzMxGdlen5wJt96dCxndke3s8Rc77udvGjOs+HUfdY=</Integrity>
+      <Fingerprint>anpam34csa</Fingerprint>
+      <Integrity>VqKWv1Wow7wkVFsA3wbfTXflAyJFjMWlNGTMVUlu5bs=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\Products.js'))</OriginalItemSpec>
@@ -156,8 +174,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>r1lcax3a0b</Fingerprint>
-      <Integrity>jxPQYyRS4eMIiYG7dvd9wyFabR3o8kqFMEXRfbaRxbQ=</Integrity>
+      <Fingerprint>lrw3q2gqxl</Fingerprint>
+      <Integrity>XxU1LzkpB6jZqweRRl/sAmQWuHzq2hmhdk6Q8rFfYbE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\Receipt\Index.js'))</OriginalItemSpec>
@@ -174,8 +192,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>n14f99i62n</Fingerprint>
-      <Integrity>xTDMHSvejrKIvFbD/QvJlGRtexDSRmYL6SuCnduYj2E=</Integrity>
+      <Fingerprint>qul2pmc82m</Fingerprint>
+      <Integrity>Imz9n/ZM2Ml6ssEE8NwzxpwHhkw7nQHNxqxfriLuQ1w=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\Receipt\modules\ItemComponent.js'))</OriginalItemSpec>
@@ -210,11 +228,29 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6eoba2y4cm</Fingerprint>
-      <Integrity>PgL72zhsjsQCPEjCAax7N5QMugv57/ZBMUr+4OzZsfg=</Integrity>
+      <Fingerprint>bub54y0ljy</Fingerprint>
+      <Integrity>zahljUo5M4+1t1M7ESEnqfyiPKSnl5aU2kFcrn3u1f8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\Receipt\New.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\TaxpayerProfile.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Interface</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Interface</BasePath>
+      <RelativePath>js/TaxpayerProfile.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>k1j4vxya1j</Fingerprint>
+      <Integrity>mIO3/gwdc0/WMepuj5RmY2C78DV7/5vMeThc3qsi26E=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\TaxpayerProfile.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\JsonFiles\SubTaxType.json'))">
       <SourceType>Package</SourceType>

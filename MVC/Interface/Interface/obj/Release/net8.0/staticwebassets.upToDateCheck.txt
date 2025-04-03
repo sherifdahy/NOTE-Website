@@ -4,12 +4,14 @@ wwwroot\css\header.css
 wwwroot\css\sidebar.css
 wwwroot\imgs\logo.png
 wwwroot\js\home.js
+wwwroot\js\PopupMessage.js
 wwwroot\js\Products.js
 wwwroot\js\Receipt\Classes.js
 wwwroot\js\Receipt\Index.js
 wwwroot\js\Receipt\modules\ItemComponent.js
 wwwroot\js\Receipt\modules\TaxComponent.js
 wwwroot\js\Receipt\New.js
+wwwroot\js\TaxpayerProfile.js
 wwwroot\JsonFiles\SubTaxType.json
 wwwroot\JsonFiles\TaxType.json
 wwwroot\lib\all.min.css

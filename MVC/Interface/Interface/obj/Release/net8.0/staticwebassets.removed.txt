@@ -1,2 +1,0 @@
-E:\NOTE POS\MVC\Interface\Interface\wwwroot\json file\SubTaxType.json
-E:\NOTE POS\MVC\Interface\Interface\wwwroot\json file\TaxType.json

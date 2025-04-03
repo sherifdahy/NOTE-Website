@@ -3,6 +3,7 @@ using Entities.ConfigurationSettings;
 using Entities.Models;
 using Interface.ApplicationConfiguration;
 using Interface.Dto;
+using Interface.Dto.ReceiptSubmit;
 using Newtonsoft.Json;
 using NuGet.Common;
 using RestSharp;
@@ -19,70 +20,118 @@ namespace Interface.Services.ApiCall
             restClient = new RestClient(appConfig.baseUrl);
             restAuth = new RestClient(appConfig.idSrvBaseUrl);
         }
-        public async Task<ResponseDTO<T,Y, Z>> GenerateNewTokenAsync<T,Y, Z>(string url, ApplicationUser applicationUser)
+        public async Task<ResponseDTO<T>> GenerateNewTokenAsync<T>(string url, ApplicationUser applicationUser)
         {
             var request = new RestRequest(url, Method.Post);
+
+            // إضافة الرؤوس
             var headers = new Dictionary<string, string>
-            {
-                { "posserial", applicationUser.POSSerial },
-                { "pososversion", "Windows" },
-                { "presharedkey", "" },
-                { "Content-Type", "application/x-www-form-urlencoded" }
-            };
-            var parameters = new Dictionary<string, string>
-            {
-                { "grant_type", "client_credentials" },
-                { "client_id", applicationUser.POSClientId },
-                { "client_secret", applicationUser.POSClientSecret },
-                { "scope", "InvoicingAPI" }
-            };
+    {
+        { "posserial", applicationUser.POSSerial },
+        { "pososversion", "Windows" },
+        { "presharedkey", "" },
+        { "Content-Type", "application/x-www-form-urlencoded" }
+    };
             request.AddHeaders(headers);
+
+            // إضافة المعلمات
+            var parameters = new Dictionary<string, string>
+    {
+        { "grant_type", "client_credentials" },
+        { "client_id", applicationUser.POSClientId },
+        { "client_secret", applicationUser.POSClientSecret },
+        { "scope", "InvoicingAPI" }
+    };
             foreach (var param in parameters)
             {
                 request.AddParameter(param.Key, param.Value);
             }
-            var response = await restAuth.ExecuteAsync<T>(request);
-            return response.StatusCode == HttpStatusCode.OK ? new ResponseDTO<T, Y, Z>() { Accepted = JsonConvert.DeserializeObject<T>(response.Content) } :
-                response.StatusCode == HttpStatusCode.BadRequest ? new ResponseDTO<T, Y, Z>() { BadRequest = JsonConvert.DeserializeObject<Y>(response.Content) } :
-                response.StatusCode == HttpStatusCode.UnprocessableEntity ? new ResponseDTO<T, Y, Z> { UnprocessableEntity = JsonConvert.DeserializeObject<Z>(response.Content) } :
 
-                default;
+            var response = await restAuth.ExecuteAsync<T>(request);
+            var responseDto = new ResponseDTO<T>();
+
+            switch (response.StatusCode)
+            {
+                case HttpStatusCode.OK:
+                    responseDto.SuccessfulResponse = JsonConvert.DeserializeObject<T>(response.Content);
+                    break;
+
+                case HttpStatusCode.UnprocessableEntity:
+                case HttpStatusCode.BadRequest:
+                    responseDto.ErrorResponse = JsonConvert.DeserializeObject(response.Content);
+                    break;
+
+                
+
+                default:
+                    return default;
+            }
+
+            return responseDto;
         }
 
-        public async Task<ResponseDTO<T, Y, Z>> ReceiptSubmissions<T, Y, Z>(string url, string submissionUuid, string token)
+        public async Task<ResponseDTO<T>> ReceiptSubmissions<T>(string url, string submissionUuid, string token)
         {
-            
-            var request = new RestRequest(url + "/" + submissionUuid + "/details?PageNo=1&PageSize=100", Method.Get);
+            var requestUrl = $"{url}/{submissionUuid}/details?PageNo=1&PageSize=100";
+            var request = new RestRequest(requestUrl, Method.Get);
             request.AddHeader("Authorization", $"Bearer {token}");
             request.AddHeader("Accept-Language", "ar");
 
             RestResponse restResponse = (RestResponse)await restClient.ExecuteAsync(request);
-            
-            return 
-                restResponse.StatusCode == HttpStatusCode.OK ? new ResponseDTO<T, Y, Z>() { Accepted = JsonConvert.DeserializeObject<T>(restResponse.Content) } :
-                restResponse.StatusCode == HttpStatusCode.Forbidden ? new ResponseDTO<T,Y, Z>() { BadRequest = JsonConvert.DeserializeObject<Y>(restResponse.Content) } :
-                restResponse.StatusCode == HttpStatusCode.UnprocessableEntity ? new ResponseDTO<T, Y, Z> { UnprocessableEntity = JsonConvert.DeserializeObject<Z>(restResponse.Content) } :
 
-                default;
+            var responseDto = new ResponseDTO<T>();
+
+            switch (restResponse.StatusCode)
+            {
+                case HttpStatusCode.OK:
+                    responseDto.SuccessfulResponse = JsonConvert.DeserializeObject<T>(restResponse.Content);
+                    break;
+
+                case HttpStatusCode.UnprocessableEntity:
+                case HttpStatusCode.Forbidden:
+                    responseDto.ErrorResponse = JsonConvert.DeserializeObject(restResponse.Content);
+                    break;
+
+                
+
+                default:
+                    return default;
+            }
+
+            return responseDto;
         }
 
 
-        public async Task<ResponseDTO<T, Y ,Z>> ReceiptSubmit<T, Y,Z>(string url, string json, string token)
+        public async Task<ResponseDTO<T>> ReceiptSubmit<T >(string url, string json, string token)
         {
             var request = new RestRequest(url, Method.Post);
             request.AddHeader("Authorization", $"Bearer {token}");
             request.AddHeader("Accept-Language", "ar");
-
             request.AddJsonBody(json);
+
             RestResponse restResponse = (RestResponse)await restClient.ExecuteAsync(request);
-            
-            return 
-                restResponse.StatusCode == HttpStatusCode.Accepted ? new ResponseDTO<T, Y,Z>() { Accepted = JsonConvert.DeserializeObject<T>(restResponse.Content) } :
-                restResponse.StatusCode == HttpStatusCode.Forbidden ? new ResponseDTO<T, Y,Z>() { BadRequest = JsonConvert.DeserializeObject<Y>(restResponse.Content)} :
-                restResponse.StatusCode == HttpStatusCode.UnprocessableEntity ? new ResponseDTO<T, Y,Z> { UnprocessableEntity = JsonConvert.DeserializeObject<Z>(restResponse.Content)} :
-                default;
+
+            var responseDto = new ResponseDTO<T>();
+
+            switch (restResponse.StatusCode)
+            {
+                case HttpStatusCode.Accepted:
+                    responseDto.SuccessfulResponse = JsonConvert.DeserializeObject<T>(restResponse.Content);
+                    break;
+
+                case HttpStatusCode.UnprocessableEntity:
+                case HttpStatusCode.Forbidden :
+                    responseDto.ErrorResponse = JsonConvert.DeserializeObject(restResponse.Content);
+                    break;
+                
+
+                default:
+                    return default;
+            }
+
+            return responseDto;
         }
 
-       
+
     }
 }

@@ -1,28 +1,21 @@
 ﻿using AutoMapper;
-using DAL.Repository;
 using Entities.InterfacesOfRepo;
 using Entities.Models;
-using Entities.Models.Document.BaseComponent;
 using Entities.Models.Document.Receipt;
-using ETA.eReceipt.IntegrationToolkit.Application.Models;
-using ETA.eReceipt.IntegrationToolkit.Infrastructure.Services;
 using Interface.Dto;
+using Interface.Dto.ReceiptSubmissions;
+using Interface.Dto.ReceiptSubmit;
 using Interface.Services;
 using Interface.Services.ApiCall;
 using Interface.ViewModels;
 using Interface.ViewModels.ReceiptVM;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
-using NuGet.Common;
-using System.Diagnostics;
-using System.Linq.Expressions;
 using System.Security.Claims;
 using System.Text;
-using System.Text.Json.Serialization;
 
 namespace Interface.Controllers
 {
@@ -74,17 +67,18 @@ namespace Interface.Controllers
             {
                 foreach (Receipt receipt in receipts.Where(x => x.Status == null || x.Status == "InProgress").ToList())
                 {
-                    ResponseDTO<ReceiptSubmissionsDTO, ErrorResponseDTO, UnprocessableEntityDTO> temp = await api.ReceiptSubmissions<ReceiptSubmissionsDTO, ErrorResponseDTO, UnprocessableEntityDTO>("api/v1/receiptsubmissions", receipt.SubmissionUuid, token);
+
+                    ResponseDTO<ReceiptSubmissionsDTO> temp = await api.ReceiptSubmissions<ReceiptSubmissionsDTO>("api/v1/receiptsubmissions", receipt.SubmissionUuid, token);
                     if (temp != null)
                     {
-                        if (temp.Accepted != null)
+                        if (temp.SuccessfulResponse != null)
                         {
-                            receipt.Status = temp.Accepted.Status;
+                            receipt.Status = temp.SuccessfulResponse.Status;
                             IUnitOfWork.Receipts.Update(receipt);
                         }
-                        else if (temp.BadRequest != null)
+                        else if (temp.ErrorResponse != null)
                         {
-                            return RedirectToAction("Index", "Error", temp.BadRequest);
+                            return RedirectToAction("Index", "Error", temp.ErrorResponse);
                         }
                     }
                 }
@@ -121,37 +115,35 @@ namespace Interface.Controllers
             {
                 string token = HttpContext.Session.GetString("access_token");
 
-
-
                 ApplicationUser user = await IUnitOfWork.UserManager.FindByIdAsync(userId.ToString());
                 Receipt receipt = mapper.Map<Receipt>(user);
                 mapper.Map(receiptVM,receipt);
                 receipt.Header.Uuid = UuidService.GenerateUUID(receipt);
                 if (token != null)
                 {
-                    ResponseDTO<ReceiptSubmitDTO, ErrorResponseDTO, UnprocessableEntityDTO> subTemp = await api.ReceiptSubmit<ReceiptSubmitDTO, ErrorResponseDTO, UnprocessableEntityDTO>("api/v1/receiptsubmissions", JsonConvert.SerializeObject(
+                    ResponseDTO<SuccessfulResponseDTO> subTemp = await api.ReceiptSubmit<SuccessfulResponseDTO>("api/v1/receiptsubmissions", JsonConvert.SerializeObject(
                     new
                     {
                         receipts = new List<Receipt>() { receipt }
                     }, jsonSerializer), token);
                     if (subTemp != null)
                     {
-                        if (subTemp.Accepted != null)
+                        if (subTemp.SuccessfulResponse != null)
                         {
-                            if (subTemp.Accepted.acceptedDocuments?.Count > 0)
+                            if (subTemp.SuccessfulResponse.acceptedDocuments?.Count > 0)
                             {
-                                receipt.SubmissionUuid = subTemp.Accepted.submissionId;
+                                receipt.SubmissionUuid = subTemp.SuccessfulResponse.submissionId;
                                 IUnitOfWork.Receipts.Insert(receipt);
                                 IUnitOfWork.Save();
                                 TempData["Message"] = JsonConvert.SerializeObject(new MessageVM() { Icon = "success", Title = "تم الارسال بنجاح.", Message = receipt.SubmissionUuid }) ;
                                 return RedirectToAction(nameof(New));
                             }
-                            else if (subTemp.Accepted.rejectedDocuments?.Count > 0)
+                            else if (subTemp.SuccessfulResponse.rejectedDocuments?.Count > 0)
                             {
                                 List<MessageVM> messageVMs = new List<MessageVM>();
-                                foreach (ReceiptsRejectedDto dto in subTemp.Accepted.rejectedDocuments)
+                                foreach (DocumentRejectedDTO dto in subTemp.SuccessfulResponse.rejectedDocuments)
                                 {
-                                    foreach (HttpCustomErrorResponseModel error in dto.error.Details)
+                                    foreach(ErrorDetailsDTO error in dto.error.Details)
                                     {
                                         messageVMs.Add(new MessageVM
                                         {
@@ -167,13 +159,20 @@ namespace Interface.Controllers
 
                             }
                         }
-                        else if (subTemp.BadRequest != null)
+                        else if (subTemp.ErrorResponse != null)
                         {
-                            return RedirectToAction("Index", "Error", subTemp.BadRequest);
-                        }
-                        else if(subTemp.UnprocessableEntity != null)
-                        {
-                            TempData["Message"] = JsonConvert.SerializeObject(new MessageVM { Icon = "error", Title = "خطأ", Message = subTemp.UnprocessableEntity.Error });
+                            var errorResponseDTO = ((JObject)subTemp.ErrorResponse).ToObject<ErrorResponseDTO>();
+                            if (errorResponseDTO != null)
+                            {
+
+                            }
+                            var simpleErrorDTO = ((JObject)subTemp.ErrorResponse).ToObject<SimpleErrorDTO>();
+                            if (simpleErrorDTO!=null)
+                            {
+                                TempData["Message"] = JsonConvert.SerializeObject(new MessageVM { Icon = "error", Title = "خطأ", Message = simpleErrorDTO.Error });
+
+                            }
+
                         }
                     }
 
@@ -211,25 +210,25 @@ namespace Interface.Controllers
         {
             string token = HttpContext.Session.GetString("access_token");
 
-            ResponseDTO<ReceiptSubmissionsDTO, ErrorResponseDTO, UnprocessableEntityDTO> temp = await api.ReceiptSubmissions<ReceiptSubmissionsDTO, ErrorResponseDTO, UnprocessableEntityDTO>("api/v1/receiptsubmissions", Id, token);
+            ResponseDTO<ReceiptSubmissionsDTO> temp = await api.ReceiptSubmissions<ReceiptSubmissionsDTO>("api/v1/receiptsubmissions", Id, token);
             if (temp != null)
             {
-                if (temp.Accepted != null && temp.Accepted.Status == "Invalid")
+                if (temp.SuccessfulResponse != null && temp.SuccessfulResponse.Status == "Invalid")
                 {
-                    foreach (ReceiptDTO receiptDTO in temp.Accepted.Receipts)
+                    foreach (ReceiptDTO receiptDTO in temp.SuccessfulResponse.Receipts)
                     {
                         foreach (ErrorDTO errorDTO in receiptDTO.Errors)
                         {
-                            foreach (InnerErrorDTO innerErrorDTO in errorDTO.Error.InnerError)
-                            {
-                                ModelState.AddModelError("", innerErrorDTO.ErrorAr);
-                            }
+                            //foreach (InnerErrorDTO innerErrorDTO in errorDTO.Error.InnerError)
+                            //{
+                            //    ModelState.AddModelError("", innerErrorDTO.ErrorAr);
+                            //}
                         }
                     }
                 }
-                else if (temp.BadRequest != null)
+                else if (temp.ErrorResponse != null)
                 {
-                    return RedirectToAction("Index", "Error", temp.BadRequest);
+                    return RedirectToAction("Index", "Error", temp.ErrorResponse);
                 }
             }
             Receipt receipt = IUnitOfWork.Receipts.FindAll(x => x.SubmissionUuid == Id).FirstOrDefault();
@@ -254,8 +253,7 @@ namespace Interface.Controllers
 
             if (token != null)
             {
-                ResponseDTO<ReceiptSubmitDTO, ErrorResponseDTO, UnprocessableEntityDTO> subTemp =
-                    await api.ReceiptSubmit<ReceiptSubmitDTO, ErrorResponseDTO, UnprocessableEntityDTO>("api/v1/receiptsubmissions", JsonConvert.SerializeObject(
+                ResponseDTO<SuccessfulResponseDTO> subTemp = await api.ReceiptSubmit<SuccessfulResponseDTO>("api/v1/receiptsubmissions", JsonConvert.SerializeObject(
                 new
                 {
                     receipts = new List<Receipt>() { receipt }
@@ -264,26 +262,26 @@ namespace Interface.Controllers
 
                 if (subTemp != null)
                 {
-                    if (subTemp.Accepted != null)
+                    if (subTemp.SuccessfulResponse != null)
                     {
-                        if (subTemp.Accepted.acceptedDocuments?.Count > 0)
+                        if (subTemp.SuccessfulResponse.acceptedDocuments?.Count > 0)
                         {
-                            receipt.SubmissionUuid = subTemp.Accepted.submissionId;
+                            receipt.SubmissionUuid = subTemp.SuccessfulResponse.submissionId;
                             IUnitOfWork.Receipts.Update(receipt);
                             IUnitOfWork.Save();
 
                             return RedirectToAction(nameof(Index), new { pg = pg });
                         }
-                        else if (subTemp.Accepted.rejectedDocuments?.Count > 0)
+                        else if (subTemp.SuccessfulResponse.rejectedDocuments?.Count > 0)
                         {
-                            TempData["error"] = JsonConvert.SerializeObject(subTemp.Accepted.rejectedDocuments);
+                            TempData["error"] = JsonConvert.SerializeObject(subTemp.SuccessfulResponse.rejectedDocuments);
                             return RedirectToAction(nameof(Index), new { pg = pg });
 
                         }
                     }
-                    else if (subTemp.BadRequest != null)
+                    else if (subTemp.ErrorResponse != null)
                     {
-                        return RedirectToAction("Index", "Error", subTemp.BadRequest);
+                        return RedirectToAction("Index", "Error", subTemp.ErrorResponse);
                     }
                 }
                 TempData["errorTime"] = "من فضلك انتظر عشر دقائق حتي تتمكن من ارسال نفس الايصال";

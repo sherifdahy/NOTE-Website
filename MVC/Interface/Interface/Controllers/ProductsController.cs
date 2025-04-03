@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using CodeEffects.Rule.Attributes;
 using Entities.InterfacesOfRepo;
 using Entities.Models;
 using Interface.Dto;

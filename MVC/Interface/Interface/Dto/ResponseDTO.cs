@@ -1,9 +1,8 @@
 ﻿namespace Interface.Dto
 {
-    public class ResponseDTO<T,Y,Z>
+    public class ResponseDTO<T>
     {
-        public T Accepted { get; set; }
-        public Y BadRequest { get; set; }
-        public Z UnprocessableEntity {  get; set; }
+        public T SuccessfulResponse { get; set; } 
+        public object ErrorResponse { get; set; } 
     }
 }

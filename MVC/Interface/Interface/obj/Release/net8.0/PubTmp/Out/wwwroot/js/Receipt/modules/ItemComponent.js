@@ -103,14 +103,14 @@ const ItemComponent = {
     toggleItemArea : function () {
         itemArea.classList.toggle('visually-hidden');
     },
-    InitializeSelect: function (url) {
 
+    InitializeSelect: function (url) {
         $('#ProductName').select2({
             theme: 'bootstrap4',
-            width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
-            placeholder: $(this).data('placeholder'),
-            allowClear: Boolean($(this).data('allow-clear')),
-            closeOnSelect: !$(this).attr('multiple'),
+            width: '100%', // استخدام عرض ثابت
+            placeholder: 'ابحث عن عنصر...', // نص افتراضي في حقل البحث
+            allowClear: true,
+            closeOnSelect: true,
             dropdownParent: $('#itemArea'),
             ajax: {
                 url: url, // رابط API الذي سيتم إرسال الطلب إليه
@@ -127,7 +127,16 @@ const ItemComponent = {
 
                     // تحويل البيانات الواردة من الخادم إلى التنسيق الذي تفهمه Select2
                     return {
-                        results: data.items, // البيانات التي سيتم عرضها في القائمة
+                        results: data.items.map(item => ({
+                            id: item.internalId, // تأكد من أن هذا الحقل فريد
+                            text: item.name, // النص الذي سيتم عرضه
+                            unitPrice: item.unitPrice,
+                            description: item.description,
+                            internalId: item.internalId,
+                            codeType: item.codeType,
+                            unitType: item.unitType,
+                            code: item.code
+                        })),
                         pagination: {
                             more: data.more // هل هناك المزيد من النتائج لتحميلها؟
                         }
@@ -136,12 +145,11 @@ const ItemComponent = {
                 cache: true // تخزين النتائج مؤقتًا لتحسين الأداء
             },
             minimumInputLength: 1, // الحد الأدنى لعدد الأحرف قبل إرسال الطلب
-            placeholder: 'ابحث عن عنصر...', // نص افتراضي في حقل البحث
             templateResult: function (item) {
                 if (item.loading) {
                     return "جاري التحميل...";
                 }
-                return item.name; // كيفية عرض العنصر في القائمة
+                return item.text; // كيفية عرض العنصر في القائمة
             },
             templateSelection: function (item) {
                 UnitPrice.value = item.unitPrice || 0;
@@ -150,10 +158,9 @@ const ItemComponent = {
                 ProductName.options[ProductName.selectedIndex]?.setAttribute('data-itemtype', item.codeType);
                 ProductName.options[ProductName.selectedIndex]?.setAttribute('data-unittype', item.unitType);
                 ProductName.options[ProductName.selectedIndex]?.setAttribute('data-itemcode', item.code);
-                return item.name; // كيفية عرض العنصر المحدد
+                return item.text; // كيفية عرض العنصر المحدد
             }
         });
-        
     }
 }
 
