@@ -1,0 +1,33 @@
+body {
+    background-color: var(--blue-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form svg {
+    width: 50px;
+}
+
+.form {
+    width: 20rem;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.form-header {
+    padding: 1.2rem;
+    text-align: center;
+    background-color: #040b12;
+    color: white;
+}
+
+.form .form-body {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.2rem;
+}
+
