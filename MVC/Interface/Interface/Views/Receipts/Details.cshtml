@@ -2,12 +2,10 @@
 @using Entities.Models.Document.BaseComponent
 @model Receipt
 
-<div dir="rtl">
-    
-    <div>
-        <div class="row row-cols-md-2 row-cols-sm-1">
+<div class="d-flex flex-column gap-3" dir="rtl">
+    <div class="box ">
+        <div class=" row row-cols-md-2 row-cols-sm-1">
             <div class="w-100">
-                
                 @{
                     if(Model.Status == "Valid")
                     {
@@ -33,7 +31,6 @@
                     }
                 }
             </div>
-            <hr class="w-100" />
             <div class="form-group">
                 <label style="font-weight:bold">رقم الايصال</label>
                 <p class="form-control">@Model.Header.ReceiptNumber</p>
@@ -48,9 +45,10 @@
             </div>
         </div>
     </div>
-    <div>
-        <h3 class="text-primary">بيانات الممول</h3>
-        <hr />
+    <div class="box">
+        <div class="box-header d-flex justify-content-between">
+            <h3 >بيانات الممول</h3>
+        </div>
         <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1">
             <div class="form-group">
                 <label style="font-weight:bold">اسم الشركة</label>
@@ -70,9 +68,10 @@
             </div>
         </div>
     </div>
-    <div>
-        <h3 class="text-primary">بيانات العميل</h3>
-        <hr />
+    <div class="box">
+        <div class="box-header d-flex justify-content-between">
+            <h3 >بيانات العميل</h3>
+        </div>
         <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1">
             <div class="form-group">
                 <label style="font-weight:bold">اسم العميل</label>
@@ -98,12 +97,13 @@
             </div>
         </div>
     </div>
-    <div>
-        <h3 class="text-primary">بنود الايصال</h3>
-        <hr />
+    <div class="box">
+        <div class="box-header d-flex justify-content-between">
+            <h3>بنود الايصال</h3>
+        </div>
         <div class="overflow-auto">
-            <table class="table table-hover table-bordered w-100 text-center ">
-                <thead class="text-light" style="line-height:3rem;background-color:var(--green-color);font-size:1.2rem">
+            <table class="styled-table">
+                <thead >
                     <tr>
                         <th class="col-1">كود الداخلي</th>
                         <th class="col-5">وصف المنتج</th>

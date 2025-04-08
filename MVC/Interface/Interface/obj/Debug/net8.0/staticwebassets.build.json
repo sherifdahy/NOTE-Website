@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "q4Fwt+KoP3VncrFgGf5OZ4Zw792RHFRcx9wJZFFnx9k=",
+  "Hash": "jXvWIlMAVLLdofOk3jPi2STPfTYvnDgwLo7/OPpJGAs=",
   "Source": "Interface",
   "BasePath": "_content/Interface",
   "Mode": "Default",
@@ -52,8 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "zmseawt8ke",
-      "Integrity": "hd3tHD+LpoL6dEFRsY2lR2dONH2XWF5l7XTBtYL5mGk=",
+      "Fingerprint": "03nyst5y9i",
+      "Integrity": "pFbEI/PNUjHGZndZ1EUX/6Yk8fE1d3cjaeb7K+HnUbg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\globel.css"
@@ -4448,6 +4448,51 @@
       ]
     },
     {
+      "Route": "css/globel.03nyst5y9i.css",
+      "AssetFile": "E:\\NOTE Company\\NoteSolution\\MVC\\Interface\\Interface\\wwwroot\\css\\globel.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1419"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pFbEI/PNUjHGZndZ1EUX/6Yk8fE1d3cjaeb7K+HnUbg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 21:56:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "03nyst5y9i"
+        },
+        {
+          "Name": "label",
+          "Value": "css/globel.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-pFbEI/PNUjHGZndZ1EUX/6Yk8fE1d3cjaeb7K+HnUbg="
+        }
+      ]
+    },
+    {
       "Route": "css/globel.css",
       "AssetFile": "E:\\NOTE Company\\NoteSolution\\MVC\\Interface\\Interface\\wwwroot\\css\\globel.css",
       "Selectors": [],
@@ -4458,7 +4503,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1388"
+          "Value": "1419"
         },
         {
           "Name": "Content-Type",
@@ -4466,11 +4511,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hd3tHD+LpoL6dEFRsY2lR2dONH2XWF5l7XTBtYL5mGk=\""
+          "Value": "\"pFbEI/PNUjHGZndZ1EUX/6Yk8fE1d3cjaeb7K+HnUbg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 21:46:26 GMT"
+          "Value": "Tue, 08 Apr 2025 21:56:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4480,52 +4525,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-hd3tHD+LpoL6dEFRsY2lR2dONH2XWF5l7XTBtYL5mGk="
-        }
-      ]
-    },
-    {
-      "Route": "css/globel.zmseawt8ke.css",
-      "AssetFile": "E:\\NOTE Company\\NoteSolution\\MVC\\Interface\\Interface\\wwwroot\\css\\globel.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1388"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"hd3tHD+LpoL6dEFRsY2lR2dONH2XWF5l7XTBtYL5mGk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 21:46:26 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "zmseawt8ke"
-        },
-        {
-          "Name": "label",
-          "Value": "css/globel.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-hd3tHD+LpoL6dEFRsY2lR2dONH2XWF5l7XTBtYL5mGk="
+          "Value": "sha256-pFbEI/PNUjHGZndZ1EUX/6Yk8fE1d3cjaeb7K+HnUbg="
         }
       ]
     },

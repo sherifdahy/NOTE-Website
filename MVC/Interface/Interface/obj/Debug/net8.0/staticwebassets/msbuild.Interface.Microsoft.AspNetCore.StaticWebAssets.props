@@ -30,8 +30,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>zmseawt8ke</Fingerprint>
-      <Integrity>hd3tHD+LpoL6dEFRsY2lR2dONH2XWF5l7XTBtYL5mGk=</Integrity>
+      <Fingerprint>03nyst5y9i</Fingerprint>
+      <Integrity>pFbEI/PNUjHGZndZ1EUX/6Yk8fE1d3cjaeb7K+HnUbg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\globel.css'))</OriginalItemSpec>

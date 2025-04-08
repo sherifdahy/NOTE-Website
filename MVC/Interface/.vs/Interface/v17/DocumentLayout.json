@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\NOTE Company\\NoteSolution\\MVC\\Interface\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|e:\\note company\\notesolution\\mvc\\interface\\interface\\views\\receipts\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\views\\receipts\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|e:\\note company\\notesolution\\mvc\\interface\\interface\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|e:\\note company\\notesolution\\mvc\\interface\\interface\\views\\receipts\\new.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\views\\receipts\\new.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|e:\\note company\\notesolution\\mvc\\interface\\interface\\views\\account\\taxpayerprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FAA00B80-E595-441C-89E1-0D4B8D0511B6}|Interface\\Interface.csproj|solutionrelative:interface\\views\\account\\taxpayerprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 246,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +35,58 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "E:\\NOTE Company\\NoteSolution\\MVC\\Interface\\Interface\\Views\\Receipts\\Details.cshtml",
+              "RelativeDocumentMoniker": "Interface\\Views\\Receipts\\Details.cshtml",
+              "ToolTip": "E:\\NOTE Company\\NoteSolution\\MVC\\Interface\\Interface\\Views\\Receipts\\Details.cshtml",
+              "RelativeToolTip": "Interface\\Views\\Receipts\\Details.cshtml",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAG4AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-08T22:52:41.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "New.cshtml",
+              "DocumentMoniker": "E:\\NOTE Company\\NoteSolution\\MVC\\Interface\\Interface\\Views\\Receipts\\New.cshtml",
+              "RelativeDocumentMoniker": "Interface\\Views\\Receipts\\New.cshtml",
+              "ToolTip": "E:\\NOTE Company\\NoteSolution\\MVC\\Interface\\Interface\\Views\\Receipts\\New.cshtml",
+              "RelativeToolTip": "Interface\\Views\\Receipts\\New.cshtml",
+              "ViewState": "AgIAAMoAAAAAAAAAAAAswOYAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-08T22:49:01.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\NOTE Company\\NoteSolution\\MVC\\Interface\\Interface\\Views\\Products\\Index.cshtml",
+              "RelativeDocumentMoniker": "Interface\\Views\\Products\\Index.cshtml",
+              "ToolTip": "E:\\NOTE Company\\NoteSolution\\MVC\\Interface\\Interface\\Views\\Products\\Index.cshtml",
+              "RelativeToolTip": "Interface\\Views\\Products\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-08T22:47:01.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TaxpayerProfile.cshtml",
+              "DocumentMoniker": "E:\\NOTE Company\\NoteSolution\\MVC\\Interface\\Interface\\Views\\Account\\TaxpayerProfile.cshtml",
+              "RelativeDocumentMoniker": "Interface\\Views\\Account\\TaxpayerProfile.cshtml",
+              "ToolTip": "E:\\NOTE Company\\NoteSolution\\MVC\\Interface\\Interface\\Views\\Account\\TaxpayerProfile.cshtml",
+              "RelativeToolTip": "Interface\\Views\\Account\\TaxpayerProfile.cshtml",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAG8AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-08T22:46:41.468Z",
+              "EditorCaption": ""
             }
           ]
         }
