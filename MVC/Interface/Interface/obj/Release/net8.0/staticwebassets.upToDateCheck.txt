@@ -1,6 +1,7 @@
 wwwroot\css\authentication.css
 wwwroot\css\globel.css
 wwwroot\css\header.css
+wwwroot\css\pages\home.css
 wwwroot\css\sidebar.css
 wwwroot\imgs\logo.png
 wwwroot\js\home.js

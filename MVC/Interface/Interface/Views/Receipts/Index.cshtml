@@ -5,7 +5,9 @@
 @using Newtonsoft.Json
 
 @model IEnumerable<Receipt>
-
+@{
+    ViewBag.Title = "NOTE Solution - Receipts";
+}
 @{
     Pager pager = new Pager();
     int pageNo = 0;

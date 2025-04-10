@@ -30,8 +30,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>03nyst5y9i</Fingerprint>
-      <Integrity>pFbEI/PNUjHGZndZ1EUX/6Yk8fE1d3cjaeb7K+HnUbg=</Integrity>
+      <Fingerprint>ry38dadj89</Fingerprint>
+      <Integrity>E+tbxHq0IRw4YbUYpPxx8RTpKS408n6tldsyrUFVfzk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\globel.css'))</OriginalItemSpec>
@@ -53,6 +53,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\header.css'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\pages\home.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Interface</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Interface</BasePath>
+      <RelativePath>css/pages/home.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>nevllugdqa</Fingerprint>
+      <Integrity>wcDKzRvz+t6XCHIwjqHnXbdoGns6uMtzc1KPoKJRXY4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\pages\home.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\sidebar.css'))">
       <SourceType>Package</SourceType>
@@ -102,8 +120,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>0dir4nh3xd</Fingerprint>
-      <Integrity>tKWutfc8WyUshUKRkgYcyVKdBIUnUMn5AB47opAD0cM=</Integrity>
+      <Fingerprint>l3qgalqfs6</Fingerprint>
+      <Integrity>IQbdanVzkkYvWvy/48IURhE6KrueSjqL1YRcq5cELn8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\home.js'))</OriginalItemSpec>
@@ -192,8 +210,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ph19kjfvtl</Fingerprint>
-      <Integrity>zd/9AIm0ZzkQzVwXGGr10SHYZOYBLk3YDl6E0oTKMBM=</Integrity>
+      <Fingerprint>2k3te95gjk</Fingerprint>
+      <Integrity>Qpm9UgI2lVEeNce2TARuImpuwrZ0nfxUJxUsV0KszUE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\Receipt\modules\ItemComponent.js'))</OriginalItemSpec>
@@ -3576,8 +3594,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>2iafwufdgr</Fingerprint>
-      <Integrity>FpVKf/RxO3b7elLZnVcmb1mLnhIzktsYdWODcXu6/uM=</Integrity>
+      <Fingerprint>fymqu7n82q</Fingerprint>
+      <Integrity>ST+7FdKeTrasNjY8Q1IuSQ8NZwqZ98sFvN0Y+65EjbY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\reports\receipt.rdlc'))</OriginalItemSpec>

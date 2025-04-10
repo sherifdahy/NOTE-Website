@@ -1,5 +1,46 @@
 ﻿
+<link href="~/css/pages/home.css" rel="stylesheet" />
+@{
+    ViewBag.Title = "NOTE Solution - Dashboard";
+}
+<div class="d-flex flex-column gap-2">
+    <div class="box">
+        <div class="d-flex justify-content-between box-header">
+            <h3>لوحة الايصالات</h3>
+        </div>
+        <div>
+            <h5>
+                نظرة عامة علي النشاط من
+                <input id="receiptsStartDate" type="datetime-local"/>
+                الي
+                <input id="receiptsEndDate" type="datetime-local" />
+            </h5>
 
-@section Scripts{
-    <script src="~/js/home.js"></script>
+            <div class="box-body row row-cols-2 d-flex justify-content-center">
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="box">
+        <div class="d-flex justify-content-between box-header">
+            <h3>لوحة الفواتير</h3>
+        </div>
+        <div>
+            <h5>
+                نظرة عامة علي النشاط من
+                <input id="invoicesStartDate" type="datetime-local" />
+                الي
+                <input id="invoicesEndDate" type="datetime-local" />
+            </h5>
+            <div class="box-body">
+
+            </div>
+        </div>
+    </div>
+
+</div>
+@section Scripts {
+        <script src="~/js/home.js"></script>
 }

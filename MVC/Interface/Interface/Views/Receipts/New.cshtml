@@ -2,11 +2,15 @@
 @using Newtonsoft.Json
 
 @model ReceiptVM
+
+@{
+    ViewBag.Title = "NOTE Solution - New Receipt";
+}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@@ttskch/select2-bootstrap4-theme/dist/select2-bootstrap4.min.css">
 
-
 <form asp-controller="Receipts" asp-action="New" method="post" onsubmit="SweetAlert.confirm(event,'هل تريد الارسال؟','','question')" class="d-flex flex-column gap-3" dir="rtl">
+    
     <div class="box">
         <div class="box-header d-flex justify-content-between">
             <h3>معلومات اساسية</h3>
@@ -83,9 +87,7 @@
     <div class="box">
         <div class="box-header d-flex justify-content-between">
             <h3 >بندود الايصال</h3>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                اضافة بند جديد
-            </button>
+            
         </div>
         <div class="overflow-auto" dir="rtl">
             <table class="styled-table">
@@ -130,13 +132,25 @@
                         </tr>
                     }
                 </tbody>
-                <tfoot id="table_item_footer">
+                <tfoot>
+                    <tr>
+                        <th colspan="6"></th>
+                        <th>
+                            <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                اضافة بند جديد
+                            </button>
+                        </th>
+                    </tr>
                 </tfoot>
             </table>
 
             
         </div>
-        <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1">
+        
+
+    </div>
+    <div class="box">
+        <div class="row row-cols-lg-4">
             <div class="form-group">
                 <label>اجمالي الضريبة</label>
                 <input asp-for="TotalCommercialDiscount" class="form-control" />
@@ -158,9 +172,7 @@
                 <input asp-for="TaxTotals" class="form-control" />
             </div>
         </div>
-
     </div>
-
 
 
 

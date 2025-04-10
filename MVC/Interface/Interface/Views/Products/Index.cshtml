@@ -1,7 +1,9 @@
 ﻿@using Entities.Models
 
 @model IEnumerable<Product>
-
+@{
+    ViewBag.Title = "NOTE Solution - Products";
+}
 @{
     Pager pager = new Pager();
     int pageNo = 0;

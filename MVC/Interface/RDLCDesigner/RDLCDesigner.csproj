@@ -56,6 +56,16 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Document\BaseComponent\BranchAddress.cs" />
+    <Compile Include="Document\BaseComponent\Buyer.cs" />
+    <Compile Include="Document\BaseComponent\CommercialDiscountData.cs" />
+    <Compile Include="Document\BaseComponent\DocumentType.cs" />
+    <Compile Include="Document\BaseComponent\Header.cs" />
+    <Compile Include="Document\BaseComponent\Item.cs" />
+    <Compile Include="Document\BaseComponent\Seller.cs" />
+    <Compile Include="Document\BaseComponent\TaxableItems.cs" />
+    <Compile Include="Document\BaseComponent\TaxTotal.cs" />
+    <Compile Include="Document\Receipt.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +85,16 @@
     </Compile>
     <Content Include="receipt.rdlc" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Entities.Models.Document.BaseComponent.BranchAddress.datasource" />
+    <None Include="Properties\DataSources\Entities.Models.Document.BaseComponent.Buyer.datasource" />
+    <None Include="Properties\DataSources\Entities.Models.Document.BaseComponent.CommercialDiscountData.datasource" />
+    <None Include="Properties\DataSources\Entities.Models.Document.BaseComponent.DocumentType.datasource" />
+    <None Include="Properties\DataSources\Entities.Models.Document.BaseComponent.Header.datasource" />
+    <None Include="Properties\DataSources\Entities.Models.Document.BaseComponent.Item.datasource" />
+    <None Include="Properties\DataSources\Entities.Models.Document.BaseComponent.Seller.datasource" />
+    <None Include="Properties\DataSources\Entities.Models.Document.BaseComponent.TaxableItem.datasource" />
+    <None Include="Properties\DataSources\Entities.Models.Document.BaseComponent.TaxTotal.datasource" />
+    <None Include="Properties\DataSources\Entities.Models.Document.Receipt.datasource" />
     <None Include="Properties\DataSources\Entities.Models.Receipt.branchAddress.datasource" />
     <None Include="Properties\DataSources\Entities.Models.Receipt.buyer.datasource" />
     <None Include="Properties\DataSources\Entities.Models.Receipt.commercialDiscountData.datasource" />

@@ -1,0 +1,25 @@
+﻿.box-border {
+    border: var(--blue-color) dashed 2px;
+    padding:1rem;
+    
+}
+
+.box-border h5{
+    position:relative;
+
+}
+
+.box-border h5::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+.box-body{
+    margin-top:2rem;
+}
+

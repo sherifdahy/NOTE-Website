@@ -1,0 +1,78 @@
+﻿@using Entities.Models.Document
+@model IEnumerable<Receipt>
+
+@{
+    var mostFrequentProductDetails = 
+    Model.Where(e => e.Status == "Valid")
+    .SelectMany(receipt => receipt.ItemData.Select(item => new { Item = item, ReceiptId = receipt.ReceiptId }))
+    .GroupBy(x => x.Item.ItemCode)
+    .Select(group => new
+    {
+        Description = group.FirstOrDefault()?.Item.Description,
+        ProductCode = group.Key,
+        ReceiptCount = group.Select(x => x.ReceiptId).Distinct().Count(),
+        Total = group.Sum(x => x.Item.Total)
+    })
+    .OrderByDescending(x => x.ReceiptCount)
+    .FirstOrDefault();
+}
+<div class="col">
+    <div class="box-border">
+        <div class="d-flex mb-3">
+            <h5>
+            الايصالات المقدمة : 
+                @Model.Count()
+            </h5>
+        </div>
+        <div>
+            <p>صالح ايصال مبيعات : @Model.Count(x => x.Status == "Valid" && x.DocumentType.ReceiptType.ToLower() == "s")</p>
+        </div>
+        <hr />
+        <div>
+            <p>صالح ايصال مرتجع : @Model.Count(x => x.Status == "Valid" && x.DocumentType.ReceiptType.ToLower() == "r")</p>
+        </div>
+        <hr />
+        <div>
+            <p>غير صالح ايصال: @Model.Count(x => x.Status == "Invalid")</p>
+        </div>
+    </div>
+</div>
+<div class="col">
+    <div class="box-border">
+        <div class="d-flex  mb-3">
+            <h5>    
+            رموز السلع والخدمات الاكثر أستخداما 
+            </h5>
+        </div>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>
+                        وصف السلعة
+                        /
+                        كود العنصر
+                    </th>
+                    <th>
+                        عدد الايصالات
+                    </th>
+                    <th>
+                        الاجمالي
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        @mostFrequentProductDetails.Description <br /> @mostFrequentProductDetails.ProductCode
+                    </td>
+                    <td>
+                        @mostFrequentProductDetails.ReceiptCount
+                    </td>
+                    <td>
+                        @mostFrequentProductDetails.Total
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

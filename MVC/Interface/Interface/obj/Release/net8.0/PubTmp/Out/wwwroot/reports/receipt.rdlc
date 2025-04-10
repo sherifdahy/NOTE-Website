@@ -51,366 +51,414 @@
       </ConnectionProperties>
       <rd:DataSourceID>f0e5cbf1-0f27-4e14-8a37-0e09d844845b</rd:DataSourceID>
     </DataSource>
-    <DataSource Name="EntitiesModelsReceipt">
+    <DataSource Name="EntitiesModelsDocumentBaseComponent">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>18498398-8150-450c-bed8-de7c54347924</rd:DataSourceID>
+      <rd:DataSourceID>e28cb3ba-0c8c-455a-937a-edd529d08396</rd:DataSourceID>
     </DataSource>
-    <DataSource Name="EntitiesModelsReceipt1">
+    <DataSource Name="EntitiesModelsDocumentBaseComponent1">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>d0d2374d-3ea3-480a-9f7d-8a28c8a1ac3a</rd:DataSourceID>
+      <rd:DataSourceID>a0f77606-d5f4-423b-b148-76ae8eb5b1e6</rd:DataSourceID>
     </DataSource>
-    <DataSource Name="EntitiesModelsReceipt2">
+    <DataSource Name="EntitiesModelsDocumentBaseComponent2">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>10c0d20c-24a0-496e-ae58-7d746056fef1</rd:DataSourceID>
+      <rd:DataSourceID>c2ddc2ae-246d-4cf4-8012-e7c5c1600261</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="EntitiesModelsDocumentBaseComponent3">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>19692af3-f83c-4cb0-a445-384bbe413bdd</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="EntitiesModelsDocumentBaseComponent4">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>cb398c23-f511-4bd2-87c0-dfedaaa647b5</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="EntitiesModelsDocumentBaseComponent5">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>e1f6cbff-855a-4cb9-a7c3-87b0899fa350</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="EntitiesModelsDocumentBaseComponent6">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>e9694bd7-ceab-44c0-8ae3-cc784570b77f</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="EntitiesModelsDocumentBaseComponent7">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>34a7bb2a-9a11-4348-96a0-7427a8f9a189</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="EntitiesModelsDocumentBaseComponent8">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>4d0b10a3-d798-4cee-b664-11e04abc5923</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="branchAddress">
+    <DataSet Name="BranchAddress">
       <Query>
-        <DataSourceName>NOTE_POSDataDB1</DataSourceName>
+        <DataSourceName>EntitiesModelsDocumentBaseComponent</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="branchAddressId">
-          <DataField>branchAddressId</DataField>
+        <Field Name="BranchAddressId">
+          <DataField>BranchAddressId</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="buildingNumber">
-          <DataField>buildingNumber</DataField>
+        <Field Name="BuildingNumber">
+          <DataField>BuildingNumber</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="country">
-          <DataField>country</DataField>
+        <Field Name="Country">
+          <DataField>Country</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="governate">
-          <DataField>governate</DataField>
+        <Field Name="Governate">
+          <DataField>Governate</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="regionCity">
-          <DataField>regionCity</DataField>
+        <Field Name="RegionCity">
+          <DataField>RegionCity</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="street">
-          <DataField>street</DataField>
+        <Field Name="Street">
+          <DataField>Street</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>Entities.Models.Receipt</rd:DataSetName>
-        <rd:TableName>branchAddress</rd:TableName>
-        <rd:ObjectDataSourceType>Entities.Models.Receipt.branchAddress, RDLCDesigner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:DataSetName>Entities.Models.Document.BaseComponent</rd:DataSetName>
+        <rd:TableName>BranchAddress</rd:TableName>
+        <rd:ObjectDataSourceType>Entities.Models.Document.BaseComponent.BranchAddress, RDLCDesigner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
-    <DataSet Name="seller">
+    <DataSet Name="Bayer">
       <Query>
-        <DataSourceName>NOTE_POSDataDB2</DataSourceName>
+        <DataSourceName>EntitiesModelsDocumentBaseComponent1</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="activityCode">
-          <DataField>activityCode</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="branchAddress">
-          <DataField>branchAddress</DataField>
-          <rd:TypeName>Entities.Models.Receipt.branchAddress</rd:TypeName>
-        </Field>
-        <Field Name="branchAddressId">
-          <DataField>branchAddressId</DataField>
+        <Field Name="BuyerId">
+          <DataField>BuyerId</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="branchCode">
-          <DataField>branchCode</DataField>
+        <Field Name="Id">
+          <DataField>Id</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="companyTradeName">
-          <DataField>companyTradeName</DataField>
+        <Field Name="MobileNumber">
+          <DataField>MobileNumber</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="deviceSerialNumber">
-          <DataField>deviceSerialNumber</DataField>
+        <Field Name="Name">
+          <DataField>Name</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="rin">
-          <DataField>rin</DataField>
+        <Field Name="PaymentNumber">
+          <DataField>PaymentNumber</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="sellerId">
-          <DataField>sellerId</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="Type">
+          <DataField>Type</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>Entities.Models.Receipt</rd:DataSetName>
-        <rd:TableName>seller</rd:TableName>
-        <rd:ObjectDataSourceType>Entities.Models.Receipt.seller, RDLCDesigner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:DataSetName>Entities.Models.Document.BaseComponent</rd:DataSetName>
+        <rd:TableName>Buyer</rd:TableName>
+        <rd:ObjectDataSourceType>Entities.Models.Document.BaseComponent.Buyer, RDLCDesigner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
-    <DataSet Name="header">
+    <DataSet Name="CommercialDiscountData">
       <Query>
-        <DataSourceName>NOTE_POSDataDB3</DataSourceName>
+        <DataSourceName>EntitiesModelsDocumentBaseComponent2</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="currency">
-          <DataField>currency</DataField>
+        <Field Name="Amount">
+          <DataField>Amount</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="CommercialDiscountDataId">
+          <DataField>CommercialDiscountDataId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="dateTimeIssued">
-          <DataField>dateTimeIssued</DataField>
+        <Field Name="Rate">
+          <DataField>Rate</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Entities.Models.Document.BaseComponent</rd:DataSetName>
+        <rd:TableName>CommercialDiscountData</rd:TableName>
+        <rd:ObjectDataSourceType>Entities.Models.Document.BaseComponent.CommercialDiscountData, RDLCDesigner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DocumentType">
+      <Query>
+        <DataSourceName>EntitiesModelsDocumentBaseComponent3</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="DocumentTypeId">
+          <DataField>DocumentTypeId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ReceiptType">
+          <DataField>ReceiptType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TypeVersion">
+          <DataField>TypeVersion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Entities.Models.Document.BaseComponent</rd:DataSetName>
+        <rd:TableName>DocumentType</rd:TableName>
+        <rd:ObjectDataSourceType>Entities.Models.Document.BaseComponent.DocumentType, RDLCDesigner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Header">
+      <Query>
+        <DataSourceName>EntitiesModelsDocumentBaseComponent4</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Currency">
+          <DataField>Currency</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateTimeIssued">
+          <DataField>DateTimeIssued</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="exchangeRate">
-          <DataField>exchangeRate</DataField>
+        <Field Name="ExchangeRate">
+          <DataField>ExchangeRate</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="headerId">
-          <DataField>headerId</DataField>
+        <Field Name="HeaderId">
+          <DataField>HeaderId</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="orderdeliveryMode">
-          <DataField>orderdeliveryMode</DataField>
+        <Field Name="OrderdeliveryMode">
+          <DataField>OrderdeliveryMode</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="previousUUID">
-          <DataField>previousUUID</DataField>
+        <Field Name="PreviousUUID">
+          <DataField>PreviousUUID</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="receiptNumber">
-          <DataField>receiptNumber</DataField>
+        <Field Name="ReceiptNumber">
+          <DataField>ReceiptNumber</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="referenceOldUUID">
-          <DataField>referenceOldUUID</DataField>
+        <Field Name="ReferenceOldUUID">
+          <DataField>ReferenceOldUUID</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="sOrderNameCode">
-          <DataField>sOrderNameCode</DataField>
+        <Field Name="ReferenceUUID">
+          <DataField>ReferenceUUID</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="uuid">
-          <DataField>uuid</DataField>
+        <Field Name="SOrderNameCode">
+          <DataField>SOrderNameCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Uuid">
+          <DataField>Uuid</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>Entities.Models.Receipt</rd:DataSetName>
-        <rd:TableName>header</rd:TableName>
-        <rd:ObjectDataSourceType>Entities.Models.Receipt.header, RDLCDesigner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:DataSetName>Entities.Models.Document.BaseComponent</rd:DataSetName>
+        <rd:TableName>Header</rd:TableName>
+        <rd:ObjectDataSourceType>Entities.Models.Document.BaseComponent.Header, RDLCDesigner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
-    <DataSet Name="buyer">
+    <DataSet Name="Item">
       <Query>
-        <DataSourceName>NOTE_POSDataDB4</DataSourceName>
+        <DataSourceName>EntitiesModelsDocumentBaseComponent5</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="buyerId">
-          <DataField>buyerId</DataField>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="InternalCode">
+          <DataField>InternalCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ItemCode">
+          <DataField>ItemCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ItemId">
+          <DataField>ItemId</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="id">
-          <DataField>id</DataField>
+        <Field Name="ItemType">
+          <DataField>ItemType</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="mobileNumber">
-          <DataField>mobileNumber</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="NetSale">
+          <DataField>NetSale</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="name">
-          <DataField>name</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="Quantity">
+          <DataField>Quantity</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="paymentNumber">
-          <DataField>paymentNumber</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="Total">
+          <DataField>Total</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="type">
-          <DataField>type</DataField>
+        <Field Name="TotalSale">
+          <DataField>TotalSale</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="UnitPrice">
+          <DataField>UnitPrice</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="UnitType">
+          <DataField>UnitType</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>Entities.Models.Receipt</rd:DataSetName>
-        <rd:TableName>buyer</rd:TableName>
-        <rd:ObjectDataSourceType>Entities.Models.Receipt.buyer, RDLCDesigner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:DataSetName>Entities.Models.Document.BaseComponent</rd:DataSetName>
+        <rd:TableName>Item</rd:TableName>
+        <rd:ObjectDataSourceType>Entities.Models.Document.BaseComponent.Item, RDLCDesigner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
-    <DataSet Name="item">
+    <DataSet Name="Seller">
       <Query>
-        <DataSourceName>EntitiesModelsReceipt</DataSourceName>
+        <DataSourceName>EntitiesModelsDocumentBaseComponent6</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="description">
-          <DataField>description</DataField>
+        <Field Name="ActivityCode">
+          <DataField>ActivityCode</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="internalCode">
-          <DataField>internalCode</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="BranchAddress">
+          <DataField>BranchAddress</DataField>
+          <rd:TypeName>Entities.Models.Document.BaseComponent.BranchAddress</rd:TypeName>
         </Field>
-        <Field Name="itemCode">
-          <DataField>itemCode</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="itemId">
-          <DataField>itemId</DataField>
+        <Field Name="BranchAddressId">
+          <DataField>BranchAddressId</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="itemType">
-          <DataField>itemType</DataField>
+        <Field Name="BranchCode">
+          <DataField>BranchCode</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="netSale">
-          <DataField>netSale</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="quantity">
-          <DataField>quantity</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="total">
-          <DataField>total</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="totalSale">
-          <DataField>totalSale</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="unitPrice">
-          <DataField>unitPrice</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="unitType">
-          <DataField>unitType</DataField>
+        <Field Name="CompanyTradeName">
+          <DataField>CompanyTradeName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DeviceSerialNumber">
+          <DataField>DeviceSerialNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Rin">
+          <DataField>Rin</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SellerId">
+          <DataField>SellerId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>Entities.Models.Receipt</rd:DataSetName>
-        <rd:TableName>item</rd:TableName>
-        <rd:ObjectDataSourceType>Entities.Models.Receipt.item, RDLCDesigner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:DataSetName>Entities.Models.Document.BaseComponent</rd:DataSetName>
+        <rd:TableName>Seller</rd:TableName>
+        <rd:ObjectDataSourceType>Entities.Models.Document.BaseComponent.Seller, RDLCDesigner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
-    <DataSet Name="documentType">
+    <DataSet Name="TaxableItem">
       <Query>
-        <DataSourceName>EntitiesModelsReceipt1</DataSourceName>
+        <DataSourceName>EntitiesModelsDocumentBaseComponent7</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="documentTypeId">
-          <DataField>documentTypeId</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="Amount">
+          <DataField>Amount</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="receiptType">
-          <DataField>receiptType</DataField>
+        <Field Name="Rate">
+          <DataField>Rate</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="SubType">
+          <DataField>SubType</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="typeVersion">
-          <DataField>typeVersion</DataField>
+        <Field Name="TaxableItemId">
+          <DataField>TaxableItemId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="TaxType">
+          <DataField>TaxType</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>Entities.Models.Receipt</rd:DataSetName>
-        <rd:TableName>documentType</rd:TableName>
-        <rd:ObjectDataSourceType>Entities.Models.Receipt.documentType, RDLCDesigner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:DataSetName>Entities.Models.Document.BaseComponent</rd:DataSetName>
+        <rd:TableName>TaxableItem</rd:TableName>
+        <rd:ObjectDataSourceType>Entities.Models.Document.BaseComponent.TaxableItem, RDLCDesigner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
-    <DataSet Name="receipt">
+    <DataSet Name="TaxTotal">
       <Query>
-        <DataSourceName>EntitiesModelsReceipt2</DataSourceName>
+        <DataSourceName>EntitiesModelsDocumentBaseComponent8</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="applicationUserId">
-          <DataField>applicationUserId</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="buyer">
-          <DataField>buyer</DataField>
-          <rd:TypeName>Entities.Models.Receipt.buyer</rd:TypeName>
-        </Field>
-        <Field Name="buyerId">
-          <DataField>buyerId</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="documentType">
-          <DataField>documentType</DataField>
-          <rd:TypeName>Entities.Models.Receipt.documentType</rd:TypeName>
-        </Field>
-        <Field Name="documentTypeId">
-          <DataField>documentTypeId</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="header">
-          <DataField>header</DataField>
-          <rd:TypeName>Entities.Models.Receipt.header</rd:TypeName>
-        </Field>
-        <Field Name="headerId">
-          <DataField>headerId</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="netAmount">
-          <DataField>netAmount</DataField>
+        <Field Name="Amount">
+          <DataField>Amount</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="paymentMethod">
-          <DataField>paymentMethod</DataField>
+        <Field Name="TaxTotalId">
+          <DataField>TaxTotalId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="TaxType">
+          <DataField>TaxType</DataField>
           <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="QRCode">
-          <DataField>QRCode</DataField>
-          <rd:TypeName>System.Byte[]</rd:TypeName>
-        </Field>
-        <Field Name="receiptId">
-          <DataField>receiptId</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="seller">
-          <DataField>seller</DataField>
-          <rd:TypeName>Entities.Models.Receipt.seller</rd:TypeName>
-        </Field>
-        <Field Name="sellerId">
-          <DataField>sellerId</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="status">
-          <DataField>status</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="submissionUuid">
-          <DataField>submissionUuid</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="totalAmount">
-          <DataField>totalAmount</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="totalCommercialDiscount">
-          <DataField>totalCommercialDiscount</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="totalSales">
-          <DataField>totalSales</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>Entities.Models.Receipt</rd:DataSetName>
-        <rd:TableName>receipt</rd:TableName>
-        <rd:ObjectDataSourceType>Entities.Models.Receipt.receipt, RDLCDesigner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:DataSetName>Entities.Models.Document.BaseComponent</rd:DataSetName>
+        <rd:TableName>TaxTotal</rd:TableName>
+        <rd:ObjectDataSourceType>Entities.Models.Document.BaseComponent.TaxTotal, RDLCDesigner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -865,7 +913,7 @@
                 <TablixMember />
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>buyer</DataSetName>
+            <DataSetName>Bayer</DataSetName>
             <Top>3.90292in</Top>
             <Left>0.22503in</Left>
             <Height>1.33125in</Height>
@@ -1652,7 +1700,7 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>item</DataSetName>
+            <DataSetName>Item</DataSetName>
             <Top>5.23417in</Top>
             <Left>0.22503in</Left>
             <Height>0.90138in</Height>
@@ -1708,7 +1756,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!receiptNumber.Value, "header")</Value>
+                    <Value>=First(Fields!ReceiptNumber.Value, "Header")</Value>
                     <Style>
                       <FontFamily>Segoe UI</FontFamily>
                       <FontWeight>Bold</FontWeight>
@@ -1744,7 +1792,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!receiptType.Value, "documentType")</Value>
+                    <Value>=First(Fields!ReceiptType.Value, "DocumentType")</Value>
                     <Style>
                       <FontFamily>Segoe UI</FontFamily>
                       <FontSize>20pt</FontSize>
@@ -1816,7 +1864,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!dateTimeIssued.Value, "header")</Value>
+                    <Value>=First(Fields!DateTimeIssued.Value, "Header")</Value>
                     <Style>
                       <FontFamily>Segoe UI</FontFamily>
                       <FontWeight>Normal</FontWeight>
@@ -2154,659 +2202,12 @@
                 <TablixMember />
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>seller</DataSetName>
+            <DataSetName>Seller</DataSetName>
             <Top>1.24666in</Top>
             <Left>3.04223in</Left>
             <Height>1.54693in</Height>
             <Width>4.89756in</Width>
             <ZIndex>8</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <TextAlign>Right</TextAlign>
-              <VerticalAlign>Middle</VerticalAlign>
-            </Style>
-          </Tablix>
-          <Tablix Name="Tablix7">
-            <TablixBody>
-              <TablixColumns>
-                <TablixColumn>
-                  <Width>1.75181in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>2.04515in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>1.56901in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>1.51068in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>0.8381in</Width>
-                </TablixColumn>
-              </TablixColumns>
-              <TablixRows>
-                <TablixRow>
-                  <Height>0.44375in</Height>
-                  <TablixCells>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="totalSales">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!totalSales.Value)</Value>
-                                  <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
-                                    <Format>#,0.00;(#,0.00);'-'</Format>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>totalSales</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </TopBorder>
-                            <BottomBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </BottomBorder>
-                            <LeftBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </LeftBorder>
-                            <RightBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </RightBorder>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox95">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>اجمالي المبيعات (ج.م)</Value>
-                                  <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox95</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </TopBorder>
-                            <BottomBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </BottomBorder>
-                            <LeftBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </LeftBorder>
-                            <RightBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </RightBorder>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox100">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox100</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                        <ColSpan>3</ColSpan>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell />
-                    <TablixCell />
-                  </TablixCells>
-                </TablixRow>
-                <TablixRow>
-                  <Height>0.44375in</Height>
-                  <TablixCells>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="totalCommercialDiscount">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!totalCommercialDiscount.Value)</Value>
-                                  <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
-                                    <Format>#,0.00;-#,0.00;'-'</Format>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>totalCommercialDiscount</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </TopBorder>
-                            <BottomBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </BottomBorder>
-                            <LeftBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </LeftBorder>
-                            <RightBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </RightBorder>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox112">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>اجمالي الخصم (ج.م)</Value>
-                                  <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox112</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </TopBorder>
-                            <BottomBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </BottomBorder>
-                            <LeftBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </LeftBorder>
-                            <RightBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </RightBorder>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox113">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox113</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                        <ColSpan>3</ColSpan>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell />
-                    <TablixCell />
-                  </TablixCells>
-                </TablixRow>
-                <TablixRow>
-                  <Height>0.44375in</Height>
-                  <TablixCells>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox106">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
-                                    <Format>#,0.00;-#,0.00;'-'</Format>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox106</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </TopBorder>
-                            <BottomBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </BottomBorder>
-                            <LeftBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </LeftBorder>
-                            <RightBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </RightBorder>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox107">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>اجمالي الضريبة (ج.م)</Value>
-                                  <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox107</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </TopBorder>
-                            <BottomBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </BottomBorder>
-                            <LeftBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </LeftBorder>
-                            <RightBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </RightBorder>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox108">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox108</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                        <ColSpan>3</ColSpan>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell />
-                    <TablixCell />
-                  </TablixCells>
-                </TablixRow>
-                <TablixRow>
-                  <Height>0.44375in</Height>
-                  <TablixCells>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="totalAmount">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!totalAmount.Value)</Value>
-                                  <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
-                                    <FontWeight>Bold</FontWeight>
-                                    <Format>#,0.00;-#,0.00;'-'</Format>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>totalAmount</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </TopBorder>
-                            <BottomBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </BottomBorder>
-                            <LeftBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </LeftBorder>
-                            <RightBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </RightBorder>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox102">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>اجمالي المبلغ (ج.م)</Value>
-                                  <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox102</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </TopBorder>
-                            <BottomBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </BottomBorder>
-                            <LeftBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </LeftBorder>
-                            <RightBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>0.75pt</Width>
-                            </RightBorder>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox103">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox103</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                        <ColSpan>3</ColSpan>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell />
-                    <TablixCell />
-                  </TablixCells>
-                </TablixRow>
-              </TablixRows>
-            </TablixBody>
-            <TablixColumnHierarchy>
-              <TablixMembers>
-                <TablixMember />
-                <TablixMember />
-                <TablixMember />
-                <TablixMember />
-                <TablixMember />
-              </TablixMembers>
-            </TablixColumnHierarchy>
-            <TablixRowHierarchy>
-              <TablixMembers>
-                <TablixMember />
-                <TablixMember />
-                <TablixMember />
-                <TablixMember />
-              </TablixMembers>
-            </TablixRowHierarchy>
-            <DataSetName>receipt</DataSetName>
-            <Top>6.13556in</Top>
-            <Left>0.22503in</Left>
-            <Height>1.775in</Height>
-            <Width>7.71475in</Width>
-            <ZIndex>9</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2920,12 +2321,12 @@
                 <TablixMember />
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>branchAddress</DataSetName>
+            <DataSetName>BranchAddress</DataSetName>
             <Top>2.78667in</Top>
             <Left>3.04223in</Left>
             <Height>0.34333in</Height>
             <Width>4.89756in</Width>
-            <ZIndex>10</ZIndex>
+            <ZIndex>9</ZIndex>
             <ToolTip>=First(Fields!street.Value, "branchAddress")</ToolTip>
             <Style>
               <Border>
@@ -2942,7 +2343,7 @@
             <Left>0.22503in</Left>
             <Height>2.63806in</Height>
             <Width>2.74776in</Width>
-            <ZIndex>11</ZIndex>
+            <ZIndex>10</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>

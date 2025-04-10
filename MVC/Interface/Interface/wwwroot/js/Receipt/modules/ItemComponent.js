@@ -236,18 +236,18 @@ const ItemComponent = {
         tempComm.description = "xyz";
         tempComm.rate =((+Discount.value / +itemTotalSale.value) * 100).toFixed(2);
         tr.innerHTML = `
-                        <td><input class="form-control InternalCode" name="itemData[${index}].InternalCode" value="${ProductName.options[ProductName.selectedIndex].getAttribute('data-internalcode') }"/></td>
-                        <td><input class="form-control Description" name="itemData[${index}].Description" value="${Description.value}"/></td>
-                        <td hidden><input class="form-control ItemType" name="itemData[${index}].ItemType" value="${ProductName.options[ProductName.selectedIndex].getAttribute('data-itemtype') }"/></td>
-                        <td hidden><input class="form-control ItemCode" name="itemData[${index}].ItemCode" value="${ProductName.options[ProductName.selectedIndex].getAttribute('data-itemcode') }"/></td>
-                        <td hidden><input class="form-control UnitType" name="itemData[${index}].UnitType" value="${ProductName.options[ProductName.selectedIndex].getAttribute('data-unittype') }"/></td>
-                        <td><input class="form-control Quantity" name="itemData[${index}].Quantity" value="${+Quantity.value}"/></td>
-                        <td><input class="form-control UnitPrice" name="itemData[${index}].UnitPrice" value="${+UnitPrice.value}"/></td>
-                        <td><input class="form-control CommercialDiscountData" name="itemData[${index}].CommercialDiscountData" value='${+Discount.value > 0 ? JSON.stringify([tempComm]) : JSON.stringify([]) }'/></td>
-                        <td hidden><input class="form-control NetSale" name="itemData[${index}].NetSale" value="${+itemNetSale.value}"/></td>
-                        <td hidden><input class="form-control TotalSale" name="itemData[${index}].TotalSale" value="${+itemTotalSale.value}"/></td>
-                        <td hidden><input class="form-control Total" name="itemData[${index}].Total" value="${+itemTotal.value}"/></td>
-                        <td><input class="form-control TaxableItems" name="itemData[${index}].TaxableItems" value='${JSON.stringify(_taxableItems)}'/></td>
+                        <td><input class="form-control-plaintext InternalCode" readonly name="itemData[${index}].InternalCode" value="${ProductName.options[ProductName.selectedIndex].getAttribute('data-internalcode') }"/></td>
+                        <td><input class="form-control-plaintext Description" name="itemData[${index}].Description" value="${Description.value}"/></td>
+                        <td hidden><input class="form-control-plaintext ItemType" name="itemData[${index}].ItemType" value="${ProductName.options[ProductName.selectedIndex].getAttribute('data-itemtype') }"/></td>
+                        <td hidden><input class="form-control-plaintext ItemCode" name="itemData[${index}].ItemCode" value="${ProductName.options[ProductName.selectedIndex].getAttribute('data-itemcode') }"/></td>
+                        <td hidden><input class="form-control-plaintext UnitType" name="itemData[${index}].UnitType" value="${ProductName.options[ProductName.selectedIndex].getAttribute('data-unittype') }"/></td>
+                        <td><input class="form-control-plaintext Quantity" name="itemData[${index}].Quantity" value="${+Quantity.value}"/></td>
+                        <td><input class="form-control-plaintext UnitPrice" name="itemData[${index}].UnitPrice" value="${+UnitPrice.value}"/></td>
+                        <td><input class="form-control-plaintext CommercialDiscountData" name="itemData[${index}].CommercialDiscountData" value='${+Discount.value > 0 ? JSON.stringify([tempComm]) : JSON.stringify([]) }'/></td>
+                        <td hidden><input class="form-control-plaintext NetSale" name="itemData[${index}].NetSale" value="${+itemNetSale.value}"/></td>
+                        <td hidden><input class="form-control-plaintext TotalSale" name="itemData[${index}].TotalSale" value="${+itemTotalSale.value}"/></td>
+                        <td hidden><input class="form-control-plaintext Total" name="itemData[${index}].Total" value="${+itemTotal.value}"/></td>
+                        <td><input class="form-control-plaintext TaxableItems" name="itemData[${index}].TaxableItems" value='${JSON.stringify(_taxableItems)}'/></td>
                         <td>
                             <button type="button" onClick="Page.ItemComponent.deleteRow(event)" class="btn btn-danger">حذف</button>
                         </td>

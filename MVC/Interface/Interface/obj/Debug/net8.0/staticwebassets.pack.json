@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\css\\header.css"
     },
     {
+      "Id": "E:\\NOTE Company\\NoteSolution\\MVC\\Interface\\Interface\\wwwroot\\css\\pages\\home.css",
+      "PackagePath": "staticwebassets\\css\\pages\\home.css"
+    },
+    {
       "Id": "E:\\NOTE Company\\NoteSolution\\MVC\\Interface\\Interface\\wwwroot\\css\\sidebar.css",
       "PackagePath": "staticwebassets\\css\\sidebar.css"
     },

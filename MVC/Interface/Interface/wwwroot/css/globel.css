@@ -29,7 +29,7 @@ body {
 .box .box-header{
     margin-bottom:1.2rem;
 }
-.box h3::before {
+.box h3::before{
     content: "";
     position: absolute;
     bottom: -10px;

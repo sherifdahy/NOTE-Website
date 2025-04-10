@@ -1,8 +1,4 @@
-﻿
-
-
-
-const page = (function () {
+﻿const page = (function () {
     function init() {
         document.querySelector('.fa-cart-shopping').parentElement.classList.add('active');
     }
